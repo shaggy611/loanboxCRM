@@ -31,12 +31,21 @@ a:hover {
 .content-screen {
   width: 100%;
   padding: 40px 24px;
+  margin-left: 260px;
 }
 
 // Leftside menu Navabr
 .menu {
   max-width: 260px;
   width: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  height: 100vh;
+  box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .main-menu {
   max-width: 260px;
@@ -227,7 +236,7 @@ header {
     display: block;
     position: absolute;
     top: 6px;
-    right: 12px;
+    right: 4px;
   }
 
   & .welcome-text p {
@@ -328,7 +337,7 @@ header {
 .statistics-section {
   margin-top: 42px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 29px;
 
   & .underwriting-statistic {
@@ -402,6 +411,7 @@ header {
       max-width: 274px;
       min-height: 334px;
       box-sizing: content-box;
+      overflow: hidden;
 
       & .data-wrapper {
         padding: 12px 12.5px;
@@ -452,6 +462,7 @@ header {
       max-width: 274px;
       min-height: 334px;
       box-sizing: content-box;
+      overflow: hidden;
 
       & .data-wrapper {
         padding: 79px 12.5px 0 12.5px;
@@ -479,6 +490,8 @@ header {
 // Payments-charts section
 .payments-charts {
   display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
 
   & .payments-total {
     background: #ffffff;
@@ -560,7 +573,6 @@ header {
 
       & .amount {
         color: #039855;
-        font-family: Inter;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -570,3 +582,259 @@ header {
   }
 }
 // End payments-charts-section
+
+// Clients table section
+.clients-table {
+  border-top: 8px solid #6941c6;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  & .clients-list-handler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    & .clients-text {
+      & .heading {
+        color: #101828;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 0;
+
+        & span {
+          border-radius: 16px;
+          background: #f9f5ff;
+          mix-blend-mode: multiply;
+          padding: 2px 8px;
+          color: #6941c6;
+          text-align: center;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px;
+          margin-left: 8px;
+          -webkit-border-radius: 16px;
+          -moz-border-radius: 16px;
+          -ms-border-radius: 16px;
+          -o-border-radius: 16px;
+        }
+      }
+
+      & p {
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: #475467;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    & .export {
+      @include button_basic_style;
+      margin-right: 12px;
+      & svg {
+        margin-right: 8px;
+      }
+    }
+
+    & .save-list {
+      padding: 10px 16px;
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23px;
+      border-radius: 8px;
+      border: 1px solid #7f56d9;
+      background: #7f56d9;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+      & svg {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  & .clients-list-search {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    & .input-group {
+      max-width: 638px;
+      border-radius: 8px;
+      border: 1px solid #d0d5dd;
+      background: #fff;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+      & button {
+        padding: 10px 8px 10px 14px;
+        border: none;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      & input {
+        padding: 10px 14px 10px 0;
+        border: none;
+      }
+    }
+
+    & .buttons-wrapper button {
+      @include button_basic_style;
+      margin-left: 12px;
+    }
+  }
+
+  & .filter-buttons {
+    & button {
+      @include button_basic_style;
+      margin-right: 5px;
+
+      & svg {
+        margin-left: 4px;
+        margin-right: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  & .table .table-responsive {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    @include border_radius_20;
+
+    & .table-bordered {
+      border: 1px solid #eaecf0;
+    }
+
+    & table > tbody > tr > td:nth-child(even) {
+      background-color: #faf9fb;
+    }
+
+    & td,
+    & th {
+      text-align: center;
+      color: #475467;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+    }
+
+    & thead th:nth-child(odd) {
+      background-color: rgba(176, 169, 255, 0.49);
+    }
+
+    & thead th:nth-child(even) {
+      background-color: #b5aeff;
+    }
+
+    & thead th {
+      color: #475467;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 16px;
+
+      &:first-child {
+        text-align: left;
+        padding-left: 24px;
+        font-size: 14px;
+
+        & input {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    & tbody th {
+      display: flex;
+      align-items: center;
+      padding: 16px 0 16px 24px;
+
+      & div {
+        text-align: left;
+        margin-left: 12px;
+      }
+    }
+
+    & tbody th .name {
+      color: #7367f0;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 21px;
+      margin-bottom: 0;
+    }
+
+    & tbody th .email {
+      color: #475467;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  & .pagination-block {
+    border-top: 1px solid #eaecf0;
+    padding-top: 12px;
+
+    & .page-link-next {
+      margin-left: auto;
+    }
+
+    & .page-link-prev {
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    & .page-link.active {
+      border: none;
+      background-color: #f9fafb;
+    }
+
+    & .page-link {
+      color: #475467;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      border: none;
+      padding: 12px 14px;
+      @include border_radius_8;
+
+      & svg {
+        margin: 0 8px;
+      }
+
+      &:hover {
+        background-color: #f9fafb;
+      }
+
+      &:visited {
+        color: #475467;
+      }
+    }
+  }
+}
+// End client table section

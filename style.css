@@ -9,6 +9,10 @@
   line-height: 24px;
 }
 
+.btn svg {
+  margin-right: 8px;
+}
+
 .screens-links {
   background-color: #2a9d8f;
   height: 100vw;
@@ -34,11 +38,19 @@ a:hover {
 .content-screen {
   width: 100%;
   padding: 40px 24px;
+  margin-left: 260px;
 }
 
 .menu {
   max-width: 260px;
   width: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  height: 100vh;
+  box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
+}
+.menu::-webkit-scrollbar {
+  width: 0;
 }
 
 .main-menu {
@@ -198,7 +210,7 @@ header .notification.indicate .indicator {
   display: block;
   position: absolute;
   top: 6px;
-  right: 12px;
+  right: 4px;
 }
 header .welcome-text p {
   color: #7c8db5;
@@ -285,7 +297,7 @@ header .user-active-status::before {
 .statistics-section {
   margin-top: 42px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 29px;
 }
 .statistics-section .underwriting-statistic {
@@ -361,6 +373,7 @@ header .user-active-status::before {
   max-width: 274px;
   min-height: 334px;
   box-sizing: content-box;
+  overflow: hidden;
 }
 .statistics-section .statistics .statistics-item .data-wrapper {
   padding: 12px 12.5px;
@@ -370,6 +383,11 @@ header .user-active-status::before {
   border: 1px solid #d0d5dd;
   background: #fff;
   padding: 10px 16px;
+  color: #344054;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
   color: #344054;
   font-size: 14px;
   font-style: normal;
@@ -410,6 +428,7 @@ header .user-active-status::before {
   max-width: 274px;
   min-height: 334px;
   box-sizing: content-box;
+  overflow: hidden;
 }
 .statistics-section .appproval-rate .statistics-item .data-wrapper {
   padding: 79px 12.5px 0 12.5px;
@@ -430,6 +449,8 @@ header .user-active-status::before {
 
 .payments-charts {
   display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
 }
 .payments-charts .payments-total {
   background: #ffffff;
@@ -508,9 +529,253 @@ header .user-active-status::before {
 }
 .payments-charts .last-payments .payments-wrapper .payments-item .amount {
   color: #039855;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.clients-table {
+  border-top: 8px solid #6941c6;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.clients-table .clients-list-handler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.clients-table .clients-list-handler .clients-text .heading {
+  color: #101828;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+.clients-table .clients-list-handler .clients-text .heading span {
+  border-radius: 16px;
+  background: #f9f5ff;
+  mix-blend-mode: multiply;
+  padding: 2px 8px;
+  color: #6941c6;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: 8px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.clients-table .clients-list-handler .clients-text p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #475467;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.clients-table .clients-list-handler .export {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+  color: #344054;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-right: 12px;
+}
+.clients-table .clients-list-handler .export svg {
+  margin-right: 8px;
+}
+.clients-table .clients-list-handler .save-list {
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  border-radius: 8px;
+  border: 1px solid #7f56d9;
+  background: #7f56d9;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.clients-table .clients-list-handler .save-list svg {
+  margin-right: 8px;
+}
+.clients-table .clients-list-search {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.clients-table .clients-list-search .input-group {
+  max-width: 638px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.clients-table .clients-list-search .input-group button {
+  padding: 10px 8px 10px 14px;
+  border: none;
+}
+.clients-table .clients-list-search .input-group button:hover {
+  background: none;
+}
+.clients-table .clients-list-search .input-group input {
+  padding: 10px 14px 10px 0;
+  border: none;
+}
+.clients-table .clients-list-search .buttons-wrapper button {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+  color: #344054;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-left: 12px;
+}
+.clients-table .filter-buttons button {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+  color: #344054;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-right: 5px;
+}
+.clients-table .filter-buttons button svg {
+  margin-left: 4px;
+  margin-right: 0;
+  padding: 0;
+}
+.clients-table .table .table-responsive {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.clients-table .table .table-responsive .table-bordered {
+  border: 1px solid #eaecf0;
+}
+.clients-table .table .table-responsive table > tbody > tr > td:nth-child(even) {
+  background-color: #faf9fb;
+}
+.clients-table .table .table-responsive td, .clients-table .table .table-responsive th {
+  text-align: center;
+  color: #475467;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+.clients-table .table .table-responsive thead th:nth-child(odd) {
+  background-color: rgba(176, 169, 255, 0.49);
+}
+.clients-table .table .table-responsive thead th:nth-child(even) {
+  background-color: #b5aeff;
+}
+.clients-table .table .table-responsive thead th {
+  color: #475467;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.clients-table .table .table-responsive thead th:first-child {
+  text-align: left;
+  padding-left: 24px;
+  font-size: 14px;
+}
+.clients-table .table .table-responsive thead th:first-child input {
+  margin-right: 12px;
+}
+.clients-table .table .table-responsive tbody th {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 16px 24px;
+}
+.clients-table .table .table-responsive tbody th div {
+  text-align: left;
+  margin-left: 12px;
+}
+.clients-table .table .table-responsive tbody th .name {
+  color: #7367f0;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+.clients-table .table .table-responsive tbody th .email {
+  color: #475467;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin-bottom: 0;
+}
+.clients-table .pagination-block {
+  border-top: 1px solid #eaecf0;
+  padding-top: 12px;
+}
+.clients-table .pagination-block .page-link-next {
+  margin-left: auto;
+}
+.clients-table .pagination-block .page-link-prev {
+  margin-right: auto;
+  cursor: pointer;
+}
+.clients-table .pagination-block .page-link.active {
+  border: none;
+  background-color: #f9fafb;
+}
+.clients-table .pagination-block .page-link {
+  color: #475467;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.clients-table .pagination-block .page-link svg {
+  margin: 0 8px;
+}
+.clients-table .pagination-block .page-link:hover {
+  background-color: #f9fafb;
+}
+.clients-table .pagination-block .page-link:visited {
+  color: #475467;
 }/*# sourceMappingURL=style.css.map */
