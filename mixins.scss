@@ -1,0 +1,14 @@
+@mixin crm_data_block {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+}
+
+@mixin button_basic_style {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+}
