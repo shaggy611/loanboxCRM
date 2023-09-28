@@ -13,6 +13,12 @@
   margin-right: 8px;
 }
 
+section,
+header {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .screens-links {
   background-color: #2a9d8f;
   height: 100vw;
@@ -191,6 +197,10 @@ a:hover {
   -o-transition: all 0.3s ease-in-out;
 }
 
+header .welcome-text {
+  padding-left: 0;
+  padding-right: 0;
+}
 header .welcome-text h1 {
   color: rgb(94, 88, 115);
   font-family: Poppins;
@@ -261,6 +271,7 @@ header .user-active-status::before {
 
 .data-picker {
   margin-top: 8px;
+  margin-bottom: 42px;
 }
 .data-picker .btn-outline-primary {
   color: #1d2939;
@@ -297,7 +308,7 @@ header .user-active-status::before {
 .statistics-section {
   margin-top: 42px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 29px;
 }
 .statistics-section .underwriting-statistic {
@@ -449,14 +460,14 @@ header .user-active-status::before {
 
 .payments-charts {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 38px;
 }
 .payments-charts .payments-total {
   background: #ffffff;
   max-width: 749px;
   width: 100%;
-  margin-right: 12px;
+  margin-right: 45px;
 }
 .payments-charts .last-payments .payments-wrapper {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -778,4 +789,150 @@ header .user-active-status::before {
 }
 .clients-table .pagination-block .page-link:visited {
   color: #475467;
+}
+
+.collection-statistic {
+  margin-bottom: 24px;
+}
+.collection-statistic .collection-statistic__item {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+  max-width: 194px;
+  padding: 12px;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title {
+  margin-bottom: 24px;
+  display: flex;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title .collection-statistic__item-title-ico {
+  width: 24px;
+  height: 24px;
+  border-radius: 26px;
+  border: 0.5px solid #eeeff5;
+  background: #fff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title .collection-statistic__item-title-ico svg {
+  margin-right: 0 !important;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title span:first-child {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.154px;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title span:last-child {
+  color: #7c8db5;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-title span:last-child svg {
+  margin-right: 8px;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-metric {
+  color: #5e5873;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 36px;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-index {
+  margin-bottom: 0;
+}
+.collection-statistic .collection-statistic__item .collection-statistic__item-percentdata {
+  color: rgba(110, 107, 123, 0.5);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 0;
+}
+
+.goals-overview {
+  margin-bottom: 24px;
+}
+.goals-overview .goals-overview-item {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+  max-width: 579px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  box-sizing: content-box;
+  margin-right: 0;
+}
+.goals-overview .goals-overview-item img {
+  min-width: 579px;
+}
+
+.contracts-by-scoring {
+  margin-bottom: 48px;
+}
+.contracts-by-scoring .contracts-by-scoring__divider {
+  margin-bottom: 26px;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number {
+  display: block;
+  padding: 4px 10px;
+  color: #ffffff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  width: 32px;
+  height: 32px;
+  margin-right: 14px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.contracts-by-scoring .contracts-by-scoring__item-text {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+.contracts-by-scoring .contracts-by-scoring__item-text span {
+  font-weight: 500;
+  margin-left: 7px;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number_0 {
+  background-color: #28c76f;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number_1 {
+  background-color: #7367f0;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number_2 {
+  background-color: #467fff;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number_3 {
+  background-color: #ccc7fa;
+}
+.contracts-by-scoring .contracts-by-scoring__item_number_4 {
+  background-color: #b7ccf7;
 }/*# sourceMappingURL=style.css.map */
