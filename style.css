@@ -1006,4 +1006,87 @@ header .user-active-status::before {
 }
 .contracts-by-scoring .contracts-by-scoring__item_number_4 {
   background-color: #b7ccf7;
+}
+
+.cashflow-section {
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
+.cashflow-section .cashflow-section-chart {
+  width: 100%;
+  margin-right: 18px;
+}
+.cashflow-section .cashflow-section-chart .chart {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+}
+.cashflow-section .cashflow-section-chart .chart img {
+  width: 100%;
+}
+.cashflow-section .underwriting-statistic {
+  max-width: 580px;
+  width: 100%;
+}
+.cashflow-section .underwriting-statistic .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+  padding: 12px 12px;
+  max-width: 180px;
+  min-height: 152px;
+  margin-right: 11.5px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .heading {
+  margin-bottom: 11px;
+  align-items: center;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .heading .status {
+  color: rgba(0, 0, 0, 0.7);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.154px;
+  -webkit-font-feature-settings: "clig" off, "liga" off;
+  -moz-font-feature-settings: "clig" off, "liga" off;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .number-parameter {
+  color: #5e5873;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .metrix-summ {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .metric-percentage {
+  color: rgba(110, 107, 123, 0.5);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }/*# sourceMappingURL=style.css.map */

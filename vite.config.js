@@ -13,7 +13,8 @@ export default defineConfig({
                 pages_2: resolve(__dirname, 'pages/chief_collection_manager_1.html'),
                 pages_3: resolve(__dirname, 'pages/chief_collection_manager_2.html'),
                 pages_4: resolve(__dirname, 'pages/lawyer_dashboard.html'),
-                pages_5: resolve(__dirname, 'pages/superadmin_dashboard_3.html')
+                pages_5: resolve(__dirname, 'pages/superadmin_dashboard_3.html'),
+                pages_6: resolve(__dirname, 'pages/credit_manager_dashboard.html')
             },
         }
     }
