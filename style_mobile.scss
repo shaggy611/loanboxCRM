@@ -1,0 +1,171 @@
+@import 'mixins';
+
+@include mobile {
+
+  .show-menu {
+    margin-left: 0 !important;
+  }
+
+  .menu-blur-filter.show {
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.415);
+    z-index: 90;
+    position: fixed;
+  }
+
+  .menu {
+    margin-left: -260px;
+    z-index: 99;
+
+    .main-menu {
+      max-width: 260px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
+      padding: 23px 0;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+
+      & .navbar-brand {
+        padding-left: 25px;
+        text-align: left;
+        width: 100%;
+      }
+
+      & .nav {
+        margin-bottom: 24px;
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+      }
+
+      & .menu-subsection {
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 15px;
+        font-weight: 300;
+        padding-left: 30px;
+        color: rgba(94, 88, 115, 0.5);
+      }
+
+      & .menu-block {
+        border-bottom: 1px solid rgba(110, 107, 123, 0.3);
+        padding: 12px 0;
+        width: 100%;
+
+        &:last-child {
+          margin: 0 !important;
+        }
+
+        & .nav-item {
+          width: 100%;
+          padding: 12px 15px 12px 15px;
+
+          .badge {
+            background-color: #7367f0;
+            position: absolute;
+            left: calc(100% - 55px);
+          }
+
+          & .collapse li {
+            padding-top: 24px;
+            padding-bottom: 0;
+
+            & a::before {
+              content: '';
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              border: 1px solid #5e5873;
+              margin-right: 15px;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+            }
+          }
+        }
+        & .nav-item .nav-link {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 15px !important;
+          padding-right: 10px !important;
+        }
+      }
+    }
+  }
+
+  // Header
+  header {
+    & .row {
+      display: block;
+    }
+
+    & .welcome-text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & .welcome-text h1 {
+      font-size: 24px;
+    }
+
+    & .welcome-text p {
+      color: #7c8db5;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    & .user-name-role {
+      text-align: right;
+      margin-right: 14px;
+    }
+
+    & .name {
+      color: #5e5873;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+    }
+
+    & .role {
+      color: #b9b9c3;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    & .user-photo {
+      width: 38px;
+      height: 38px;
+      position: relative;
+    }
+
+    & .user-active-status::before {
+      position: absolute;
+      top: 10px;
+      content: '';
+      display: block;
+      width: 11px;
+      height: 11px;
+      border: 1px solid #ffffff;
+      background-color: red;
+      z-index: 99;
+    }
+  }
+  // End Header
+}

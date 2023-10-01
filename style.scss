@@ -1,39 +1,6 @@
 @import 'mixins';
 @import 'common_styles';
 
-// Additional styled for main page with links
-.screens-links {
-  background-color: #2a9d8f;
-  height: 100vw;
-  padding: 20px 20%;
-
-  & li {
-    background-color: #f4a261;
-
-    & a {
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-    }
-  }
-}
-// End additional styled for main page with links
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: rgba(94, 88, 115, 0.5);
-}
-
-a:hover {
-  color: #5e5873 !important;
-}
-
-.content-screen {
-  width: 100%;
-  padding: 40px 24px;
-  margin-left: 260px;
-}
-
 // Leftside menu Navabr
 .menu {
   max-width: 260px;
@@ -42,6 +9,7 @@ a:hover {
   overflow-y: scroll;
   height: 100vh;
   box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -148,6 +116,24 @@ a:hover {
       padding-bottom: 12px;
       padding-left: 15px !important;
       padding-right: 10px !important;
+
+      &:hover {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
+
+        & a,
+        & span {
+          color: #ffffff;
+        }
+
+        &::before {
+          border: 1px solid #ffffff;
+        }
+      }
     }
 
     & .nav-item.active-item > a {
@@ -203,6 +189,7 @@ a:hover {
     -o-transition: all 0.3s ease-in-out;
   }
 }
+
 // End of Leftside menu Navabr
 
 // Header
@@ -337,6 +324,7 @@ header {
   margin-top: 42px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 29px;
 
   & .underwriting-statistic {
@@ -348,14 +336,15 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 12px;
+      row-gap: 12px;
 
       & .underwriting-statistic-item {
         @include crm_data_block;
         padding: 12px 12px;
         max-width: 180px;
         min-height: 152px;
-        margin-right: 11.5px;
-        margin-bottom: 12px;
+        // margin-right: 11.5px;
+        // margin-bottom: 12px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -463,6 +452,18 @@ header {
         }
       }
 
+      & .statistics-item-title {
+        color: rgba(0, 0, 0, 0.7);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.154px;
+        margin-bottom: 44px;
+        display: block;
+      }
+
       & .number-parameter {
         color: #5e5873;
         font-family: Montserrat;
@@ -491,6 +492,19 @@ header {
       min-height: 334px;
       box-sizing: content-box;
       overflow: hidden;
+
+      & .statistics-item-title {
+        color: rgba(0, 0, 0, 0.7);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.154px;
+        margin-bottom: 44px;
+        margin-top: -68px;
+        display: block;
+      }
 
       & .application-button {
         @include button_basic_style;
@@ -917,7 +931,7 @@ header {
 
   & .collection-statistic__item {
     @include crm_data_block;
-    max-width: 194px;
+    max-width: 179px;
     padding: 12px;
 
     & .collection-statistic__item-title {
@@ -1161,3 +1175,256 @@ header {
   }
 }
 // End statistics-section
+
+// Cashflow chart section
+.cashflow-chart-section {
+  padding-bottom: 40px;
+
+  & .cashflow-chart-section__chart {
+    @include crm_data_block;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+// End Cashflow chart section
+
+// Overdue section
+.overdue-section {
+  margin-bottom: 24px;
+
+  & .overdue-section-chart {
+    @include crm_data_block;
+    padding: 0;
+
+    & img {
+      width: 100%;
+      max-width: 721px;
+    }
+  }
+
+  & .overdue-section-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: end;
+
+    & .overdue-section-item {
+      @include crm_data_block;
+      padding: 20px 13px 20px 20px;
+      max-width: 179px;
+      box-sizing: border-box;
+
+      & .number {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        width: 48px;
+        height: 48px;
+        padding: 13px;
+        margin-right: 0;
+        margin-left: auto;
+        margin-bottom: 2px;
+        border-radius: 26px;
+      }
+
+      & .number-bg-purple-grade-1 {
+        background-color: #d0cdf2;
+      }
+
+      & .number-bg-purple-grade-2 {
+        background-color: rgba(115, 103, 240, 0.45);
+      }
+
+      & .number-bg-purple-grade-3 {
+        background-color: #a199f6;
+      }
+
+      & .number-bg-purple-grade-4 {
+        background-color: #7367f0;
+      }
+
+      & .title {
+        color: var(--dark, #5e5873);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 12px;
+      }
+
+      & .subtitle {
+        color: var(--dark, #5e5873);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+// End overdue section
+
+// Login form
+.login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+
+  & .login-form {
+    max-width: 484px;
+    padding: 0 37px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  & .login-form-logo {
+    width: 100%;
+    text-align: center;
+    color: #7367f0;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50.4px; /* 120% */
+    letter-spacing: 0.14px;
+
+    & svg {
+      margin-right: 14px;
+    }
+  }
+
+  & .login-form-wrapper {
+    padding: 16px 32px;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
+
+  & .login-form-title {
+    color: var(--1-theme-color-heading-display-text, #5e5873);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  & .login-form-subtitle {
+    color: #6e6b7b;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 24px;
+  }
+
+  & .login-form-center,
+  & .login-form-right {
+    background-color: #fff;
+    padding-top: 79px;
+  }
+
+  & .login-form-right {
+    background-image: url('/public/images/pattern-bg-1.svg');
+    background-repeat: no-repeat;
+    background-position: 100% -40%;
+
+    // &:after {
+    //   position: absolute;
+    //   content: url('/public/images/pattern-bg-1.svg');
+    // }
+  }
+
+  & form {
+    margin-bottom: 16px;
+
+    & .form-label {
+      color: #6e6b7b;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      margin-bottom: 8px;
+    }
+
+    & .form-control {
+      border-radius: 5px;
+      border: 1px solid #d8d6de;
+      padding: 8px 15px;
+      margin-bottom: 24px;
+
+      &::placeholder {
+        color: #b9b9c3;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    & .btn {
+      padding: 10px 22px;
+      border-radius: 5px;
+      background: #7367f0;
+      color: #fff;
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.4px;
+      border: none;
+      width: 100%;
+
+      &:focus {
+        background: #5c53c3;
+      }
+    }
+  }
+
+  & .login-form-create-account {
+    color: #6e6b7b;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: 0.14px;
+    text-align: center;
+
+    & a {
+      color: #7367f0;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.14px;
+      text-decoration: none;
+    }
+  }
+}
+// End Login Form

@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>LoanBox</title>
+</head>
+
+<body>
+
+    <div class="app d-flex">
+
+        <div class="menu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="main-menu col-auto col-md-3 col-xl-2">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100">
+                            <a href="/"
+                                class="navbar-brand d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                                <img src="/images/logo.svg" alt="Logo" class="d-inline-block align-text-top">
+                                <span class="logo-name fs-5 d-none d-sm-inline mx-2">LoanBox</span>
+                            </a>
+                            <ul class="nav nav-pills flex-column align-items-center align-items-sm-start menu-block"
+                                id="menu-block-1">
+                                <li class="nav-item active-item">
+
+                                    <a href="#submenu1" data-bs-toggle="collapse"
+                                        class="dropdown-item nav-link dropdown-toggle px-0 align-middle">
+                                        <i><img src="/images/dashboard-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Dashboard</span> <span
+                                            class="badge rounded-circle">2</span> </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Analytics</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">eCommerce</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/clients-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Clients</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/applications-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Applications</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/loans-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Loans</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/overdue-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Overdue</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <span class="menu-subsection">Subtitle:</span>
+
+                            <ul class="nav nav-pills flex-column align-items-center align-items-sm-start menu-block"
+                                id="menu-block-1">
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/collection-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Collection</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/legal-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Legal</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/risk-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Risk</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/reports-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Reports</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <span class="menu-subsection">Subtitle:</span>
+
+                            <ul class="nav nav-pills flex-column align-items-center align-items-sm-start menu-block"
+                                id="menu-block-1">
+
+                                <li class="nav-item">
+
+                                    <a href="#submenu2" data-bs-toggle="collapse"
+                                        class="dropdown-item nav-link dropdown-toggle px-0 align-middle">
+                                        <i><img src="/images/analytics-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Analytics</span> </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_1</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_2</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a href="#submenu3" data-bs-toggle="collapse"
+                                        class="dropdown-item nav-link dropdown-toggle px-0 align-middle">
+                                        <i><img src="/images/marketing-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Marketing</span> </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_1</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_2</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a href="#submenu4" data-bs-toggle="collapse"
+                                        class="dropdown-item nav-link dropdown-toggle px-0 align-middle">
+                                        <i><img src="/images/administration-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Administration</span> </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu4" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_1</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span
+                                                    class="d-none d-sm-inline">Item_2</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                            <ul class="nav nav-pills flex-column align-items-center align-items-sm-start mt-4 menu-block"
+                                id="menu-block-1">
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/settings-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Settings</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i><img src="/images/logout-ico.svg" alt="Menu icon"></i> <span
+                                            class="ms-1 d-none d-sm-inline">Log
+                                            Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-screen">
+
+            <header>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-4 welcome-text">
+                            <h1>Welcome Back, Marci</h1>
+                            <p>Here is the information about all your orders</p>
+                        </div>
+                        <div class="col-5 d-flex justify-content-end align-items-center">
+                            <button type="button" class="btn">
+                                <img src="/images/search-ico.svg" alt="Search">
+                            </button>
+                            <button type="button" class="btn notification indicate">
+                                <img src="/images/bell-ico.svg" alt="Bell">
+                                <svg class="indicator" width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 2C4 3.10457 3.10457 4 2 4C0.895431 4 0 3.10457 0 2C0 0.895431 0.895431 0 2 0C3.10457 0 4 0.895431 4 2Z"
+                                        fill="#FF3B30" />
+                                </svg>
+                            </button>
+                            <div class="user-name-role">
+                                <p class="name m-0">Nan Saetang</p>
+                                <p class="role m-0">Superadmin</p>
+                            </div>
+                            <img class="user-photo user-active-status" src="/images/user-photo-ico.png" alt="User">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="data-picker">
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <div class="btn-group" role="group" aria-label="Choose data for filter">
+                            <button type="button" class="btn btn-outline-primary">12 month</button>
+                            <button type="button" class="btn btn-outline-primary">30 days</button>
+                            <button type="button" class="btn btn-outline-primary">7 days</button>
+                            <button type="button" class="btn btn-outline-primary">24 hours</button>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button type="button" class="btn data-selecter"><svg class="calendar" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.5 8.33366H2.5M13.3333 1.66699V5.00033M6.66667 1.66699V5.00033M6.5 18.3337H13.5C14.9001 18.3337 15.6002 18.3337 16.135 18.0612C16.6054 17.8215 16.9878 17.439 17.2275 16.9686C17.5 16.4339 17.5 15.7338 17.5 14.3337V7.33366C17.5 5.93353 17.5 5.23346 17.2275 4.69868C16.9878 4.22828 16.6054 3.84583 16.135 3.60614C15.6002 3.33366 14.9001 3.33366 13.5 3.33366H6.5C5.09987 3.33366 4.3998 3.33366 3.86502 3.60614C3.39462 3.84583 3.01217 4.22828 2.77248 4.69868C2.5 5.23346 2.5 5.93353 2.5 7.33366V14.3337C2.5 15.7338 2.5 16.4339 2.77248 16.9686C3.01217 17.439 3.39462 17.8215 3.86502 18.0612C4.3998 18.3337 5.09987 18.3337 6.5 18.3337Z"
+                                    stroke="#344054" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Select dates</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="statistics-section">
+
+                <div class="underwriting-statistic">
+                    <p class="section-heading">Underwriting Statistics</p>
+
+
+                    <div class="wrapper">
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Leads</span>
+                                <div class="index">
+                                    <svg class="up" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.65369 5.29651C7.50291 5.44728 7.41055 5.65681 7.41085 5.88692L7.41085 5.98819C7.41085 6.44899 7.78388 6.82203 8.24409 6.82144L12.797 6.82144L5.09526 14.5232C4.76999 14.8485 4.76999 15.3764 5.09526 15.7017C5.42053 16.027 5.9485 16.027 6.27377 15.7017L13.9755 7.99995V12.5529C13.9755 13.0137 14.3486 13.3867 14.8088 13.3861H14.91C15.3708 13.3861 15.7439 13.0131 15.7433 12.5529V5.88692C15.7433 5.42612 15.3703 5.05308 14.91 5.05367L8.24409 5.05367C8.01369 5.05367 7.80446 5.14573 7.65369 5.29651Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                    3.0
+                                </div>
+                            </div>
+                            <div class="number-parameter">23034</div>
+                            <div class="metric-percentage">+1.01% this week</div>
+                        </div>
+
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Clients</span>
+                                <div class="index">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_366_139839)">
+                                            <path
+                                                d="M16.3749 7.21326C16.2171 7.06248 15.9977 6.97013 15.7569 6.97042L15.6509 6.97042C15.1685 6.97042 14.778 7.34345 14.7786 7.80366L14.7786 12.3566L6.71656 4.65483C6.37607 4.32956 5.8234 4.32956 5.48291 4.65483C5.14242 4.9801 5.14242 5.50807 5.48291 5.83334L13.545 13.5351H8.77906C8.2967 13.5351 7.90621 13.9081 7.90683 14.3683L7.90683 14.4696C7.90683 14.9304 8.29732 15.3035 8.77906 15.3029L15.7569 15.3029C16.2392 15.3029 16.6297 14.9298 16.6291 14.4696L16.6291 7.80366C16.6291 7.57326 16.5327 7.36403 16.3749 7.21326Z"
+                                                fill="#F80B0B" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_366_139839">
+                                                <rect width="20" height="20.9357" fill="white"
+                                                    transform="matrix(0 1 -1 0 21.3945 0)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    0.2
+                                </div>
+                            </div>
+                            <div class="number-parameter">11239</div>
+                            <div class="metric-percentage">-0.01% this week</div>
+                        </div>
+
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Applications</span>
+                                <div class="index">
+                                    <svg class="up" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.65369 5.29651C7.50291 5.44728 7.41055 5.65681 7.41085 5.88692L7.41085 5.98819C7.41085 6.44899 7.78388 6.82203 8.24409 6.82144L12.797 6.82144L5.09526 14.5232C4.76999 14.8485 4.76999 15.3764 5.09526 15.7017C5.42053 16.027 5.9485 16.027 6.27377 15.7017L13.9755 7.99995V12.5529C13.9755 13.0137 14.3486 13.3867 14.8088 13.3861H14.91C15.3708 13.3861 15.7439 13.0131 15.7433 12.5529V5.88692C15.7433 5.42612 15.3703 5.05308 14.91 5.05367L8.24409 5.05367C8.01369 5.05367 7.80446 5.14573 7.65369 5.29651Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                    10.2
+                                </div>
+                            </div>
+                            <div class="number-parameter">26356</div>
+                            <div class="metric-percentage">+1.01% this week</div>
+                        </div>
+
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Avg rating</span>
+                                <div class="index">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_366_158357)">
+                                            <path
+                                                d="M16.8749 7.21326C16.7171 7.06248 16.4977 6.97013 16.2569 6.97042L16.1509 6.97042C15.6685 6.97042 15.278 7.34345 15.2786 7.80366L15.2786 12.3566L7.21656 4.65483C6.87607 4.32956 6.3234 4.32956 5.98291 4.65483C5.64242 4.9801 5.64242 5.50807 5.98291 5.83334L14.045 13.5351H9.27906C8.7967 13.5351 8.40621 13.9081 8.40683 14.3683L8.40683 14.4696C8.40683 14.9304 8.79732 15.3035 9.27906 15.3029L16.2569 15.3029C16.7392 15.3029 17.1297 14.9298 17.1291 14.4696L17.1291 7.80366C17.1291 7.57326 17.0327 7.36403 16.8749 7.21326Z"
+                                                fill="#F80B0B" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_366_158357">
+                                                <rect width="20" height="20.9357" fill="white"
+                                                    transform="matrix(0 1 -1 0 21.8945 0)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    0.2
+                                </div>
+                            </div>
+                            <div class="number-parameter">374/700</div>
+                            <div class="metric-percentage">-0.01% this week</div>
+                        </div>
+
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Approval time</span>
+                                <div class="index">
+                                    <svg class="up" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.65369 5.29651C7.50291 5.44728 7.41055 5.65681 7.41085 5.88692L7.41085 5.98819C7.41085 6.44899 7.78388 6.82203 8.24409 6.82144L12.797 6.82144L5.09526 14.5232C4.76999 14.8485 4.76999 15.3764 5.09526 15.7017C5.42053 16.027 5.9485 16.027 6.27377 15.7017L13.9755 7.99995V12.5529C13.9755 13.0137 14.3486 13.3867 14.8088 13.3861H14.91C15.3708 13.3861 15.7439 13.0131 15.7433 12.5529V5.88692C15.7433 5.42612 15.3703 5.05308 14.91 5.05367L8.24409 5.05367C8.01369 5.05367 7.80446 5.14573 7.65369 5.29651Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                    10.2
+                                </div>
+                            </div>
+                            <div class="number-parameter">2 m 11 s</div>
+                            <div class="metric-percentage">+1.01% this week</div>
+                        </div>
+
+                        <div class="underwriting-statistic-item">
+                            <div class="heading d-flex justify-content-between">
+                                <span class="status">Avg contract</span>
+                                <div class="index">
+                                    <!-- <svg class="up" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.65369 5.29651C7.50291 5.44728 7.41055 5.65681 7.41085 5.88692L7.41085 5.98819C7.41085 6.44899 7.78388 6.82203 8.24409 6.82144L12.797 6.82144L5.09526 14.5232C4.76999 14.8485 4.76999 15.3764 5.09526 15.7017C5.42053 16.027 5.9485 16.027 6.27377 15.7017L13.9755 7.99995V12.5529C13.9755 13.0137 14.3486 13.3867 14.8088 13.3861H14.91C15.3708 13.3861 15.7439 13.0131 15.7433 12.5529V5.88692C15.7433 5.42612 15.3703 5.05308 14.91 5.05367L8.24409 5.05367C8.01369 5.05367 7.80446 5.14573 7.65369 5.29651Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                    3.0 -->
+                                </div>
+                            </div>
+                            <div class="number-parameter">14 m 15 s</div>
+                            <div class="metric-percentage"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="statistics">
+                    <p class="section-heading">Statistics</p>
+
+                    <div class="statistics-item">
+                        <div class="data-wrapper">
+                            <span class="statistics-item-title">Applications</span>
+                            <div class="number-parameter mb-3">23034</div>
+
+                            <div class="index">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                    fill="none">
+                                    <path
+                                        d="M12.4987 15.7015C12.6494 15.5508 12.7418 15.3412 12.7415 15.1111L12.7415 15.0099C12.7415 14.5491 12.3685 14.176 11.9083 14.1766L7.35533 14.1766L15.0571 6.47485C15.3824 6.14959 15.3824 5.62161 15.0571 5.29634C14.7318 4.97107 14.2038 4.97107 13.8786 5.29634L6.17682 12.9981V8.44518C6.17682 7.98438 5.80378 7.61134 5.34357 7.61193H5.2423C4.7815 7.61193 4.40846 7.98497 4.40905 8.44518V15.1111C4.40905 15.5719 4.78209 15.945 5.2423 15.9444L11.9083 15.9444C12.1386 15.9444 12.3479 15.8523 12.4987 15.7015Z"
+                                        fill="#FF3B30" />
+                                </svg>
+                                <span class="number">2.56</span>
+                                <span class="percentage">-0.91% this week</span>
+                            </div>
+                        </div>
+
+                        <span class="chart">
+                            <svg class="chart2" width="271" height="154" viewBox="0 0 271 154" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 0C44.0288 4.17001 46.7554 104.003 90.3333 115.5C126.269 124.981 144.465 71.162 180.667 77C219.933 83.3322 232.498 139.414 271 154H0V0Z"
+                                    fill="#FEF3F2" />
+                                <path
+                                    d="M0 0C44.0288 4.17001 46.7554 104.003 90.3333 115.5C126.269 124.981 144.465 71.162 180.667 77C219.933 83.3322 232.498 139.414 271 154H0V0Z"
+                                    fill="url(#paint0_linear_55_240033)" />
+                                <path
+                                    d="M271 154C232.498 139.414 219.933 83.3322 180.667 77C144.465 71.162 126.269 124.981 90.3333 115.5C46.7554 104.003 44.0288 4.17001 -7.62939e-06 0"
+                                    stroke="url(#paint1_linear_55_240033)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_55_240033" x1="135.5" y1="0" x2="135.5" y2="154"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.641167" stop-color="white" stop-opacity="0" />
+                                        <stop offset="1" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_55_240033" x1="278.718" y1="154" x2="-16.5418"
+                                        y2="87.9313" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F04438" />
+                                        <stop offset="1" stop-color="#F04438" stop-opacity="0.95" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="appproval-rate">
+                    <p class="section-heading"></p>
+
+                    <div class="statistics-item">
+
+                        <div class="data-wrapper">
+                            <span class="statistics-item-title">Avg rating</span>
+                            <div class="number-parameter mb-3">190,489</div>
+
+                            <div class="index">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                    fill="none">
+                                    <path
+                                        d="M7.21228 5.29651C7.0615 5.44728 6.96915 5.65681 6.96944 5.88692L6.96944 5.98819C6.96944 6.44899 7.34248 6.82203 7.80269 6.82144L12.3556 6.82144L4.65385 14.5232C4.32858 14.8485 4.32858 15.3764 4.65385 15.7017C4.97912 16.027 5.50709 16.027 5.83236 15.7017L13.5341 7.99995V12.5529C13.5341 13.0137 13.9072 13.3867 14.3674 13.3861H14.4686C14.9294 13.3861 15.3025 13.0131 15.3019 12.5529V5.88692C15.3019 5.42612 14.9288 5.05308 14.4686 5.05367L7.80269 5.05367C7.57229 5.05367 7.36306 5.14573 7.21228 5.29651Z"
+                                        fill="#34C759" />
+                                </svg>
+                                <span class="number">3.1</span>
+                                <span class="percentage">+0.49% this week</span>
+                            </div>
+                        </div>
+
+                        <span class="chart">
+                            <svg class="group-289237" width="275" height="181" viewBox="0 0 275 181" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 139.512C0 139.512 11.8137 133.046 20.5486 114.577C29.2834 96.1082 39.4698 78.8153 57.7103 88.2699C75.9508 97.7246 80.7926 100.514 80.7926 100.514C80.7926 100.514 97.9557 112.266 109.611 79.458C121.898 47.5338 132.056 36.9416 132.056 36.9416C132.056 36.9416 142.36 27.9465 152.119 47.478C161.879 67.0095 171.576 84.638 171.576 84.638C171.576 84.638 185.724 105.718 194.55 79.458C203.376 53.1984 213.75 23.1874 213.75 23.1874C213.75 23.1874 224.163 -11.4804 245.131 5.85349C266.1 23.1874 275 23.1874 275 23.1874V175C275 178.314 272.314 181 269 181H5.99999C2.68629 181 0 178.314 0 175V139.512Z"
+                                        fill="url(#paint0_linear_360_271437)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 139.512C0 139.512 11.8137 133.046 20.5486 114.577C29.2834 96.1082 39.4698 78.8153 57.7103 88.2699C75.9508 97.7246 80.7926 100.514 80.7926 100.514C80.7926 100.514 97.9557 112.266 109.611 79.458C121.898 47.5338 132.056 36.9416 132.056 36.9416C132.056 36.9416 142.36 27.9465 152.119 47.478C161.879 67.0095 171.576 84.638 171.576 84.638C171.576 84.638 185.724 105.718 194.55 79.458C203.376 53.1984 213.75 23.1874 213.75 23.1874C213.75 23.1874 224.163 -11.4804 245.131 5.85349C266.1 23.1874 275 23.1874 275 23.1874V175C275 178.314 272.314 181 269 181H5.99999C2.68629 181 0 178.314 0 175V139.512Z"
+                                        fill="url(#paint1_linear_360_271437)" />
+                                </g>
+                                <path
+                                    d="M0 139C0 139 11.8137 132.555 20.5486 114.144C29.2834 95.7323 39.4698 78.4935 57.7103 87.9185C75.9508 97.3436 80.7926 100.124 80.7926 100.124C80.7926 100.124 97.9557 111.84 109.611 79.1341C121.898 47.3098 132.056 36.7508 132.056 36.7508C132.056 36.7508 142.36 27.7838 152.119 47.2542C161.879 66.7246 171.576 84.298 171.576 84.298C171.576 84.298 185.724 105.312 194.55 79.1341C203.376 52.9567 213.75 23.0396 213.75 23.0396C213.75 23.0396 224.163 -11.5198 245.131 5.75989C266.1 23.0396 275 23.0396 275 23.0396"
+                                    stroke="#28C76F" stroke-width="2" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_360_271437" x1="0" y1="0.0754857" x2="0" y2="181"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#28C76F" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0.01" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_360_271437" x1="0" y1="0.0754857" x2="0" y2="181"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0114183" stop-color="white" stop-opacity="0.01" />
+                                        <stop offset="1" stop-opacity="0.01" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="overdue-section">
+                <p class="section-heading">Last Payments</p>
+
+                <div class="row justify-content-between">
+                    <div class="col-6">
+                        <div class="overdue-section-chart">
+                            <img src="/public/images/overdue-chart.svg" alt="Chart">
+                        </div>
+                    </div>
+                    <div class="col-6 overdue-section-items-wrapper">
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-4">1+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-3">5+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-1">10+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-1">30+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-2">45+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                        <div class="overdue-section-item">
+                            <div class="number number-bg-purple-grade-4">60+</div>
+                            <p class="title">13034</p>
+                            <p class="subtitle">$1,138,871</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="payments-charts">
+                <div class="last-payments">
+                    <p class="section-heading">Last Payments</p>
+
+                    <div class="payments-wrapper">
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg class="mask" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.5 0.5H2.5C1.08333 0.5 0 1.58333 0 3V13C0 14.4167 1.08333 15.5 2.5 15.5H17.5C18.9167 15.5 20 14.4167 20 13V3C20 1.58333 18.9167 0.5 17.5 0.5ZM2.5 2.16667H17.5C18 2.16667 18.3333 2.5 18.3333 3V5.5H1.66667V3C1.66667 2.5 2 2.16667 2.5 2.16667ZM2.5 13.8333H17.5C18 13.8333 18.3333 13.5 18.3333 13V7.16667H1.66667V13C1.66667 13.5 2 13.8333 2.5 13.8333Z"
+                                        fill="#7367F0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#455678 (Mia Dung)</p>
+                                <p class="date mb-0">9 / 16 / 21 05:20:21 PM</p>
+                            </div>
+                            <div class="amount">+ $75.00</div>
+                        </div>
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.08464 9.16667H6.83464V5H10.168C10.668 5 11.0013 4.66667 11.0013 4.16667C11.0013 3.66667 10.668 3.33333 10.168 3.33333H6.83464V0.833333C6.83464 0.333333 6.5013 0 6.0013 0C5.5013 0 5.16797 0.333333 5.16797 0.833333V3.33333H3.91797C1.83464 3.33333 0.167969 5 0.167969 7.08333C0.167969 9.16667 1.83464 10.8333 3.91797 10.8333H5.16797V15H1.0013C0.501302 15 0.167969 15.3333 0.167969 15.8333C0.167969 16.3333 0.501302 16.6667 1.0013 16.6667H5.16797V19.1667C5.16797 19.6667 5.5013 20 6.0013 20C6.5013 20 6.83464 19.6667 6.83464 19.1667V16.6667H8.08464C10.168 16.6667 11.8346 15 11.8346 12.9167C11.8346 10.8333 10.168 9.16667 8.08464 9.16667ZM3.91797 9.16667C2.7513 9.16667 1.83464 8.25 1.83464 7.08333C1.83464 5.91667 2.7513 5 3.91797 5H5.16797V9.16667H3.91797ZM6.83464 15H8.08464C9.2513 15 10.168 14.0833 10.168 12.9167C10.168 11.75 9.2513 10.8333 8.08464 10.8333H6.83464V15Z"
+                                        fill="#28C76F" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#545324 (Lon Hon)</p>
+                                <p class="date mb-0">9 / 16 / 21 5:19:05 PM</p>
+                            </div>
+                            <div class="amount">+ $244.00</div>
+                        </div>
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.08464 9.16667H6.83464V5H10.168C10.668 5 11.0013 4.66667 11.0013 4.16667C11.0013 3.66667 10.668 3.33333 10.168 3.33333H6.83464V0.833333C6.83464 0.333333 6.5013 0 6.0013 0C5.5013 0 5.16797 0.333333 5.16797 0.833333V3.33333H3.91797C1.83464 3.33333 0.167969 5 0.167969 7.08333C0.167969 9.16667 1.83464 10.8333 3.91797 10.8333H5.16797V15H1.0013C0.501302 15 0.167969 15.3333 0.167969 15.8333C0.167969 16.3333 0.501302 16.6667 1.0013 16.6667H5.16797V19.1667C5.16797 19.6667 5.5013 20 6.0013 20C6.5013 20 6.83464 19.6667 6.83464 19.1667V16.6667H8.08464C10.168 16.6667 11.8346 15 11.8346 12.9167C11.8346 10.8333 10.168 9.16667 8.08464 9.16667ZM3.91797 9.16667C2.7513 9.16667 1.83464 8.25 1.83464 7.08333C1.83464 5.91667 2.7513 5 3.91797 5H5.16797V9.16667H3.91797ZM6.83464 15H8.08464C9.2513 15 10.168 14.0833 10.168 12.9167C10.168 11.75 9.2513 10.8333 8.08464 10.8333H6.83464V15Z"
+                                        fill="#28C76F" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#545324 (Lon Hon)</p>
+                                <p class="date mb-0">9 / 16 / 21 5:19:05 PM</p>
+                            </div>
+                            <div class="amount">+ $244.00</div>
+                        </div>
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg class="mask" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.5 0.5H2.5C1.08333 0.5 0 1.58333 0 3V13C0 14.4167 1.08333 15.5 2.5 15.5H17.5C18.9167 15.5 20 14.4167 20 13V3C20 1.58333 18.9167 0.5 17.5 0.5ZM2.5 2.16667H17.5C18 2.16667 18.3333 2.5 18.3333 3V5.5H1.66667V3C1.66667 2.5 2 2.16667 2.5 2.16667ZM2.5 13.8333H17.5C18 13.8333 18.3333 13.5 18.3333 13V7.16667H1.66667V13C1.66667 13.5 2 13.8333 2.5 13.8333Z"
+                                        fill="#7367F0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#455678 (Mia Dung)</p>
+                                <p class="date mb-0">9 / 16 / 21 05:20:21 PM</p>
+                            </div>
+                            <div class="amount">+ $75.00</div>
+                        </div>
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg class="mask" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.5 0.5H2.5C1.08333 0.5 0 1.58333 0 3V13C0 14.4167 1.08333 15.5 2.5 15.5H17.5C18.9167 15.5 20 14.4167 20 13V3C20 1.58333 18.9167 0.5 17.5 0.5ZM2.5 2.16667H17.5C18 2.16667 18.3333 2.5 18.3333 3V5.5H1.66667V3C1.66667 2.5 2 2.16667 2.5 2.16667ZM2.5 13.8333H17.5C18 13.8333 18.3333 13.5 18.3333 13V7.16667H1.66667V13C1.66667 13.5 2 13.8333 2.5 13.8333Z"
+                                        fill="#7367F0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#455678 (Mia Dung)</p>
+                                <p class="date mb-0">9 / 16 / 21 05:20:21 PM</p>
+                            </div>
+                            <div class="amount">+ $75.00</div>
+                        </div>
+                        <div class="payments-item d-flex align-tems-center">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.08464 9.16667H6.83464V5H10.168C10.668 5 11.0013 4.66667 11.0013 4.16667C11.0013 3.66667 10.668 3.33333 10.168 3.33333H6.83464V0.833333C6.83464 0.333333 6.5013 0 6.0013 0C5.5013 0 5.16797 0.333333 5.16797 0.833333V3.33333H3.91797C1.83464 3.33333 0.167969 5 0.167969 7.08333C0.167969 9.16667 1.83464 10.8333 3.91797 10.8333H5.16797V15H1.0013C0.501302 15 0.167969 15.3333 0.167969 15.8333C0.167969 16.3333 0.501302 16.6667 1.0013 16.6667H5.16797V19.1667C5.16797 19.6667 5.5013 20 6.0013 20C6.5013 20 6.83464 19.6667 6.83464 19.1667V16.6667H8.08464C10.168 16.6667 11.8346 15 11.8346 12.9167C11.8346 10.8333 10.168 9.16667 8.08464 9.16667ZM3.91797 9.16667C2.7513 9.16667 1.83464 8.25 1.83464 7.08333C1.83464 5.91667 2.7513 5 3.91797 5H5.16797V9.16667H3.91797ZM6.83464 15H8.08464C9.2513 15 10.168 14.0833 10.168 12.9167C10.168 11.75 9.2513 10.8333 8.08464 10.8333H6.83464V15Z"
+                                        fill="#28C76F" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <p class="heading mb-0">#545324 (Lon Hon)</p>
+                                <p class="date mb-0">9 / 16 / 21 5:19:05 PM</p>
+                            </div>
+                            <div class="amount">+ $244.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments-total">
+                    <p class="section-heading">Payments by types, totals</p>
+                    <div class="chart donut-chart">
+                        <img src="/public/images/donut-chart.svg" alt="Chart">
+                    </div>
+                </div>
+            </section>
+
+            <section class="cashflow-chart-section">
+                <p class="section-heading">Cashflow</p>
+
+                <div class="cashflow-chart-section__chart">
+                    <img src="/public/images/cashflow-chart-wide.svg" alt="Chart">
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../main.js"></script>
+
+</body>
+
+</html>

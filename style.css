@@ -1,3 +1,59 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(94, 88, 115, 0.5);
+}
+
+a:hover {
+  color: #5e5873 !important;
+}
+
+.content-screen {
+  width: 100%;
+  padding: 40px 24px;
+  margin-left: 260px;
+}
+
+#menu-button-toggler {
+  margin-bottom: 25px;
+  display: none;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  height: auto;
+}
+#menu-button-toggler hr {
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+#menu-button-toggler button {
+  border: 1px solid #d0d5dd;
+  padding: 7px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.app {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  #menu-button-toggler {
+    display: block;
+    position: fixed;
+  }
+}
+@media (max-width: 767px) {
+  .content-screen {
+    width: 100%;
+    padding: 60px 10px 20px 10px;
+    margin-left: 0;
+  }
+}
 .section-heading {
   margin-bottom: 12px;
   color: #5e5873;
@@ -15,7 +71,7 @@
 
 section,
 header {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: auto;
 }
 
@@ -33,21 +89,6 @@ header {
   text-decoration: none;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(94, 88, 115, 0.5);
-}
-
-a:hover {
-  color: #5e5873 !important;
-}
-
-.content-screen {
-  width: 100%;
-  padding: 40px 24px;
-  margin-left: 260px;
-}
-
 .menu {
   max-width: 260px;
   width: 100%;
@@ -55,6 +96,7 @@ a:hover {
   overflow-y: scroll;
   height: 100vh;
   box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
 }
 .menu::-webkit-scrollbar {
   width: 0;
@@ -148,6 +190,20 @@ a:hover {
   padding-bottom: 12px;
   padding-left: 15px !important;
   padding-right: 10px !important;
+}
+.main-menu .menu-block .nav-item .nav-link:hover {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
+}
+.main-menu .menu-block .nav-item .nav-link:hover a, .main-menu .menu-block .nav-item .nav-link:hover span {
+  color: #ffffff;
+}
+.main-menu .menu-block .nav-item .nav-link:hover::before {
+  border: 1px solid #ffffff;
 }
 .main-menu .menu-block .nav-item.active-item > a {
   background-color: #f8f8f8;
@@ -310,6 +366,7 @@ header .user-active-status::before {
   margin-top: 42px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 29px;
 }
 .statistics-section .underwriting-statistic {
@@ -322,6 +379,7 @@ header .user-active-status::before {
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 12px;
        column-gap: 12px;
+  row-gap: 12px;
 }
 .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -332,8 +390,6 @@ header .user-active-status::before {
   padding: 12px 12px;
   max-width: 180px;
   min-height: 152px;
-  margin-right: 11.5px;
-  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -438,6 +494,17 @@ header .user-active-status::before {
   margin-left: 7px;
   margin-right: 0;
 }
+.statistics-section .statistics .statistics-item .statistics-item-title {
+  color: rgba(0, 0, 0, 0.7);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.154px;
+  margin-bottom: 44px;
+  display: block;
+}
 .statistics-section .statistics .statistics-item .number-parameter {
   color: #5e5873;
   font-family: Montserrat;
@@ -466,6 +533,18 @@ header .user-active-status::before {
   min-height: 334px;
   box-sizing: content-box;
   overflow: hidden;
+}
+.statistics-section .appproval-rate .statistics-item .statistics-item-title {
+  color: rgba(0, 0, 0, 0.7);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.154px;
+  margin-bottom: 44px;
+  margin-top: -68px;
+  display: block;
 }
 .statistics-section .appproval-rate .statistics-item .application-button {
   border-radius: 8px;
@@ -871,7 +950,7 @@ header .user-active-status::before {
   border: 1px solid #eff0f6;
   background: #fff;
   width: 100%;
-  max-width: 194px;
+  max-width: 179px;
   padding: 12px;
 }
 .collection-statistic .collection-statistic__item .collection-statistic__item-title {
@@ -1089,4 +1168,237 @@ header .user-active-status::before {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+.cashflow-chart-section {
+  padding-bottom: 40px;
+}
+.cashflow-chart-section .cashflow-chart-section__chart {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+}
+.cashflow-chart-section .cashflow-chart-section__chart img {
+  width: 100%;
+}
+
+.overdue-section {
+  margin-bottom: 24px;
+}
+.overdue-section .overdue-section-chart {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.overdue-section .overdue-section-chart img {
+  width: 100%;
+  max-width: 721px;
+}
+.overdue-section .overdue-section-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: end;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+  padding: 20px 13px 20px 20px;
+  max-width: 179px;
+  box-sizing: border-box;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .number {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  width: 48px;
+  height: 48px;
+  padding: 13px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 2px;
+  border-radius: 26px;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-1 {
+  background-color: #d0cdf2;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-2 {
+  background-color: rgba(115, 103, 240, 0.45);
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-3 {
+  background-color: #a199f6;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-4 {
+  background-color: #7367f0;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .title {
+  color: var(--dark, #5e5873);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.overdue-section .overdue-section-items-wrapper .overdue-section-item .subtitle {
+  color: var(--dark, #5e5873);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+}
+.login .login-form {
+  max-width: 484px;
+  padding: 0 37px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.login .login-form-logo {
+  width: 100%;
+  text-align: center;
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.4px; /* 120% */
+  letter-spacing: 0.14px;
+}
+.login .login-form-logo svg {
+  margin-right: 14px;
+}
+.login .login-form-wrapper {
+  padding: 16px 32px;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+.login .login-form-title {
+  color: var(--1-theme-color-heading-display-text, #5e5873);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.login .login-form-subtitle {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 24px;
+}
+.login .login-form-center, .login .login-form-right {
+  background-color: #fff;
+  padding-top: 79px;
+}
+.login .login-form-right {
+  background-image: url("/public/images/pattern-bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: 100% -40%;
+}
+.login form {
+  margin-bottom: 16px;
+}
+.login form .form-label {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+.login form .form-control {
+  border-radius: 5px;
+  border: 1px solid #d8d6de;
+  padding: 8px 15px;
+  margin-bottom: 24px;
+}
+.login form .form-control::-moz-placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login form .form-control::placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login form .btn {
+  padding: 10px 22px;
+  border-radius: 5px;
+  background: #7367f0;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  border: none;
+  width: 100%;
+}
+.login form .btn:focus {
+  background: #5c53c3;
+}
+.login .login-form-create-account {
+  color: #6e6b7b;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  letter-spacing: 0.14px;
+  text-align: center;
+}
+.login .login-form-create-account a {
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.14px;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
