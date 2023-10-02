@@ -1517,3 +1517,19 @@ header {
   }
 }
 // End Login Form
+
+// Cashflow chart section
+.cpa-section {
+  padding-bottom: 40px;
+
+  & .cpa-section__chart {
+    margin-top: 30px;
+    @include crm_data_block;
+  }
+
+  & .highcharts-figure,
+  .highcharts-data-table table {
+    max-width: 100%;
+  }
+}
+// End Cashflow chart section

@@ -19,6 +19,7 @@ export default defineConfig({
                 pages_8: resolve(__dirname, 'pages/login_page_1.html'),
                 pages_9: resolve(__dirname, 'pages/login_page_2.html'),
                 pages_10: resolve(__dirname, 'pages/login_page_3.html'),
+                pages_11: resolve(__dirname, 'pages/marketing_manager.html'),
             },
         }
     }

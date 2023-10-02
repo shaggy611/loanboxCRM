@@ -94,6 +94,128 @@ header {
   text-decoration: none;
 }
 
+#chart_donut {
+  max-height: 400px;
+}
+
+.donut-chart {
+  position: relative;
+}
+
+.chart-canvas-title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: #5e5873;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.chart-canvas-title p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.chart-canvas-title span {
+  font-size: 24px;
+}
+
+.canvas-wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 100%;
+  -webkit-border-radius: 131%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  width: 430px;
+  margin: auto;
+  box-shadow: 0px 3.56707px 44.58839px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991px) {
+  #chart_donut {
+    max-height: 500px;
+  }
+  .canvas-wrapper {
+    max-width: 330px;
+  }
+}
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-axis-line,
+.highcharts-grid-line {
+  stroke: #e6edff;
+}
+
+.highcharts-tick {
+  stroke: #fff;
+}
+
+.highcharts-axis-labels text {
+  fill: #7c8db5 !important;
+  font-size: 14px !important;
+}
+
+.highcharts-legend {
+  padding-bottom: 10px;
+}
+
+.highcharts-legend-item .highcharts-graph {
+  stroke-width: 5px;
+}
+
 .menu {
   max-width: 260px;
   width: 100%;
@@ -1732,4 +1854,20 @@ header .user-active-status::before {
 .login-page-3 .login-form-logo {
   margin-top: -100px;
   margin-bottom: 60px;
+}
+
+.cpa-section {
+  padding-bottom: 40px;
+}
+.cpa-section .cpa-section__chart {
+  margin-top: 30px;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  width: 100%;
+}
+.cpa-section .highcharts-figure,
+.cpa-section .highcharts-data-table table {
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
