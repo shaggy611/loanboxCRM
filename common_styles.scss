@@ -24,6 +24,7 @@ a:hover {
   position: fixed;
   top: 0;
   height: auto;
+  z-index: 90;
 
   & hr {
     margin-top: 7px;
@@ -40,6 +41,7 @@ a:hover {
     -o-border-radius: 6px;
     margin-left: 10px;
     margin-top: 7px;
+    // z-index: 91;
   }
 }
 
@@ -67,7 +69,7 @@ a:hover {
   color: #5e5873;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -93,7 +95,7 @@ header {
     background-color: #f4a261;
 
     & a {
-      font-size: 15px;
+      font-size: 0.9375rem;
       font-weight: 500;
       text-decoration: none;
     }

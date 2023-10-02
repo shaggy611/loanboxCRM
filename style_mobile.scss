@@ -1,6 +1,9 @@
 @import 'mixins';
 
 @include mobile {
+  :root {
+    font-size: 12px;
+  }
 
   .show-menu {
     margin-left: 0 !important;
@@ -24,7 +27,7 @@
       background: #fff;
       box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
       padding: 23px 0;
-      font-size: 15px;
+      font-size: 0.9375rem;
       font-style: normal;
       font-weight: 500;
       line-height: 24px;
@@ -46,7 +49,7 @@
 
       & .menu-subsection {
         font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 15px;
+        font-size: 0.9375rem;
         font-weight: 300;
         padding-left: 30px;
         color: rgba(94, 88, 115, 0.5);
@@ -102,6 +105,7 @@
 
   // Header
   header {
+    margin-bottom: 20px;
     & .row {
       display: block;
     }
@@ -112,16 +116,11 @@
     }
 
     & .welcome-text h1 {
-      font-size: 24px;
+      text-align: center;
     }
 
     & .welcome-text p {
-      color: #7c8db5;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
+      text-align: center;
     }
 
     & .user-name-role {
@@ -133,7 +132,7 @@
       color: #5e5873;
       text-align: right;
       font-family: Montserrat;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       line-height: 21px;
@@ -143,7 +142,7 @@
       color: #b9b9c3;
       text-align: right;
       font-family: Montserrat;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-style: normal;
       font-weight: 400;
       line-height: 18px;
@@ -168,4 +167,750 @@
     }
   }
   // End Header
+
+  .data-picker {
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    & .btn-outline-primary {
+      font-size: 0.875rem;
+      padding: 10px 16px;
+
+      &:hover {
+        background-color: #7367f0;
+      }
+    }
+
+    & .data-selecter {
+      max-width: 145px;
+      padding: 10px 7px;
+      line-height: 40px;
+
+      & svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  // Statistics-section
+  .statistics-section {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 29px;
+
+    & .underwriting-statistic {
+      max-width: 580px;
+      width: 100%;
+      margin-right: 0;
+
+      & .wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 8px;
+        row-gap: 8px;
+
+        & .underwriting-statistic-item {
+          @include crm_data_block;
+          padding: 12px 12px;
+          max-width: 180px;
+          min-height: 152px;
+          // margin-right: 11.5px;
+          // margin-bottom: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    & .statistics {
+      max-width: 274px;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      & .statistics-item {
+        @include crm_data_block;
+        position: relative;
+        max-width: 274px;
+        min-height: 334px;
+        box-sizing: content-box;
+        overflow: hidden;
+
+        & .statistics-item-buttons {
+          text-align: right;
+          margin-bottom: 29px;
+
+          & .btn-outline-primary {
+            color: #1d2939;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            padding: 10px 14px;
+            border: 1px solid #d0d5dd;
+
+            &:hover {
+              background-color: #7367f0;
+            }
+
+            &:focus {
+              background-color: #f9fafb;
+            }
+          }
+        }
+
+        & .data-wrapper {
+          padding: 12px 12.5px;
+        }
+
+        & .application-button {
+          @include button_basic_style;
+          color: #344054;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px;
+
+          &:hover {
+            background-color: #7367f0;
+            color: #1d2939;
+          }
+
+          & svg {
+            margin-left: 7px;
+            margin-right: 0;
+          }
+        }
+
+        & .statistics-item-title {
+          color: rgba(0, 0, 0, 0.7);
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.154px;
+          margin-bottom: 44px;
+          display: block;
+        }
+
+        & .number-parameter {
+          color: #5e5873;
+          font-family: Montserrat;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        & .chart {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    & .appproval-rate {
+      max-width: 274px;
+      width: 100%;
+
+      & .statistics-item {
+        @include crm_data_block;
+        position: relative;
+        max-width: 274px;
+        min-height: 334px;
+        box-sizing: content-box;
+        overflow: hidden;
+
+        & .statistics-item-title {
+          color: rgba(0, 0, 0, 0.7);
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.154px;
+          margin-bottom: 44px;
+          margin-top: -68px;
+          display: block;
+        }
+
+        & .application-button {
+          @include button_basic_style;
+          color: #344054;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px;
+          margin-top: -92px;
+
+          &:hover {
+            background-color: #7367f0;
+            color: #1d2939;
+          }
+
+          & svg {
+            margin-left: 7px;
+            margin-right: 0;
+          }
+        }
+
+        & .statistics-item-buttons {
+          text-align: right;
+          margin-bottom: 29px;
+          margin-top: -67px;
+
+          & .btn-outline-primary {
+            color: #1d2939;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            padding: 10px 14px;
+            border: 1px solid #d0d5dd;
+
+            &:hover {
+              background-color: #7367f0;
+            }
+
+            &:focus {
+              background-color: #f9fafb;
+            }
+          }
+        }
+
+        & .data-wrapper {
+          padding: 79px 12.5px 0 12.5px;
+        }
+
+        & .number-parameter {
+          color: #5e5873;
+          font-family: Montserrat;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        & .chart {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  // End statistics-section
+
+  // Payments-charts section
+  .payments-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 38px;
+
+    & .payments-total {
+      background: #ffffff;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+
+      & .chart img {
+        max-width: 300px;
+      }
+    }
+
+    & .last-payments .payments-wrapper {
+      & .payments-item {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #eaecf0;
+        justify-content: space-between;
+      }
+    }
+
+    & .last-payments {
+      width: 100%;
+    }
+  }
+  // End payments-charts-section
+
+  // Clients table section
+  .clients-table {
+    border-top: 8px solid #6941c6;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    & .clients-list-handler {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 24px;
+
+      & div:last-child {
+        text-align: right;
+
+        & button {
+          margin-right: 0;
+          margin-bottom: 7px;
+          width: 110px;
+        }
+      }
+
+      & .export {
+        @include button_basic_style;
+        margin-right: 12px;
+        & svg {
+          margin-right: 8px;
+        }
+      }
+
+      & .save-list {
+        padding: 10px 16px;
+        color: #fff;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+        border-radius: 8px;
+        border: 1px solid #7f56d9;
+        background: #7f56d9;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+        & svg {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    & .clients-list-search {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: 24px;
+
+      & .input-group {
+        margin-bottom: 7px;
+        height: min-content;
+
+        & input {
+          padding: 10px 14px 10px 0;
+          border: none;
+        }
+      }
+
+      & .buttons-wrapper button {
+        @include button_basic_style;
+        margin-left: 0;
+        margin-right: 7px;
+        margin-bottom: 7px;
+      }
+    }
+
+    & .filter-buttons {
+      & button {
+        @include button_basic_style;
+        margin-right: 5px;
+
+        & svg {
+          margin-left: 4px;
+          margin-right: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    & .table .table-responsive {
+      & tbody th {
+        padding: 16px 16px 16px 24px;
+      }
+    }
+  }
+  // End client table section
+
+  // Collection-statistic section
+  .collection-statistic {
+    margin-bottom: 24px;
+
+    & .row {
+      justify-content: space-around !important;
+    }
+
+    & .collection-statistic__item {
+      @include crm_data_block;
+      max-width: 169px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+  }
+  // End collection-statistic section
+
+  // goals-overview section
+  .goals-overview {
+    margin-bottom: 24px;
+
+    & .row {
+      justify-content: space-around !important;
+    }
+
+    & .goals-overview-item {
+      @include crm_data_block;
+      max-width: 379px;
+      box-sizing: content-box;
+      margin-right: 0;
+
+      & img {
+        max-width: 350px;
+        min-width: auto;
+      }
+    }
+  }
+  // End goals-overview section
+
+  // Contracts-by-scoring section
+  .contracts-by-scoring {
+    margin-bottom: 48px;
+
+    & .row {
+      justify-content: flex-start !important;
+    }
+
+    & .contracts-by-scoring__item {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    & .contracts-by-scoring__divider {
+      margin-bottom: 18px;
+    }
+
+    & .contracts-by-scoring__item_number {
+      display: block;
+      padding: 4px 10px;
+      color: #ffffff;
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      width: 32px;
+      height: 32px;
+      margin-right: 14px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    & .contracts-by-scoring__item-text {
+      color: #6e6b7b;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 21px;
+      margin-bottom: 0;
+
+      & span {
+        font-weight: 500;
+        margin-left: 7px;
+      }
+    }
+  }
+  // End contracts-by-scoring section
+
+  // Statistics-section
+  .cashflow-section {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+
+    & .cashflow-section-chart {
+      width: 100%;
+      margin-right: 0;
+
+      & .chart {
+        @include crm_data_block;
+
+        & img {
+          width: 100%;
+          // height: 100%;
+          // max-height: 278px;
+        }
+      }
+    }
+
+    & .underwriting-statistic {
+      max-width: 580px;
+      width: 100%;
+      margin-top: 20px;
+
+      & .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 12px;
+
+        & .underwriting-statistic-item {
+          @include crm_data_block;
+          padding: 12px 8px;
+          max-width: 180px;
+          min-height: 152px;
+          margin-right: 11.5px;
+          margin-bottom: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  // End statistics-section
+
+  // Overdue section
+  .overdue-section {
+    margin-bottom: 24px;
+
+    & .overdue-section-chart {
+      @include crm_data_block;
+      padding: 0;
+      margin-bottom: 20px;
+
+      & img {
+        width: 100%;
+        max-width: 721px;
+      }
+    }
+
+    & .overdue-section-items-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: end;
+
+      & .overdue-section-item {
+        @include crm_data_block;
+        padding: 20px 13px 20px 20px;
+        max-width: 179px;
+        box-sizing: border-box;
+
+        & .number {
+          color: #fff;
+          text-align: center;
+          font-family: Montserrat;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 21px;
+          width: 48px;
+          height: 48px;
+          padding: 13px;
+          margin-right: 0;
+          margin-left: auto;
+          margin-bottom: 2px;
+          border-radius: 26px;
+        }
+
+        & .number-bg-purple-grade-1 {
+          background-color: #d0cdf2;
+        }
+
+        & .number-bg-purple-grade-2 {
+          background-color: rgba(115, 103, 240, 0.45);
+        }
+
+        & .number-bg-purple-grade-3 {
+          background-color: #a199f6;
+        }
+
+        & .number-bg-purple-grade-4 {
+          background-color: #7367f0;
+        }
+
+        & .title {
+          color: var(--dark, #5e5873);
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 12px;
+        }
+
+        & .subtitle {
+          color: var(--dark, #5e5873);
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: Montserrat;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  // End overdue section
+
+  // Login form
+  .login {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+    display: flex;
+    justify-content: center;
+
+    & .login-big-img {
+      display: none;
+    }
+
+    & .login-form {
+      max-width: auto;
+      width: 100%;
+      padding: 0 37px;
+      height: 100vh;
+      // position: absolute;
+      // right: 0;
+    }
+
+    & .login-form-logo {
+      width: 100%;
+      text-align: center;
+      color: #7367f0;
+      font-family: Montserrat;
+      font-size: 2.625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 50.4px; /* 120% */
+      letter-spacing: 0.14px;
+
+      & svg {
+        margin-right: 14px;
+      }
+    }
+
+    & .login-form-wrapper {
+      padding: 16px 32px;
+      transform: translateY(50%);
+      -webkit-transform: translateY(50%);
+      -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      -o-transform: translateY(50%);
+    }
+
+    & .login-form-title {
+      color: var(--1-theme-color-heading-display-text, #5e5873);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 8px;
+    }
+
+    & .login-form-subtitle {
+      color: #6e6b7b;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+      margin-bottom: 24px;
+    }
+
+    & .login-form-center,
+    & .login-form-right {
+      background-color: #fff;
+      padding-top: 79px;
+    }
+
+    & form {
+      margin-bottom: 16px;
+
+      & .form-label {
+        color: #6e6b7b;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 8px;
+      }
+
+      & .form-control {
+        border-radius: 5px;
+        border: 1px solid #d8d6de;
+        padding: 8px 15px;
+        margin-bottom: 24px;
+
+        &::placeholder {
+          color: #b9b9c3;
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: Montserrat;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+
+      & .btn {
+        padding: 10px 22px;
+        border-radius: 5px;
+        background: #7367f0;
+        color: #fff;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        border: none;
+        width: 100%;
+
+        &:focus {
+          background: #5c53c3;
+        }
+      }
+    }
+
+    & .login-form-create-account {
+      color: #6e6b7b;
+      font-family: Montserrat;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+      letter-spacing: 0.14px;
+      text-align: center;
+
+      & a {
+        color: #7367f0;
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.14px;
+        text-decoration: none;
+      }
+    }
+  }
+  // End Login Form
 }

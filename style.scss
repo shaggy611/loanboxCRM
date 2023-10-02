@@ -21,7 +21,7 @@
   background: #fff;
   box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
   padding: 23px 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -41,7 +41,7 @@
 
   & .menu-subsection {
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     padding-left: 30px;
     color: rgba(94, 88, 115, 0.5);
@@ -227,7 +227,7 @@ header {
   & .welcome-text p {
     color: #7c8db5;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -242,7 +242,7 @@ header {
     color: #5e5873;
     text-align: right;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
@@ -252,7 +252,7 @@ header {
     color: #b9b9c3;
     text-align: right;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -284,7 +284,7 @@ header {
 
   & .btn-outline-primary {
     color: #1d2939;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -302,7 +302,7 @@ header {
     border-radius: 8px;
     border: 1px solid #d0d5dd;
     color: #667085;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -356,7 +356,7 @@ header {
           & .status {
             color: rgba(0, 0, 0, 0.7);
             font-feature-settings: 'clig' off, 'liga' off;
-            font-size: 14px;
+            font-size: 0.875rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -367,7 +367,7 @@ header {
         }
         & .number-parameter {
           color: #5e5873;
-          font-size: 24px;
+          font-size: 1.5rem;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
@@ -375,7 +375,7 @@ header {
         }
 
         & .metrix-summ {
-          font-size: 14px;
+          font-size: 0.875rem;
           font-style: normal;
           font-weight: 400;
           margin-bottom: 20px;
@@ -384,7 +384,7 @@ header {
         & .metric-percentage {
           color: rgba(110, 107, 123, 0.5);
           font-family: Poppins;
-          font-size: 12px;
+          font-size: 0.75rem;
           font-style: normal;
           font-weight: 400;
           line-height: 150%;
@@ -412,7 +412,7 @@ header {
 
         & .btn-outline-primary {
           color: #1d2939;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-style: normal;
           font-weight: 600;
           line-height: 20px;
@@ -436,7 +436,7 @@ header {
       & .application-button {
         @include button_basic_style;
         color: #344054;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
@@ -455,7 +455,7 @@ header {
       & .statistics-item-title {
         color: rgba(0, 0, 0, 0.7);
         font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -467,7 +467,7 @@ header {
       & .number-parameter {
         color: #5e5873;
         font-family: Montserrat;
-        font-size: 32px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -496,7 +496,7 @@ header {
       & .statistics-item-title {
         color: rgba(0, 0, 0, 0.7);
         font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -509,7 +509,7 @@ header {
       & .application-button {
         @include button_basic_style;
         color: #344054;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
@@ -533,7 +533,7 @@ header {
 
         & .btn-outline-primary {
           color: #1d2939;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-style: normal;
           font-weight: 600;
           line-height: 20px;
@@ -557,7 +557,7 @@ header {
       & .number-parameter {
         color: #5e5873;
         font-family: Montserrat;
-        font-size: 32px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -640,7 +640,7 @@ header {
           color: #5e5873;
           font-feature-settings: 'clig' off, 'liga' off;
           font-family: Montserrat;
-          font-size: 15px;
+          font-size: 0.9375rem;
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
@@ -650,7 +650,7 @@ header {
           color: #5e5873;
           font-feature-settings: 'clig' off, 'liga' off;
           font-family: Montserrat;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-style: normal;
           font-weight: 400;
           line-height: 21px;
@@ -659,7 +659,7 @@ header {
 
       & .amount {
         color: #039855;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
@@ -685,7 +685,7 @@ header {
     & .clients-text {
       & .heading {
         color: #101828;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-style: normal;
         font-weight: 600;
         line-height: 28px;
@@ -698,7 +698,7 @@ header {
           padding: 2px 8px;
           color: #6941c6;
           text-align: center;
-          font-size: 12px;
+          font-size: 0.75rem;
           font-style: normal;
           font-weight: 500;
           line-height: 18px;
@@ -714,7 +714,7 @@ header {
         margin-top: 5px;
         margin-bottom: 0;
         color: #475467;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
@@ -732,7 +732,7 @@ header {
     & .save-list {
       padding: 10px 16px;
       color: #fff;
-      font-size: 16px;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 500;
       line-height: 23px;
@@ -812,7 +812,7 @@ header {
       text-align: center;
       color: #475467;
       font-family: Montserrat;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       line-height: 21px;
@@ -829,7 +829,7 @@ header {
     & thead th {
       color: #475467;
       font-family: Montserrat;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -840,7 +840,7 @@ header {
       &:first-child {
         text-align: left;
         padding-left: 24px;
-        font-size: 14px;
+        font-size: 0.875rem;
 
         & input {
           margin-right: 12px;
@@ -863,7 +863,7 @@ header {
       color: #7367f0;
       font-feature-settings: 'clig' off, 'liga' off;
       font-family: Montserrat;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 600;
       line-height: 21px;
@@ -873,7 +873,7 @@ header {
     & tbody th .email {
       color: #475467;
       font-family: Inter;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       line-height: 20px;
@@ -901,7 +901,7 @@ header {
 
     & .page-link {
       color: #475467;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 600;
       line-height: 20px;
@@ -954,7 +954,7 @@ header {
       & span:first-child {
         color: #6e6b7b;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -964,7 +964,7 @@ header {
       & span:last-child {
         color: #7c8db5;
         font-family: Poppins;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
@@ -979,7 +979,7 @@ header {
 
     & .collection-statistic__item-metric {
       color: #5e5873;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -993,7 +993,7 @@ header {
     & .collection-statistic__item-percentdata {
       color: rgba(110, 107, 123, 0.5);
       font-family: Poppins;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-style: normal;
       font-weight: 400;
       line-height: 150%;
@@ -1036,7 +1036,7 @@ header {
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -1054,7 +1054,7 @@ header {
     color: #6e6b7b;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
     line-height: 21px;
@@ -1137,7 +1137,7 @@ header {
           & .status {
             color: rgba(0, 0, 0, 0.7);
             font-feature-settings: 'clig' off, 'liga' off;
-            font-size: 14px;
+            font-size: 0.875rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -1148,7 +1148,7 @@ header {
         }
         & .number-parameter {
           color: #5e5873;
-          font-size: 24px;
+          font-size: 1.5rem;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
@@ -1156,7 +1156,7 @@ header {
         }
 
         & .metrix-summ {
-          font-size: 14px;
+          font-size: 0.875rem;
           font-style: normal;
           font-weight: 400;
           margin-bottom: 20px;
@@ -1165,7 +1165,7 @@ header {
         & .metric-percentage {
           color: rgba(110, 107, 123, 0.5);
           font-family: Poppins;
-          font-size: 12px;
+          font-size: 0.75rem;
           font-style: normal;
           font-weight: 400;
           line-height: 150%;
@@ -1220,7 +1220,7 @@ header {
         color: #fff;
         text-align: center;
         font-family: Montserrat;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 700;
         line-height: 21px;
@@ -1251,7 +1251,7 @@ header {
 
       & .title {
         color: var(--dark, #5e5873);
-        font-size: 24px;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -1262,7 +1262,7 @@ header {
         color: var(--dark, #5e5873);
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Montserrat;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
         line-height: 21px;
@@ -1274,18 +1274,13 @@ header {
 // End overdue section
 
 // Login form
-.login {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
-
+@mixin login_form {
   & .login-form {
     max-width: 484px;
     padding: 0 37px;
-    height: 100%;
-    position: absolute;
-    right: 0;
+    height: 100vh;
+    // position: absolute;
+    // right: 0;
   }
 
   & .login-form-logo {
@@ -1293,7 +1288,7 @@ header {
     text-align: center;
     color: #7367f0;
     font-family: Montserrat;
-    font-size: 42px;
+    font-size: 2.625rem;
     font-style: normal;
     font-weight: 600;
     line-height: 50.4px; /* 120% */
@@ -1317,7 +1312,7 @@ header {
     color: var(--1-theme-color-heading-display-text, #5e5873);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1328,7 +1323,7 @@ header {
     color: #6e6b7b;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
@@ -1344,7 +1339,8 @@ header {
   & .login-form-right {
     background-image: url('/public/images/pattern-bg-1.svg');
     background-repeat: no-repeat;
-    background-position: 100% -40%;
+    background-position: 150px -100px;
+    background-size: auto;
 
     // &:after {
     //   position: absolute;
@@ -1359,7 +1355,7 @@ header {
       color: #6e6b7b;
       font-feature-settings: 'clig' off, 'liga' off;
       font-family: Montserrat;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-style: normal;
       font-weight: 400;
       line-height: 18px;
@@ -1376,7 +1372,7 @@ header {
         color: #b9b9c3;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Montserrat;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
@@ -1391,7 +1387,7 @@ header {
       text-align: center;
       font-feature-settings: 'clig' off, 'liga' off;
       font-family: Montserrat;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
@@ -1408,7 +1404,7 @@ header {
   & .login-form-create-account {
     color: #6e6b7b;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 21px; /* 150% */
@@ -1418,13 +1414,106 @@ header {
     & a {
       color: #7367f0;
       font-family: Montserrat;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       line-height: 21px;
       letter-spacing: 0.14px;
       text-decoration: none;
     }
+  }
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+  display: flex;
+
+  & .login-big-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/public/images/square-pattern-1.svg');
+    background-repeat: no-repeat;
+    background-position: 87px 105%;
+    background-size: auto;
+
+    & img {
+      max-width: 900px;
+    }
+  }
+
+  @include login_form;
+}
+
+.login-page-2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  // background-color: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+  display: flex;
+  justify-content: center;
+
+  background: 5% 0% / 20% no-repeat url('/public/images/square-pattern-2.svg'),
+    5% 90% / 30% no-repeat url('/public/images/female-chair-bg-svg.svg'),
+    90% 15% / 30% no-repeat url('/public/images/male-female-chart.svg'),
+    linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+
+  @include login_form;
+
+  & .login-form {
+    min-width: 484px;
+    max-width: 484px;
+    padding: 120px 37px 0 37px;
+    height: 100vh;
+    // position: absolute;
+    // right: 0;
+  }
+}
+
+.login-page-3 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  background: 95% 90% / 30% no-repeat
+      url('/public/images/female-chair-bg-svg.svg'),
+    5% 5% / 30% no-repeat url('/public/images/male-female-chart.svg'),
+    center / 100% no-repeat url('/public/images/login-3-bg-pattern.svg'),
+    linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+
+  @include login_form;
+
+  & .login-form {
+    // min-width: 484px;
+    max-width: 484px;
+    padding: 70px 37px 0 37px;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  & .login-form-wrapper {
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    border-radius: 16px;
+    border: 1px solid #d8d8d8;
+    background: #f3f7fd;
+  }
+
+  & .login-form-logo {
+    margin-top: -100px;
+    margin-bottom: 60px;
   }
 }
 // End Login Form

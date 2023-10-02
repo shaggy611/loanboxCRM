@@ -19,14 +19,28 @@
 
 <body>
 
-    <div class="login">
-        <div class="login-form login-form-right">
+    <div class="login-page-3">
+        <div class="login-form">
             <div class="login-form-logo">
                 <img src="/public/images/logo.svg" alt="Logo">
                 <span>LoanBox Test</span>
             </div>
             <div class="login-form-wrapper">
+                <div class="login-form-title">Log In</div>
+                <div class="login-form-subtitle">Enter your phone number and we'll send you password to log in.</div>
 
+                <form>
+                    <div class="mb-3">
+                        <label for="text-phone-number" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="text-phone-number" aria-describedby="Phoner number"
+                            placeholder="+38 (999) 999-9999">
+                        <div id="number-help" class="form-text"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Password</button>
+                </form>
+
+                <div class="login-form-create-account">New on our platform? <a href="#">Create an account</a></div>
             </div>
         </div>
     </div>

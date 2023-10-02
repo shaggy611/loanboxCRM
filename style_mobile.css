@@ -1,4 +1,7 @@
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  :root {
+    font-size: 12px;
+  }
   .show-menu {
     margin-left: 0 !important;
   }
@@ -19,7 +22,7 @@
     background: #fff;
     box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
     padding: 23px 0;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -39,7 +42,7 @@
   }
   .menu .main-menu .menu-subsection {
     font-feature-settings: "clig" off, "liga" off;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     padding-left: 30px;
     color: rgba(94, 88, 115, 0.5);
@@ -84,6 +87,9 @@
     padding-left: 15px !important;
     padding-right: 10px !important;
   }
+  header {
+    margin-bottom: 20px;
+  }
   header .row {
     display: block;
   }
@@ -92,15 +98,10 @@
     padding-right: 0;
   }
   header .welcome-text h1 {
-    font-size: 24px;
+    text-align: center;
   }
   header .welcome-text p {
-    color: #7c8db5;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    text-align: center;
   }
   header .user-name-role {
     text-align: right;
@@ -110,7 +111,7 @@
     color: #5e5873;
     text-align: right;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
@@ -119,7 +120,7 @@
     color: #b9b9c3;
     text-align: right;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -139,5 +140,704 @@
     border: 1px solid #ffffff;
     background-color: red;
     z-index: 99;
+  }
+  .data-picker {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  .data-picker .btn-outline-primary {
+    font-size: 0.875rem;
+    padding: 10px 16px;
+  }
+  .data-picker .btn-outline-primary:hover {
+    background-color: #7367f0;
+  }
+  .data-picker .data-selecter {
+    max-width: 145px;
+    padding: 10px 7px;
+    line-height: 40px;
+  }
+  .data-picker .data-selecter svg {
+    margin-right: 5px;
+  }
+  .statistics-section {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 29px;
+  }
+  .statistics-section .underwriting-statistic {
+    max-width: 580px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .statistics-section .underwriting-statistic .wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 2fr;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+    row-gap: 8px;
+  }
+  .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    padding: 12px 12px;
+    max-width: 180px;
+    min-height: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .statistics-section .statistics {
+    max-width: 274px;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .statistics-section .statistics .statistics-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    max-width: 274px;
+    min-height: 334px;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+  .statistics-section .statistics .statistics-item .statistics-item-buttons {
+    text-align: right;
+    margin-bottom: 29px;
+  }
+  .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary {
+    color: #1d2939;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+  }
+  .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary:hover {
+    background-color: #7367f0;
+  }
+  .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary:focus {
+    background-color: #f9fafb;
+  }
+  .statistics-section .statistics .statistics-item .data-wrapper {
+    padding: 12px 12.5px;
+  }
+  .statistics-section .statistics .statistics-item .application-button {
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    padding: 10px 16px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .statistics-section .statistics .statistics-item .application-button:hover {
+    background-color: #7367f0;
+    color: #1d2939;
+  }
+  .statistics-section .statistics .statistics-item .application-button svg {
+    margin-left: 7px;
+    margin-right: 0;
+  }
+  .statistics-section .statistics .statistics-item .statistics-item-title {
+    color: rgba(0, 0, 0, 0.7);
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.154px;
+    margin-bottom: 44px;
+    display: block;
+  }
+  .statistics-section .statistics .statistics-item .number-parameter {
+    color: #5e5873;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .statistics-section .statistics .statistics-item .chart {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .statistics-section .appproval-rate {
+    max-width: 274px;
+    width: 100%;
+  }
+  .statistics-section .appproval-rate .statistics-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    max-width: 274px;
+    min-height: 334px;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+  .statistics-section .appproval-rate .statistics-item .statistics-item-title {
+    color: rgba(0, 0, 0, 0.7);
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.154px;
+    margin-bottom: 44px;
+    margin-top: -68px;
+    display: block;
+  }
+  .statistics-section .appproval-rate .statistics-item .application-button {
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    padding: 10px 16px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: -92px;
+  }
+  .statistics-section .appproval-rate .statistics-item .application-button:hover {
+    background-color: #7367f0;
+    color: #1d2939;
+  }
+  .statistics-section .appproval-rate .statistics-item .application-button svg {
+    margin-left: 7px;
+    margin-right: 0;
+  }
+  .statistics-section .appproval-rate .statistics-item .statistics-item-buttons {
+    text-align: right;
+    margin-bottom: 29px;
+    margin-top: -67px;
+  }
+  .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary {
+    color: #1d2939;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+  }
+  .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary:hover {
+    background-color: #7367f0;
+  }
+  .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary:focus {
+    background-color: #f9fafb;
+  }
+  .statistics-section .appproval-rate .statistics-item .data-wrapper {
+    padding: 79px 12.5px 0 12.5px;
+  }
+  .statistics-section .appproval-rate .statistics-item .number-parameter {
+    color: #5e5873;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .statistics-section .appproval-rate .statistics-item .chart {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .payments-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 38px;
+  }
+  .payments-charts .payments-total {
+    background: #ffffff;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .payments-charts .payments-total .chart img {
+    max-width: 300px;
+  }
+  .payments-charts .last-payments .payments-wrapper .payments-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eaecf0;
+    justify-content: space-between;
+  }
+  .payments-charts .last-payments {
+    width: 100%;
+  }
+  .clients-table {
+    border-top: 8px solid #6941c6;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .clients-table .clients-list-handler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+  .clients-table .clients-list-handler div:last-child {
+    text-align: right;
+  }
+  .clients-table .clients-list-handler div:last-child button {
+    margin-right: 0;
+    margin-bottom: 7px;
+    width: 110px;
+  }
+  .clients-table .clients-list-handler .export {
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    padding: 10px 16px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-right: 12px;
+  }
+  .clients-table .clients-list-handler .export svg {
+    margin-right: 8px;
+  }
+  .clients-table .clients-list-handler .save-list {
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    border-radius: 8px;
+    border: 1px solid #7f56d9;
+    background: #7f56d9;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+  .clients-table .clients-list-handler .save-list svg {
+    margin-right: 8px;
+  }
+  .clients-table .clients-list-search {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+  }
+  .clients-table .clients-list-search .input-group {
+    margin-bottom: 7px;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .clients-table .clients-list-search .input-group input {
+    padding: 10px 14px 10px 0;
+    border: none;
+  }
+  .clients-table .clients-list-search .buttons-wrapper button {
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    padding: 10px 16px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 0;
+    margin-right: 7px;
+    margin-bottom: 7px;
+  }
+  .clients-table .filter-buttons button {
+    border-radius: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    padding: 10px 16px;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-right: 5px;
+  }
+  .clients-table .filter-buttons button svg {
+    margin-left: 4px;
+    margin-right: 0;
+    padding: 0;
+  }
+  .clients-table .table .table-responsive tbody th {
+    padding: 16px 16px 16px 24px;
+  }
+  .collection-statistic {
+    margin-bottom: 24px;
+  }
+  .collection-statistic .row {
+    justify-content: space-around !important;
+  }
+  .collection-statistic .collection-statistic__item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    max-width: 169px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .goals-overview {
+    margin-bottom: 24px;
+  }
+  .goals-overview .row {
+    justify-content: space-around !important;
+  }
+  .goals-overview .goals-overview-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    max-width: 379px;
+    box-sizing: content-box;
+    margin-right: 0;
+  }
+  .goals-overview .goals-overview-item img {
+    max-width: 350px;
+    min-width: auto;
+  }
+  .contracts-by-scoring {
+    margin-bottom: 48px;
+  }
+  .contracts-by-scoring .row {
+    justify-content: flex-start !important;
+  }
+  .contracts-by-scoring .contracts-by-scoring__item {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .contracts-by-scoring .contracts-by-scoring__divider {
+    margin-bottom: 18px;
+  }
+  .contracts-by-scoring .contracts-by-scoring__item_number {
+    display: block;
+    padding: 4px 10px;
+    color: #ffffff;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .contracts-by-scoring .contracts-by-scoring__item-text {
+    color: #6e6b7b;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 0;
+  }
+  .contracts-by-scoring .contracts-by-scoring__item-text span {
+    font-weight: 500;
+    margin-left: 7px;
+  }
+  .cashflow-section {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+  }
+  .cashflow-section .cashflow-section-chart {
+    width: 100%;
+    margin-right: 0;
+  }
+  .cashflow-section .cashflow-section-chart .chart {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+  }
+  .cashflow-section .cashflow-section-chart .chart img {
+    width: 100%;
+  }
+  .cashflow-section .underwriting-statistic {
+    max-width: 580px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .cashflow-section .underwriting-statistic .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+  .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    padding: 12px 8px;
+    max-width: 180px;
+    min-height: 152px;
+    margin-right: 11.5px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .overdue-section {
+    margin-bottom: 24px;
+  }
+  .overdue-section .overdue-section-chart {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .overdue-section .overdue-section-chart img {
+    width: 100%;
+    max-width: 721px;
+  }
+  .overdue-section .overdue-section-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: end;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    padding: 20px 13px 20px 20px;
+    max-width: 179px;
+    box-sizing: border-box;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .number {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    width: 48px;
+    height: 48px;
+    padding: 13px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 2px;
+    border-radius: 26px;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-1 {
+    background-color: #d0cdf2;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-2 {
+    background-color: rgba(115, 103, 240, 0.45);
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-3 {
+    background-color: #a199f6;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .number-bg-purple-grade-4 {
+    background-color: #7367f0;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .title {
+    color: var(--dark, #5e5873);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .overdue-section .overdue-section-items-wrapper .overdue-section-item .subtitle {
+    color: var(--dark, #5e5873);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+  }
+  .login {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+    display: flex;
+    justify-content: center;
+  }
+  .login .login-big-img {
+    display: none;
+  }
+  .login .login-form {
+    max-width: auto;
+    width: 100%;
+    padding: 0 37px;
+    height: 100vh;
+  }
+  .login .login-form-logo {
+    width: 100%;
+    text-align: center;
+    color: #7367f0;
+    font-family: Montserrat;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50.4px; /* 120% */
+    letter-spacing: 0.14px;
+  }
+  .login .login-form-logo svg {
+    margin-right: 14px;
+  }
+  .login .login-form-wrapper {
+    padding: 16px 32px;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
+  .login .login-form-title {
+    color: var(--1-theme-color-heading-display-text, #5e5873);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .login .login-form-subtitle {
+    color: #6e6b7b;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 24px;
+  }
+  .login .login-form-center, .login .login-form-right {
+    background-color: #fff;
+    padding-top: 79px;
+  }
+  .login form {
+    margin-bottom: 16px;
+  }
+  .login form .form-label {
+    color: #6e6b7b;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+  .login form .form-control {
+    border-radius: 5px;
+    border: 1px solid #d8d6de;
+    padding: 8px 15px;
+    margin-bottom: 24px;
+  }
+  .login form .form-control::-moz-placeholder {
+    color: #b9b9c3;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .login form .form-control::placeholder {
+    color: #b9b9c3;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .login form .btn {
+    padding: 10px 22px;
+    border-radius: 5px;
+    background: #7367f0;
+    color: #fff;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    border: none;
+    width: 100%;
+  }
+  .login form .btn:focus {
+    background: #5c53c3;
+  }
+  .login .login-form-create-account {
+    color: #6e6b7b;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: 0.14px;
+    text-align: center;
+  }
+  .login .login-form-create-account a {
+    color: #7367f0;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.14px;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=style_mobile.css.map */

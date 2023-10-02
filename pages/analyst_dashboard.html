@@ -20,6 +20,7 @@
 <body>
 
     <div class="app d-flex">
+        <div class="menu-blur-filter"></div>
 
         <div class="menu">
             <div class="container-fluid">
@@ -200,16 +201,29 @@
             </div>
         </div>
 
+        <div class="w-100" id="menu-button-toggler">
+            <button class="navbar-toggler menu-toggler" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.25 2.25H14.75C15.2 2.25 15.5 1.95 15.5 1.5C15.5 1.05 15.2 0.75 14.75 0.75H1.25C0.8 0.75 0.5 1.05 0.5 1.5C0.5 1.95 0.8 2.25 1.25 2.25ZM15.5 6C15.5 6.45 15.2 6.75 14.75 6.75H1.25C0.8 6.75 0.5 6.45 0.5 6C0.5 5.55 0.8 5.25 1.25 5.25H14.75C15.2 5.25 15.5 5.55 15.5 6ZM1.25 9.75H14.75C15.2 9.75 15.5 10.05 15.5 10.5C15.5 10.95 15.2 11.25 14.75 11.25H1.25C0.8 11.25 0.5 10.95 0.5 10.5C0.5 10.05 0.8 9.75 1.25 9.75Z"
+                        fill="black" />
+                </svg>
+            </button>
+            <hr>
+        </div>
+
         <div class="content-screen">
 
             <header>
                 <div class="container-fluid">
                     <div class="row justify-content-between">
-                        <div class="col-4 welcome-text">
+                        <div class="col-md-4 col-sm-12 welcome-text">
+
                             <h1>Welcome Back, Marci</h1>
                             <p>Here is the information about all your orders</p>
                         </div>
-                        <div class="col-5 d-flex justify-content-end align-items-center">
+                        <div
+                            class="col-md-5 col-sm-12 d-flex justify-content-lg-end justify-content-around align-items-center">
                             <button type="button" class="btn">
                                 <img src="/images/search-ico.svg" alt="Search">
                             </button>
@@ -222,11 +236,13 @@
                                         fill="#FF3B30" />
                                 </svg>
                             </button>
-                            <div class="user-name-role">
-                                <p class="name m-0">Nan Saetang</p>
-                                <p class="role m-0">Superadmin</p>
+                            <div class="d-flex">
+                                <div class="user-name-role">
+                                    <p class="name m-0">Nan Saetang</p>
+                                    <p class="role m-0">Superadmin</p>
+                                </div>
+                                <img class="user-photo user-active-status" src="/images/user-photo-ico.png" alt="User">
                             </div>
-                            <img class="user-photo user-active-status" src="/images/user-photo-ico.png" alt="User">
                         </div>
                     </div>
                 </div>
@@ -495,12 +511,12 @@
                 <p class="section-heading">Last Payments</p>
 
                 <div class="row justify-content-between">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="overdue-section-chart">
                             <img src="/public/images/overdue-chart.svg" alt="Chart">
                         </div>
                     </div>
-                    <div class="col-6 overdue-section-items-wrapper">
+                    <div class="col-12 col-lg-6 overdue-section-items-wrapper">
                         <div class="overdue-section-item">
                             <div class="number number-bg-purple-grade-4">1+</div>
                             <p class="title">13034</p>

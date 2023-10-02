@@ -3,6 +3,10 @@ body {
   color: rgba(94, 88, 115, 0.5);
 }
 
+:root {
+  font-size: 16px;
+}
+
 a:hover {
   color: #5e5873 !important;
 }
@@ -20,6 +24,7 @@ a:hover {
   position: fixed;
   top: 0;
   height: auto;
+  z-index: 90;
 }
 #menu-button-toggler hr {
   margin-top: 7px;
@@ -41,13 +46,13 @@ a:hover {
   position: relative;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #menu-button-toggler {
     display: block;
     position: fixed;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .content-screen {
     width: 100%;
     padding: 60px 10px 20px 10px;
@@ -59,7 +64,7 @@ a:hover {
   color: #5e5873;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -84,7 +89,7 @@ header {
   background-color: #f4a261;
 }
 .screens-links li a {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -108,7 +113,7 @@ header {
   background: #fff;
   box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.1);
   padding: 23px 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -126,7 +131,7 @@ header {
 }
 .main-menu .menu-subsection {
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 300;
   padding-left: 30px;
   color: rgba(94, 88, 115, 0.5);
@@ -282,7 +287,7 @@ header .notification.indicate .indicator {
 header .welcome-text p {
   color: #7c8db5;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -295,7 +300,7 @@ header .name {
   color: #5e5873;
   text-align: right;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -304,7 +309,7 @@ header .role {
   color: #b9b9c3;
   text-align: right;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
@@ -332,7 +337,7 @@ header .user-active-status::before {
 }
 .data-picker .btn-outline-primary {
   color: #1d2939;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -348,7 +353,7 @@ header .user-active-status::before {
   border-radius: 8px;
   border: 1px solid #d0d5dd;
   color: #667085;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -401,7 +406,7 @@ header .user-active-status::before {
 .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item .heading .status {
   color: rgba(0, 0, 0, 0.7);
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -411,14 +416,14 @@ header .user-active-status::before {
 }
 .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item .number-parameter {
   color: #5e5873;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 12px;
 }
 .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item .metrix-summ {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   margin-bottom: 20px;
@@ -426,7 +431,7 @@ header .user-active-status::before {
 .statistics-section .underwriting-statistic .wrapper .underwriting-statistic-item .metric-percentage {
   color: rgba(110, 107, 123, 0.5);
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -454,7 +459,7 @@ header .user-active-status::before {
 }
 .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary {
   color: #1d2939;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -476,12 +481,12 @@ header .user-active-status::before {
   background: #fff;
   padding: 10px 16px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -497,7 +502,7 @@ header .user-active-status::before {
 .statistics-section .statistics .statistics-item .statistics-item-title {
   color: rgba(0, 0, 0, 0.7);
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -508,7 +513,7 @@ header .user-active-status::before {
 .statistics-section .statistics .statistics-item .number-parameter {
   color: #5e5873;
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -537,7 +542,7 @@ header .user-active-status::before {
 .statistics-section .appproval-rate .statistics-item .statistics-item-title {
   color: rgba(0, 0, 0, 0.7);
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -552,12 +557,12 @@ header .user-active-status::before {
   background: #fff;
   padding: 10px 16px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -578,7 +583,7 @@ header .user-active-status::before {
 }
 .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary {
   color: #1d2939;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -597,7 +602,7 @@ header .user-active-status::before {
 .statistics-section .appproval-rate .statistics-item .number-parameter {
   color: #5e5873;
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -674,7 +679,7 @@ header .user-active-status::before {
   color: #5e5873;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -683,14 +688,14 @@ header .user-active-status::before {
   color: #5e5873;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
 }
 .payments-charts .last-payments .payments-wrapper .payments-item .amount {
   color: #039855;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -710,7 +715,7 @@ header .user-active-status::before {
 }
 .clients-table .clients-list-handler .clients-text .heading {
   color: #101828;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -723,7 +728,7 @@ header .user-active-status::before {
   padding: 2px 8px;
   color: #6941c6;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
@@ -737,7 +742,7 @@ header .user-active-status::before {
   margin-top: 5px;
   margin-bottom: 0;
   color: #475467;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -748,7 +753,7 @@ header .user-active-status::before {
   background: #fff;
   padding: 10px 16px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -760,7 +765,7 @@ header .user-active-status::before {
 .clients-table .clients-list-handler .save-list {
   padding: 10px 16px;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 23px;
@@ -801,7 +806,7 @@ header .user-active-status::before {
   background: #fff;
   padding: 10px 16px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -813,7 +818,7 @@ header .user-active-status::before {
   background: #fff;
   padding: 10px 16px;
   color: #344054;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -844,7 +849,7 @@ header .user-active-status::before {
   text-align: center;
   color: #475467;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -858,7 +863,7 @@ header .user-active-status::before {
 .clients-table .table .table-responsive thead th {
   color: #475467;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -869,7 +874,7 @@ header .user-active-status::before {
 .clients-table .table .table-responsive thead th:first-child {
   text-align: left;
   padding-left: 24px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .clients-table .table .table-responsive thead th:first-child input {
   margin-right: 12px;
@@ -887,7 +892,7 @@ header .user-active-status::before {
   color: #7367f0;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
@@ -896,7 +901,7 @@ header .user-active-status::before {
 .clients-table .table .table-responsive tbody th .email {
   color: #475467;
   font-family: Inter;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -919,7 +924,7 @@ header .user-active-status::before {
 }
 .clients-table .pagination-block .page-link {
   color: #475467;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -972,7 +977,7 @@ header .user-active-status::before {
 .collection-statistic .collection-statistic__item .collection-statistic__item-title span:first-child {
   color: #6e6b7b;
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -981,7 +986,7 @@ header .user-active-status::before {
 .collection-statistic .collection-statistic__item .collection-statistic__item-title span:last-child {
   color: #7c8db5;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -993,7 +998,7 @@ header .user-active-status::before {
 }
 .collection-statistic .collection-statistic__item .collection-statistic__item-metric {
   color: #5e5873;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1005,7 +1010,7 @@ header .user-active-status::before {
 .collection-statistic .collection-statistic__item .collection-statistic__item-percentdata {
   color: rgba(110, 107, 123, 0.5);
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -1044,7 +1049,7 @@ header .user-active-status::before {
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -1061,7 +1066,7 @@ header .user-active-status::before {
   color: #6e6b7b;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
@@ -1139,7 +1144,7 @@ header .user-active-status::before {
 .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .heading .status {
   color: rgba(0, 0, 0, 0.7);
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -1149,14 +1154,14 @@ header .user-active-status::before {
 }
 .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .number-parameter {
   color: #5e5873;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 12px;
 }
 .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .metrix-summ {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   margin-bottom: 20px;
@@ -1164,7 +1169,7 @@ header .user-active-status::before {
 .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item .metric-percentage {
   color: rgba(110, 107, 123, 0.5);
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -1219,7 +1224,7 @@ header .user-active-status::before {
   color: #fff;
   text-align: center;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
   line-height: 21px;
@@ -1245,7 +1250,7 @@ header .user-active-status::before {
 }
 .overdue-section .overdue-section-items-wrapper .overdue-section-item .title {
   color: var(--dark, #5e5873);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1255,7 +1260,7 @@ header .user-active-status::before {
   color: var(--dark, #5e5873);
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -1267,20 +1272,32 @@ header .user-active-status::before {
   height: 100vh;
   position: relative;
   background: linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+  display: flex;
+}
+.login .login-big-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/images/square-pattern-1.svg");
+  background-repeat: no-repeat;
+  background-position: 87px 105%;
+  background-size: auto;
+}
+.login .login-big-img img {
+  max-width: 900px;
 }
 .login .login-form {
   max-width: 484px;
   padding: 0 37px;
-  height: 100%;
-  position: absolute;
-  right: 0;
+  height: 100vh;
 }
 .login .login-form-logo {
   width: 100%;
   text-align: center;
   color: #7367f0;
   font-family: Montserrat;
-  font-size: 42px;
+  font-size: 2.625rem;
   font-style: normal;
   font-weight: 600;
   line-height: 50.4px; /* 120% */
@@ -1301,7 +1318,7 @@ header .user-active-status::before {
   color: var(--1-theme-color-heading-display-text, #5e5873);
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1311,7 +1328,7 @@ header .user-active-status::before {
   color: #6e6b7b;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -1324,7 +1341,8 @@ header .user-active-status::before {
 .login .login-form-right {
   background-image: url("/public/images/pattern-bg-1.svg");
   background-repeat: no-repeat;
-  background-position: 100% -40%;
+  background-position: 150px -100px;
+  background-size: auto;
 }
 .login form {
   margin-bottom: 16px;
@@ -1333,7 +1351,7 @@ header .user-active-status::before {
   color: #6e6b7b;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
@@ -1349,7 +1367,7 @@ header .user-active-status::before {
   color: #b9b9c3;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -1358,7 +1376,7 @@ header .user-active-status::before {
   color: #b9b9c3;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -1371,7 +1389,7 @@ header .user-active-status::before {
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -1385,7 +1403,7 @@ header .user-active-status::before {
 .login .login-form-create-account {
   color: #6e6b7b;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px; /* 150% */
@@ -1395,10 +1413,323 @@ header .user-active-status::before {
 .login .login-form-create-account a {
   color: #7367f0;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0.14px;
   text-decoration: none;
+}
+
+.login-page-2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: 5% 0%/20% no-repeat url("/public/images/square-pattern-2.svg"), 5% 90%/30% no-repeat url("/public/images/female-chair-bg-svg.svg"), 90% 15%/30% no-repeat url("/public/images/male-female-chart.svg"), linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+}
+.login-page-2 .login-form {
+  max-width: 484px;
+  padding: 0 37px;
+  height: 100vh;
+}
+.login-page-2 .login-form-logo {
+  width: 100%;
+  text-align: center;
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 2.625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.4px; /* 120% */
+  letter-spacing: 0.14px;
+}
+.login-page-2 .login-form-logo svg {
+  margin-right: 14px;
+}
+.login-page-2 .login-form-wrapper {
+  padding: 16px 32px;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+.login-page-2 .login-form-title {
+  color: var(--1-theme-color-heading-display-text, #5e5873);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.login-page-2 .login-form-subtitle {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 24px;
+}
+.login-page-2 .login-form-center, .login-page-2 .login-form-right {
+  background-color: #fff;
+  padding-top: 79px;
+}
+.login-page-2 .login-form-right {
+  background-image: url("/public/images/pattern-bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: 150px -100px;
+  background-size: auto;
+}
+.login-page-2 form {
+  margin-bottom: 16px;
+}
+.login-page-2 form .form-label {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+.login-page-2 form .form-control {
+  border-radius: 5px;
+  border: 1px solid #d8d6de;
+  padding: 8px 15px;
+  margin-bottom: 24px;
+}
+.login-page-2 form .form-control::-moz-placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login-page-2 form .form-control::placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login-page-2 form .btn {
+  padding: 10px 22px;
+  border-radius: 5px;
+  background: #7367f0;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  border: none;
+  width: 100%;
+}
+.login-page-2 form .btn:focus {
+  background: #5c53c3;
+}
+.login-page-2 .login-form-create-account {
+  color: #6e6b7b;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  letter-spacing: 0.14px;
+  text-align: center;
+}
+.login-page-2 .login-form-create-account a {
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.14px;
+  text-decoration: none;
+}
+.login-page-2 .login-form {
+  min-width: 484px;
+  max-width: 484px;
+  padding: 120px 37px 0 37px;
+  height: 100vh;
+}
+
+.login-page-3 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: 95% 90%/30% no-repeat url("/public/images/female-chair-bg-svg.svg"), 5% 5%/30% no-repeat url("/public/images/male-female-chart.svg"), center/100% no-repeat url("/public/images/login-3-bg-pattern.svg"), linear-gradient(90deg, #f8f8f8 0%, #f3f7fd 100%);
+}
+.login-page-3 .login-form {
+  max-width: 484px;
+  padding: 0 37px;
+  height: 100vh;
+}
+.login-page-3 .login-form-logo {
+  width: 100%;
+  text-align: center;
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 2.625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.4px; /* 120% */
+  letter-spacing: 0.14px;
+}
+.login-page-3 .login-form-logo svg {
+  margin-right: 14px;
+}
+.login-page-3 .login-form-wrapper {
+  padding: 16px 32px;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+.login-page-3 .login-form-title {
+  color: var(--1-theme-color-heading-display-text, #5e5873);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.login-page-3 .login-form-subtitle {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 24px;
+}
+.login-page-3 .login-form-center, .login-page-3 .login-form-right {
+  background-color: #fff;
+  padding-top: 79px;
+}
+.login-page-3 .login-form-right {
+  background-image: url("/public/images/pattern-bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: 150px -100px;
+  background-size: auto;
+}
+.login-page-3 form {
+  margin-bottom: 16px;
+}
+.login-page-3 form .form-label {
+  color: #6e6b7b;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+.login-page-3 form .form-control {
+  border-radius: 5px;
+  border: 1px solid #d8d6de;
+  padding: 8px 15px;
+  margin-bottom: 24px;
+}
+.login-page-3 form .form-control::-moz-placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login-page-3 form .form-control::placeholder {
+  color: #b9b9c3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.login-page-3 form .btn {
+  padding: 10px 22px;
+  border-radius: 5px;
+  background: #7367f0;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  border: none;
+  width: 100%;
+}
+.login-page-3 form .btn:focus {
+  background: #5c53c3;
+}
+.login-page-3 .login-form-create-account {
+  color: #6e6b7b;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  letter-spacing: 0.14px;
+  text-align: center;
+}
+.login-page-3 .login-form-create-account a {
+  color: #7367f0;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.14px;
+  text-decoration: none;
+}
+.login-page-3 .login-form {
+  max-width: 484px;
+  padding: 70px 37px 0 37px;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.login-page-3 .login-form-wrapper {
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  border-radius: 16px;
+  border: 1px solid #d8d8d8;
+  background: #f3f7fd;
+}
+.login-page-3 .login-form-logo {
+  margin-top: -100px;
+  margin-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */
