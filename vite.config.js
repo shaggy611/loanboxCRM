@@ -21,8 +21,6 @@ export default defineConfig({
                 pages_10: resolve(__dirname, 'pages/login_page_3.html'),
                 pages_11: resolve(__dirname, 'pages/marketing_manager.html'),
             },
-        },
-        rollupOptions: {
             external: [
                 /^node:.*/,
             ]
