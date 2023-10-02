@@ -283,21 +283,46 @@
                 </div>
             </section>
 
-            <section class="goals-overview">
-                <div class="row justify-content-around">
-                    <div class="col-6 p-0 w-auto">
-                        <p class="section-heading">Goals Overview (by now)</p>
-                        <div class="goals-overview-item">
-                            <img src="/public/images/goals-overview-chart-1.svg" alt="Chart">
+            <section class="payments-responses">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-lg-6">
+                        <p class="section-heading">Payments by types, totals</p>
+                        <div class="payments-responses-item">
+                            <div class="chart donut-chart">
+                                <div class="chart-canvas-title">
+                                    <p>total users:</p>
+                                    <span>1 896</span>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas id="payments_chart_donut"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-6 p-0 w-auto">
-                        <p class="section-heading">Goals Overview (by now)</p>
-                        <div class="goals-overview-item">
-                            <img src="/public/images/goals-overview-chart-2.svg" alt="Chart">
+                    <div class="col-12 col-lg-6">
+                        <p class="section-heading">Responses by overdue stages</p>
+                        <div class="payments-responses-item">
+                            <div class="chart donut-chart">
+                                <div class="chart-canvas-title">
+                                    <p>total overdue:</p>
+                                    <span>$15, 896</span>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas id="responses_chart_donut"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="cpa-section">
+                <p class="section-heading">CPA efficiency (conversion to loans)</p>
+                <div class="cpa-section__chart">
+                    <figure class="highcharts-figure">
+                        <div id="cpa-lined-chart-blue"></div>
+                    </figure>
                 </div>
             </section>
 
