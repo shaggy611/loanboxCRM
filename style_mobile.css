@@ -514,6 +514,12 @@
   .goals-overview {
     margin-bottom: 24px;
   }
+  .goals-overview .section-heading {
+    margin-top: 20px;
+  }
+  .goals-overview .goals-overview-wrapper {
+    flex-wrap: wrap;
+  }
   .goals-overview .row {
     justify-content: space-around !important;
   }
@@ -523,7 +529,7 @@
     border: 1px solid #eff0f6;
     background: #fff;
     width: 100%;
-    max-width: 379px;
+    max-width: 290px;
     box-sizing: content-box;
     margin-right: 0;
   }
@@ -643,7 +649,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    justify-content: end;
+    justify-content: center;
   }
   .overdue-section .overdue-section-items-wrapper .overdue-section-item {
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -839,5 +845,82 @@
     line-height: 21px;
     letter-spacing: 0.14px;
     text-decoration: none;
+  }
+  .settings-section .settings-section-sub-block-left {
+    max-width: 76px;
+  }
+  .settings-section .settings-section-sub-block-right .upload-field {
+    max-width: 240px;
+  }
+  .settings-section .settings-section-sub-block-right input.max-width-input {
+    max-width: 170px;
+  }
+  .settings-section .settings-section-sub-block-right input.max-width-input-234 {
+    max-width: 194px;
+  }
+  .settings-section .settings-section-sub-block-right .form-select {
+    max-width: 170px;
+    padding-right: 30px;
+  }
+  .settings-section .settings-section-sub-block-right .input-group-text {
+    font-size: 0.6rem;
+  }
+  .settings-section .settings-section-sub-block-right .input-group-text {
+    padding: 8px 0 10px 12px;
+  }
+  .settings-section .settings-section-sub-block {
+    flex-wrap: wrap;
+  }
+  .settings-section .settings-section-sub-block-left {
+    max-width: 280px;
+    width: 100%;
+  }
+  .settings-section .settings-section-sub-block-left .title {
+    width: 100%;
+  }
+  .settings-section .settings-section-sub-block-left .subtitle {
+    width: 100%;
+  }
+  .user-inform {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  .user-inform .user-inform-activity {
+    text-align: center;
+  }
+  .underwriting-statistics {
+    margin-bottom: 44px;
+  }
+  .underwriting-statistics .underwriting-statistics-items-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .underwriting-statistics .underwriting-statistics-items-wrapper .underwriting-statistics-left {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    max-width: 441px;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .underwriting-statistics .underwriting-statistics-items-wrapper .underwriting-statistics-right {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eff0f6;
+    background: #fff;
+    width: 100%;
+    padding: 16px;
+    max-width: 441px;
+    width: 100%;
   }
 }/*# sourceMappingURL=style_mobile.css.map */

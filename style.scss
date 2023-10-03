@@ -620,6 +620,7 @@ header {
       padding-top: 16px;
       padding-bottom: 16px;
       border-bottom: 1px solid #eaecf0;
+      justify-content: space-between;
 
       & .icon {
         padding: 6px 13px;
@@ -816,6 +817,43 @@ header {
       font-style: normal;
       font-weight: 400;
       line-height: 21px;
+
+      & svg {
+        margin-right: 8px;
+      }
+
+      & .bage {
+        @include border_radius_16;
+
+        padding: 8px 8px 8px 6px;
+        border-width: 1.5px;
+        border-style: solid;
+        text-align: center;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+
+        &.c-purple {
+          color: #7367f0;
+          border-color: #7367f0;
+        }
+
+        &.c-green {
+          color: #28c76f;
+          border-color: #28c76f;
+        }
+
+        &.c-orange {
+          color: #ff9f43;
+          border-color: #ff9f43;
+        }
+        &.c-red {
+          color: #ea5455;
+          border-color: #ea5455;
+        }
+      }
     }
 
     & thead th:nth-child(odd) {
@@ -1007,15 +1045,123 @@ header {
 .goals-overview {
   margin-bottom: 24px;
 
+  & .goals-overview-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .goals-overview-chart {
+    max-width: 561px;
+    width: 100%;
+    padding: 15px;
+
+    &.purple-chart {
+      & .goal:before {
+        background: #7367f0 !important;
+      }
+
+      & .remain:before {
+        background: rgba(70, 126, 255, 0.5764705882);
+      }
+    }
+
+    & svg {
+      width: 100%;
+      margin-right: 20px;
+    }
+
+    & .background-circle {
+      fill: none;
+      stroke: #467eff93;
+    }
+
+    & .foreground-circle {
+      fill: none;
+    }
+
+    & .circle-container {
+      overflow: visible;
+    }
+
+    & .circle-text {
+      display: none;
+    }
+
+    & .circle-info-text {
+      transform: translate(0, -10%);
+    }
+  }
+
   & .goals-overview-item {
     @include crm_data_block;
-    max-width: 579px;
+    max-width: 510px;
     min-width: fit-content;
     box-sizing: content-box;
     margin-right: 0;
+    padding: 25px;
+    display: flex;
 
     & img {
       min-width: 579px;
+    }
+  }
+
+  & .goals-overview-numbers {
+    & .heading,
+    & .sum {
+      color: #5e5873;
+      font-family: Montserrat;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    & .point {
+      color: #82868b;
+      font-family: Montserrat;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-top: 29px;
+      position: relative;
+
+      &.goal:before {
+        position: absolute;
+        display: block;
+        left: -15px;
+        top: 7px;
+        background: #467fff;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+      }
+
+      &.remain:before {
+        position: absolute;
+        display: block;
+        left: -15px;
+        top: 7px;
+        background: rgba(70, 126, 255, 0.5764705882);
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+      }
+    }
+
+    & .sum {
+      margin-top: 9px;
     }
   }
 }
@@ -1179,6 +1325,10 @@ header {
 // Cashflow chart section
 .cashflow-chart-section {
   padding-bottom: 40px;
+
+  & .highcharts-figure {
+    max-width: 100%;
+  }
 
   & .cashflow-chart-section__chart {
     @include crm_data_block;
@@ -1550,3 +1700,507 @@ header {
   }
 }
 // End goals-overview section
+
+// Settings section
+.settings-section {
+  & .settings-section-heading {
+    color: #101828;
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    margin-bottom: 25px;
+  }
+
+  & .settings-section-tabs-navigation {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #eaecf0;
+
+    & li .nav-link {
+      color: #667085;
+      font-family: Inter;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      margin-right: 24px;
+
+      &.active,
+      &:hover {
+        color: #6941c6;
+        border-bottom: 2px solid #6941c6;
+      }
+    }
+  }
+
+  & .user-menu-group-buttons {
+    margin-bottom: 20px;
+    border-right: 1px solid #d0d5dd !important;
+
+    & .btn-outline-primary {
+      padding: 10px 16px;
+      border: 1px solid #d0d5dd !important;
+      background: #fff;
+      color: #1d2939;
+      font-family: Inter;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+
+      &:hover {
+        background: #f9fafb;
+      }
+    }
+  }
+
+  & .settings-section-wrapper {
+    & .settings-section-form-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .title {
+        color: #101828;
+        font-family: Inter;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 4px;
+      }
+
+      & .subtitle {
+        color: #475467;
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      & .cancel-btn {
+        @include button_basic_style;
+      }
+
+      & .save-btn {
+        padding: 10px 16px;
+        border-radius: 8px;
+        border: none;
+        background: #7f56d9;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: white;
+        font-size: 0.875rem;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  & .settings-section-sub-block {
+    border-bottom: 1px solid #eaecf0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .settings-section-sub-block-left {
+    max-width: 280px;
+    width: 100%;
+
+    & .title {
+      font-family: Inter;
+      color: #344054;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    & .subtitle {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: #475467;
+    }
+  }
+
+  & .settings-section-sub-block-right {
+    max-width: 752px;
+    width: 100%;
+
+    & .user-avatar {
+      width: 100%;
+      max-width: 64px;
+      max-height: 64px;
+    }
+
+    & .upload-field {
+      cursor: pointer;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #eaecf0;
+      padding: 16px 24px;
+      text-align: center;
+      justify-content: center;
+      height: auto;
+      max-width: 620px;
+
+      & input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      & label {
+        border: none;
+        display: block;
+      }
+    }
+
+    & .disable-left-border {
+      border-left-color: transparent;
+    }
+
+    & .input-group-text {
+      align-items: self-start;
+      background-color: #fff;
+      border-right: none;
+      height: fit-content;
+      padding: 12px 0 12px 12px;
+
+      & .cloud-ico {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 12px;
+        border-radius: 28px;
+        border: 6px solid #f9fafb;
+        background: #f2f4f7;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      & p {
+        margin-bottom: 0;
+      }
+
+      & p span {
+        color: #6941c6;
+        font-weight: 600;
+      }
+    }
+
+    & .settings-section-input-check {
+      border-radius: 4px;
+      border: 1px solid #7f56d9;
+      background: #f9f5ff;
+      width: 20px;
+      margin-right: 7px;
+    }
+
+    & .form-check {
+      color: #344054;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    .form-check-input:checked[type='checkbox'] {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M9 1L3.5 6.5L1 4" stroke="%237F56D9" stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+    }
+
+    & .form-select {
+      height: fit-content;
+      padding: 10px 14px;
+      max-width: 364px;
+    }
+    & input {
+      border-radius: 8px;
+      border: 1px solid #d0d5dd;
+      background: white;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      margin-bottom: 24px;
+      padding: 10px 14px;
+
+      &::placeholder {
+        color: #101828;
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    & input.max-width-input {
+      max-width: 364px;
+    }
+
+    & input.max-width-input-234 {
+      max-width: 234px;
+    }
+
+    & .form-select.max-width-100 {
+      max-width: 100%;
+    }
+  }
+}
+
+// End settings section
+
+// User inform section
+.user-inform {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 240, 255, 0) 0.03%,
+    #f1f0ff 52.52%,
+    rgba(241, 240, 255, 0) 99.95%
+  );
+
+  & .user-infogm-left {
+    display: flex;
+    position: relative;
+
+    & .image-border {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    & img {
+      width: 94px;
+      height: 94px;
+      margin-right: 24px;
+    }
+  }
+
+  & .user-contacts {
+    & p {
+      margin-bottom: 4px;
+    }
+
+    & .name {
+      color: #101828;
+      /* Display sm/Semibold */
+      font-family: Inter;
+      font-size: 1.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 38px;
+    }
+    & .mail,
+    & .phone {
+      color: #475467;
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    & .account-completeness {
+      color: #6e6b7b;
+      font-family: Montserrat;
+      font-size: 0.4375rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 10.5px;
+    }
+  }
+
+  & .user-infogm-right-button-wrapper {
+    margin-top: 12px;
+    & .block-list-btn {
+      @include button_basic_style;
+    }
+
+    & .authorize-btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background: #7f56d9;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      color: white;
+      font-size: 0.875rem;
+      margin-left: 12px;
+    }
+  }
+
+  & .user-inform-activity {
+    color: #6e6b7b;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10.5px;
+    margin-top: 30px;
+
+    & p span {
+      color: #6e6b7b;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 7px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 10.5px;
+    }
+
+    & .registered {
+      margin-bottom: 5px;
+    }
+  }
+}
+// End user inform section
+
+// underwriting-statistics section
+.underwriting-statistics {
+  margin-bottom: 44px;
+  & .underwriting-statistics-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & .underwriting-statistics-left {
+      display: flex;
+      justify-content: space-between;
+      @include crm_data_block;
+      max-width: 541px;
+      width: 100%;
+      padding: 16px;
+    }
+
+    & .underwriting-statistics-right {
+      @include crm_data_block;
+      padding: 16px;
+      max-width: 541px;
+      width: 100%;
+    }
+
+    & .underwriting-statistics-clients-btn {
+      margin-bottom: 65px;
+      @include button_basic_style;
+      & svg {
+        margin-left: 8px;
+        margin-right: 0;
+      }
+    }
+
+    & .scoring {
+      color: #6e6b7b;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.154px;
+    }
+
+    & .score-wrapper {
+      display: flex;
+      justify-content: space-between;
+      & .percents {
+      }
+
+      & .score {
+        color: #5e5873;
+        font-family: Inter;
+        font-size: 1.5ren;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+// End underwriting-statistics section
+
+// Clients statistics
+.clients-stat {
+  & .heading {
+    color: #101828;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+
+  & .clients-stat-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    & .clients-stat-item {
+      max-width: 297px;
+      width: 100%;
+
+      &:hover {
+        border-bottom: 5px solid #7f56d9;
+      }
+      & .heading {
+        color: #475467;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      & > div {
+        display: flex;
+        align-items: center;
+
+        & .stat {
+          color: #5e5873;
+          font-family: Inter;
+          font-size: 1.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 38px;
+          margin-right: 16px;
+        }
+
+        & .index {
+          padding: 2px 10px 2px 8px;
+          @include border_radius_16;
+          margin-top: -13px;
+          text-align: center;
+          font-family: Inter;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+
+          &.green {
+            color: #027a48;
+            background-color: #ecfdf3;
+
+            &::before {
+              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="%2312B76A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            }
+          }
+
+          &.red {
+            color: #b42318;
+            background-color: #fef3f2;
+
+            &::before {
+              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2.5V9.5M6 9.5L9.5 6M6 9.5L2.5 6" stroke="%23F04438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End clients statistics

@@ -20,6 +20,8 @@ export default defineConfig({
                 pages_9: resolve(__dirname, 'pages/login_page_2.html'),
                 pages_10: resolve(__dirname, 'pages/login_page_3.html'),
                 pages_11: resolve(__dirname, 'pages/marketing_manager.html'),
+                pages_12: resolve(__dirname, 'pages/client-overview-profile.html'),
+                pages_13: resolve(__dirname, 'pages/credit_manager_dashboard_2.html'),
             },
             external: [
                 /^node:.*/,

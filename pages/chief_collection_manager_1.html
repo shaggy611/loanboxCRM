@@ -227,7 +227,7 @@
                             <p>Here is the information about all your orders</p>
                         </div>
                         <div
-                            class="col-md-5 col-sm-12 d-flex justify-content-lg-end justify-content-around align-items-center">
+                            class="col-md-5 col-sm-12 d-flex justify-content-lg-end justify-content-around align-items-center p-0">
                             <button type="button" class="btn">
                                 <img src="/images/search-ico.svg" alt="Search">
                             </button>
@@ -377,20 +377,34 @@
             </section>
 
             <section class="goals-overview">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 col-12 p-0 w-auto">
+                <div class="goals-overview-wrapper">
+                    <div class="p-0 goals-overview-chart">
                         <p class="section-heading">Goals Overview (by now)</p>
                         <div class="goals-overview-item">
-                            <!-- <img src="/public/images/goals-overview-chart-1.svg" alt="Chart"> -->
-                            <canvas id="goals_chart_blue" width="300px" height="200"></canvas>
+                            <div id="goals_chart_blue"></div>
+
+                            <div class="goals-overview-numbers">
+                                <p class="heading">Soft plan</p>
+                                <p class="point goal">Goal</p>
+                                <p class="sum">$10,000</p>
+                                <p class="point remain">Remain</p>
+                                <p class="sum">$6,532</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-12 p-0 w-auto">
+                    <div class="p-0 goals-overview-chart purple-chart">
                         <p class="section-heading">Goals Overview (by now)</p>
                         <div class="goals-overview-item">
-                            <!-- <img src="/public/images/goals-overview-chart-2.svg" alt="Chart"> -->
-                            <canvas id="goals-chart-purple" width="300px" height="200"></canvas>
+                            <div id="goals_chart_purple"></div>
+
+                            <div class="goals-overview-numbers">
+                                <p class="heading">Soft plan</p>
+                                <p class="point goal">Goal</p>
+                                <p class="sum">$10,000</p>
+                                <p class="point remain">Remain</p>
+                                <p class="sum">$6,532</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -228,7 +228,7 @@
                             <p>Here is the information about all your orders</p>
                         </div>
                         <div
-                            class="col-md-5 col-sm-12 d-flex justify-content-lg-end justify-content-around align-items-center">
+                            class="col-md-5 col-sm-12 d-flex justify-content-lg-end justify-content-around align-items-center p-0">
                             <button type="button" class="btn">
                                 <img src="/images/search-ico.svg" alt="Search">
                             </button>
@@ -253,8 +253,478 @@
                 </div>
             </header>
 
-            <section class="settings">
+            <section class="user-inform">
+                <div class="user-infogm-left">
+                    <div class="image-border" id="circle-status"></div>
+                    <img src="/public/images/user-avatar.png" alt="Avatar" class="client-user-avatar">
+                    <div class="user-contacts">
+                        <p class="name">Sergey Sensei</p>
+                        <p class="mail">hello@helloi.com</p>
+                        <p class="phone">+38 093 678 56 47</p>
+                        <p class="account-completeness">Profile completeness: 75%</p>
+                    </div>
+                </div>
+                <div class="user-infogm-right">
+                    <div class="user-infogm-right-button-wrapper">
+                        <button class="btn block-list-btn">To Block list</button>
+                        <button type="submit" class="btn btn-primary authorize-btn">Authorize</button>
+                    </div>
 
+                    <div class="user-inform-activity">
+                        <p class="registered"><span>Registered:</span> 9 / 16 / 21 5:19:05 PM</p>
+                        <p class="last-active"><span>Last active:</span> 9 / 17 / 21 5:19:05 PM</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="underwriting-statistics">
+                <p class="section-heading">Underwriting Statistic</p>
+
+                <div class="underwriting-statistics-items-wrapper">
+                    <div class="underwriting-statistics-left">
+                        <div class="underwriting-statistics-items-data">
+                            <button class="btn underwriting-statistics-clients-btn" type="button">Clients<svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#344054" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <p class="scoring">Scoring</p>
+                            <div class="score-wrapper">
+                                <p class="score">529/1000</p>
+                                <div class="percents">
+                                    <svg width="62" height="24" viewBox="0 0 62 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:multiply">
+                                            <rect width="62" height="24" rx="12" fill="#ECFDF3" />
+                                            <path d="M14 15.5V8.5M14 8.5L10.5 12M14 8.5L17.5 12" stroke="#12B76A"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M29.2183 6.81818V17H27.6771V8.35938H27.6175L25.1814 9.95028V8.47869L27.7219 6.81818H29.2183ZM35.5173 17.169C34.7318 17.1657 34.0606 16.9586 33.5038 16.5476C32.947 16.1366 32.5211 15.5384 32.2261 14.7528C31.9311 13.9673 31.7836 13.0211 31.7836 11.9141C31.7836 10.8104 31.9311 9.86742 32.2261 9.08523C32.5244 8.30303 32.952 7.70644 33.5088 7.29545C34.0689 6.88447 34.7384 6.67898 35.5173 6.67898C36.2962 6.67898 36.964 6.88613 37.5209 7.30043C38.0777 7.71141 38.5036 8.308 38.7986 9.0902C39.0969 9.86908 39.246 10.8104 39.246 11.9141C39.246 13.0244 39.0985 13.9723 38.8035 14.7578C38.5086 15.54 38.0827 16.1383 37.5258 16.5526C36.969 16.9635 36.2995 17.169 35.5173 17.169ZM35.5173 15.8416C36.2067 15.8416 36.7453 15.5052 37.1331 14.8324C37.5242 14.1596 37.7197 13.1868 37.7197 11.9141C37.7197 11.0689 37.6302 10.3546 37.4513 9.77131C37.2756 9.18466 37.022 8.74053 36.6906 8.43892C36.3625 8.134 35.9714 7.98153 35.5173 7.98153C34.8312 7.98153 34.2926 8.3196 33.9015 8.99574C33.5104 9.67187 33.3132 10.6446 33.3099 11.9141C33.3099 12.7625 33.3978 13.4801 33.5734 14.0668C33.7524 14.6501 34.0059 15.0926 34.3341 15.3942C34.6622 15.6925 35.0566 15.8416 35.5173 15.8416ZM46.3243 15.0909V14.554C46.3243 14.1695 46.4039 13.8182 46.5629 13.5C46.7253 13.1785 46.9607 12.9216 47.2689 12.7294C47.5805 12.5339 47.9566 12.4361 48.3975 12.4361C48.8482 12.4361 49.2261 12.5322 49.531 12.7244C49.8359 12.9167 50.0663 13.1735 50.222 13.495C50.3811 13.8165 50.4607 14.1695 50.4607 14.554V15.0909C50.4607 15.4754 50.3811 15.8284 50.222 16.1499C50.0629 16.468 49.8293 16.7249 49.521 16.9205C49.2161 17.1127 48.8416 17.2088 48.3975 17.2088C47.95 17.2088 47.5722 17.1127 47.2639 16.9205C46.9557 16.7249 46.722 16.468 46.5629 16.1499C46.4039 15.8284 46.3243 15.4754 46.3243 15.0909ZM47.4827 14.554V15.0909C47.4827 15.3759 47.5506 15.6345 47.6865 15.8665C47.8224 16.0985 48.0594 16.2145 48.3975 16.2145C48.7322 16.2145 48.9659 16.0985 49.0985 15.8665C49.231 15.6345 49.2973 15.3759 49.2973 15.0909V14.554C49.2973 14.2689 49.2327 14.0104 49.1034 13.7784C48.9775 13.5464 48.7422 13.4304 48.3975 13.4304C48.066 13.4304 47.8307 13.5464 47.6915 13.7784C47.5523 14.0104 47.4827 14.2689 47.4827 14.554ZM41.2036 9.2642V8.72727C41.2036 8.3428 41.2831 7.98982 41.4422 7.66832C41.6046 7.34683 41.8399 7.08996 42.1482 6.89773C42.4597 6.70549 42.8359 6.60938 43.2767 6.60938C43.7275 6.60938 44.1053 6.70549 44.4102 6.89773C44.7152 7.08996 44.9455 7.34683 45.1013 7.66832C45.2571 7.98982 45.335 8.3428 45.335 8.72727V9.2642C45.335 9.64867 45.2554 10.0017 45.0963 10.3232C44.9405 10.6413 44.7085 10.8982 44.4003 11.0938C44.0954 11.286 43.7209 11.3821 43.2767 11.3821C42.826 11.3821 42.4465 11.286 42.1382 11.0938C41.8333 10.8982 41.6013 10.6413 41.4422 10.3232C41.2831 10.0017 41.2036 9.64867 41.2036 9.2642ZM42.3669 8.72727V9.2642C42.3669 9.54924 42.4332 9.80776 42.5658 10.0398C42.7017 10.2718 42.9387 10.3878 43.2767 10.3878C43.6082 10.3878 43.8402 10.2718 43.9727 10.0398C44.1086 9.80776 44.1766 9.54924 44.1766 9.2642V8.72727C44.1766 8.44223 44.1119 8.18371 43.9827 7.9517C43.8534 7.7197 43.6181 7.60369 43.2767 7.60369C42.9453 7.60369 42.71 7.7197 42.5708 7.9517C42.4349 8.18371 42.3669 8.44223 42.3669 8.72727ZM41.6759 17L48.6759 6.81818H49.8641L42.8641 17H41.6759Z"
+                                                fill="#027A48" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="graph-bg">
+                            <svg width="286" height="169" viewBox="0 0 286 169" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 1.33301C45.0288 5.50302 47.7554 105.336 91.3333 116.833C127.269 126.314 145.465 72.495 181.667 78.333C220.933 84.6652 233.498 140.747 272 155.333H1V1.33301Z"
+                                    fill="#FEF3F2" />
+                                <path
+                                    d="M1 1.33301C45.0288 5.50302 47.7554 105.336 91.3333 116.833C127.269 126.314 145.465 72.495 181.667 78.333C220.933 84.6652 233.498 140.747 272 155.333H1V1.33301Z"
+                                    fill="url(#paint0_linear_236_206873)" />
+                                <path
+                                    d="M272 155.333C233.498 140.747 220.933 84.6652 181.667 78.333C145.465 72.495 127.269 126.314 91.3333 116.833C47.7554 105.336 45.0288 5.50302 0.999992 1.33301"
+                                    stroke="url(#paint1_linear_236_206873)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_236_206873" x1="136.5" y1="1.33301" x2="136.5"
+                                        y2="155.333" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.641167" stop-color="white" stop-opacity="0" />
+                                        <stop offset="1" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_236_206873" x1="279.718" y1="155.333"
+                                        x2="-15.5418" y2="89.2643" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F04438" />
+                                        <stop offset="1" stop-color="#F04438" stop-opacity="0.95" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div class="underwriting-statistics-left">
+                        <div class="underwriting-statistics-items-data">
+                            <button class="btn underwriting-statistics-clients-btn" type="button">Clients<svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#344054" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <p class="scoring">Scoring</p>
+                            <div class="score-wrapper">
+                                <p class="score">529/1000</p>
+                                <div class="percents">
+                                    <svg width="62" height="24" viewBox="0 0 62 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode:multiply">
+                                            <rect width="62" height="24" rx="12" fill="#FEF3F2" />
+                                            <path d="M14 15.5V8.5M14 8.5L10.5 12M14 8.5L17.5 12" stroke="#F04438"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M29.2183 6.81818V17H27.6771V8.35938H27.6175L25.1814 9.95028V8.47869L27.7219 6.81818H29.2183ZM35.5173 17.169C34.7318 17.1657 34.0606 16.9586 33.5038 16.5476C32.947 16.1366 32.5211 15.5384 32.2261 14.7528C31.9311 13.9673 31.7836 13.0211 31.7836 11.9141C31.7836 10.8104 31.9311 9.86742 32.2261 9.08523C32.5244 8.30303 32.952 7.70644 33.5088 7.29545C34.0689 6.88447 34.7384 6.67898 35.5173 6.67898C36.2962 6.67898 36.964 6.88613 37.5209 7.30043C38.0777 7.71141 38.5036 8.308 38.7986 9.0902C39.0969 9.86908 39.246 10.8104 39.246 11.9141C39.246 13.0244 39.0985 13.9723 38.8035 14.7578C38.5086 15.54 38.0827 16.1383 37.5258 16.5526C36.969 16.9635 36.2995 17.169 35.5173 17.169ZM35.5173 15.8416C36.2067 15.8416 36.7453 15.5052 37.1331 14.8324C37.5242 14.1596 37.7197 13.1868 37.7197 11.9141C37.7197 11.0689 37.6302 10.3546 37.4513 9.77131C37.2756 9.18466 37.022 8.74053 36.6906 8.43892C36.3625 8.134 35.9714 7.98153 35.5173 7.98153C34.8312 7.98153 34.2926 8.3196 33.9015 8.99574C33.5104 9.67187 33.3132 10.6446 33.3099 11.9141C33.3099 12.7625 33.3978 13.4801 33.5734 14.0668C33.7524 14.6501 34.0059 15.0926 34.3341 15.3942C34.6622 15.6925 35.0566 15.8416 35.5173 15.8416ZM46.3243 15.0909V14.554C46.3243 14.1695 46.4039 13.8182 46.5629 13.5C46.7253 13.1785 46.9607 12.9216 47.2689 12.7294C47.5805 12.5339 47.9566 12.4361 48.3975 12.4361C48.8482 12.4361 49.2261 12.5322 49.531 12.7244C49.8359 12.9167 50.0663 13.1735 50.222 13.495C50.3811 13.8165 50.4607 14.1695 50.4607 14.554V15.0909C50.4607 15.4754 50.3811 15.8284 50.222 16.1499C50.0629 16.468 49.8293 16.7249 49.521 16.9205C49.2161 17.1127 48.8416 17.2088 48.3975 17.2088C47.95 17.2088 47.5722 17.1127 47.2639 16.9205C46.9557 16.7249 46.722 16.468 46.5629 16.1499C46.4039 15.8284 46.3243 15.4754 46.3243 15.0909ZM47.4827 14.554V15.0909C47.4827 15.3759 47.5506 15.6345 47.6865 15.8665C47.8224 16.0985 48.0594 16.2145 48.3975 16.2145C48.7322 16.2145 48.9659 16.0985 49.0985 15.8665C49.231 15.6345 49.2973 15.3759 49.2973 15.0909V14.554C49.2973 14.2689 49.2327 14.0104 49.1034 13.7784C48.9775 13.5464 48.7422 13.4304 48.3975 13.4304C48.066 13.4304 47.8307 13.5464 47.6915 13.7784C47.5523 14.0104 47.4827 14.2689 47.4827 14.554ZM41.2036 9.2642V8.72727C41.2036 8.3428 41.2831 7.98982 41.4422 7.66832C41.6046 7.34683 41.8399 7.08996 42.1482 6.89773C42.4597 6.70549 42.8359 6.60938 43.2767 6.60938C43.7275 6.60938 44.1053 6.70549 44.4102 6.89773C44.7152 7.08996 44.9455 7.34683 45.1013 7.66832C45.2571 7.98982 45.335 8.3428 45.335 8.72727V9.2642C45.335 9.64867 45.2554 10.0017 45.0963 10.3232C44.9405 10.6413 44.7085 10.8982 44.4003 11.0938C44.0954 11.286 43.7209 11.3821 43.2767 11.3821C42.826 11.3821 42.4465 11.286 42.1382 11.0938C41.8333 10.8982 41.6013 10.6413 41.4422 10.3232C41.2831 10.0017 41.2036 9.64867 41.2036 9.2642ZM42.3669 8.72727V9.2642C42.3669 9.54924 42.4332 9.80776 42.5658 10.0398C42.7017 10.2718 42.9387 10.3878 43.2767 10.3878C43.6082 10.3878 43.8402 10.2718 43.9727 10.0398C44.1086 9.80776 44.1766 9.54924 44.1766 9.2642V8.72727C44.1766 8.44223 44.1119 8.18371 43.9827 7.9517C43.8534 7.7197 43.6181 7.60369 43.2767 7.60369C42.9453 7.60369 42.71 7.7197 42.5708 7.9517C42.4349 8.18371 42.3669 8.44223 42.3669 8.72727ZM41.6759 17L48.6759 6.81818H49.8641L42.8641 17H41.6759Z"
+                                                fill="#B42318" />
+                                        </g>
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="graph-bg">
+                            <svg width="286" height="169" viewBox="0 0 286 169" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 1.33301C45.0288 5.50302 47.7554 105.336 91.3333 116.833C127.269 126.314 145.465 72.495 181.667 78.333C220.933 84.6652 233.498 140.747 272 155.333H1V1.33301Z"
+                                    fill="#FEF3F2" />
+                                <path
+                                    d="M1 1.33301C45.0288 5.50302 47.7554 105.336 91.3333 116.833C127.269 126.314 145.465 72.495 181.667 78.333C220.933 84.6652 233.498 140.747 272 155.333H1V1.33301Z"
+                                    fill="url(#paint0_linear_236_206873)" />
+                                <path
+                                    d="M272 155.333C233.498 140.747 220.933 84.6652 181.667 78.333C145.465 72.495 127.269 126.314 91.3333 116.833C47.7554 105.336 45.0288 5.50302 0.999992 1.33301"
+                                    stroke="url(#paint1_linear_236_206873)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_236_206873" x1="136.5" y1="1.33301" x2="136.5"
+                                        y2="155.333" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.641167" stop-color="white" stop-opacity="0" />
+                                        <stop offset="1" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_236_206873" x1="279.718" y1="155.333"
+                                        x2="-15.5418" y2="89.2643" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F04438" />
+                                        <stop offset="1" stop-color="#F04438" stop-opacity="0.95" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="settings-section-heading">Settings</p>
+                        <ul class="nav nav-underline settings-section-tabs-navigation">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Credit history</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Transactions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Documents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Credit Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Actions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Communications</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btn-group user-menu-group-buttons" role="group" aria-label="Choose data for filter">
+                            <button type="button" class="btn btn-outline-primary">Profile</button>
+                            <button type="button" class="btn btn-outline-primary">Contacts</button>
+                            <button type="button" class="btn btn-outline-primary">Files</button>
+                            <button type="button" class="btn btn-outline-primary">Cards</button>
+                            <button type="button" class="btn btn-outline-primary">Fingerprint</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form class="settings-section-wrapper">
+                            <div class="settings-section-form-header">
+                                <div>
+                                    <p class="title">Profile Settings</p>
+                                    <p class="subtitle">Update your photo and personal details here.</p>
+                                </div>
+
+                                <div class="d-flex">
+                                    <button class="btn cancel-btn">Cancel</button>
+                                    <button type="submit" class="btn btn-primary save-btn">Save</button>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="settings-section-sub-block settings-section-name">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">Name</p>
+                                </div>
+                                <div class="settings-section-sub-block-right">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input" placeholder="Name"
+                                            aria-describedby="Name">
+                                        <input type="text" class="form-control max-width-input" placeholder="Surname"
+                                            aria-describedby="Surname">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section-sub-block settings-section-email">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">
+                                        Email address
+                                    </p>
+                                </div>
+                                <div class="settings-section-sub-block-right">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M1.66602 5.83301L8.47012 10.5959C9.02109 10.9816 9.29658 11.1744 9.59624 11.2491C9.86093 11.3151 10.1378 11.3151 10.4025 11.2491C10.7021 11.1744 10.9776 10.9816 11.5286 10.5959L18.3327 5.83301M5.66602 16.6663H14.3327C15.7328 16.6663 16.4329 16.6663 16.9677 16.3939C17.4381 16.1542 17.8205 15.7717 18.0602 15.3013C18.3327 14.7665 18.3327 14.0665 18.3327 12.6663V7.33301C18.3327 5.93288 18.3327 5.23281 18.0602 4.69803C17.8205 4.22763 17.4381 3.84517 16.9677 3.60549C16.4329 3.33301 15.7328 3.33301 14.3327 3.33301H5.66602C4.26588 3.33301 3.56582 3.33301 3.03104 3.60549C2.56063 3.84517 2.17818 4.22763 1.9385 4.69803C1.66602 5.23281 1.66602 5.93288 1.66602 7.33301V12.6663C1.66602 14.0665 1.66602 14.7665 1.9385 15.3013C2.17818 15.7717 2.56063 16.1542 3.03104 16.3939C3.56582 16.6663 4.26588 16.6663 5.66602 16.6663Z"
+                                                    stroke="#667085" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg></span>
+                                        <input type="email" class="form-control disable-left-border" aria-label="Email"
+                                            placeholder="Email">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="settings-section-sub-block settings-section-photo">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">Your photo</p>
+                                    <p class="subtitle">
+                                        This will be displayed on profile.
+                                    </p>
+                                </div>
+                                <div class="settings-section-sub-block-right">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <img src="/public/images/user-avatar.png" alt="Avatar" class="user-avatar">
+                                        <div class="input-group ms-4 upload-field">
+                                            <label class="input-group-text" for="inputGroupFile01">
+                                                <div class="cloud-ico">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                        viewBox="0 0 20 20" fill="none">
+                                                        <path
+                                                            d="M6.66602 13.3333L9.99935 10M9.99935 10L13.3327 13.3333M9.99935 10V17.5M16.666 13.9524C17.6839 13.1117 18.3327 11.8399 18.3327 10.4167C18.3327 7.88536 16.2807 5.83333 13.7493 5.83333C13.5673 5.83333 13.3969 5.73833 13.3044 5.58145C12.2177 3.73736 10.2114 2.5 7.91602 2.5C4.46424 2.5 1.66602 5.29822 1.66602 8.75C1.66602 10.4718 2.36222 12.0309 3.48847 13.1613"
+                                                            stroke="#475467" stroke-width="1.66667"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <p><span>Click to upload</span> or drag and drop</p>
+                                                <p>SVG, PNG, JPG or GIF (max. 800x400px)</p>
+                                            </label>
+                                            <input type="file" class="form-control" id="inputGroupFile01">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section-sub-block settings-section-identification">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">Identification</p>
+                                </div>
+                                <div class="settings-section-sub-block-right">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div class="input-group max-width-input">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select document
+                                                    type</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Government ID" aria-describedby="Government ID">
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Serie / Record" aria-describedby="Serie / Record">
+                                        <input type="text" class="form-control max-width-input" placeholder="Number"
+                                            aria-describedby="Number">
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Issued date" aria-describedby="Issued date">
+                                        <input type="text" class="form-control max-width-input" placeholder="Valid to"
+                                            aria-describedby="Valid to">
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input" placeholder="Birth date"
+                                            aria-describedby="Birth date">
+                                        <input type="text" class="form-control max-width-input" placeholder="Tax ID"
+                                            aria-describedby="Tax ID">
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Birth place" aria-describedby="Birth place">
+                                        <div class="input-group max-width-input justify-content-end">
+                                            <select class="form-select" id="inputGroupSelect02">
+                                                <option selected>Gender</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="settings-section-sub-block settings-section-adress">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">Adress</p>
+                                    <p class="subtitle">
+                                        Registration address
+                                    </p>
+                                    <p class="subtitle">
+                                        Living address
+                                    </p>
+                                </div>
+
+                                <div class="settings-section-sub-block-right">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Address Line 1" aria-describedby="Address Line 1">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Address Line 2" aria-describedby="Address Line 2">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <select class="form-select max-width-100" id="inputGroupSelect03">
+                                            <option selected>Living type</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="d-flex flex-row justify-content-between mt-4">
+                                        <input type="text" class="form-control max-width-input-234" placeholder="City"
+                                            aria-describedby="City">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="State/Region" aria-describedby="State/Region">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="ZIP code" aria-describedby="ZIP code">
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="form-check">
+                                            <input class="form-check-input settings-section-input-check" type="checkbox"
+                                                value="" id="Check1">
+                                            <label class="form-check-label" for="Check1">
+                                                I’m living at the same address
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between mt-4">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Address Line 1" aria-describedby="Address Line 1">
+                                        <input type="text" class="form-control max-width-input"
+                                            placeholder="Address Line 2" aria-describedby="Address Line 2">
+
+                                    </div>
+
+
+                                    <div class="input-group ">
+                                        <select class="form-select max-width-100" id="inputGroupSelect04">
+                                            <option selected>Living type</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="d-flex flex-row justify-content-between mt-4">
+                                        <input type="text" class="form-control max-width-input-234" placeholder="City"
+                                            aria-describedby="City">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="State/Region" aria-describedby="State/Region">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="ZIP code" aria-describedby="ZIP code">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section-sub-block settings-section-additional-information">
+                                <div class="settings-section-sub-block-left">
+                                    <p class="title">Additional Information</p>
+                                    <p class="subtitle">Optional</p>
+                                </div>
+                                <div class="settings-section-sub-block-right">
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div class="input-group">
+                                            <select class="form-select max-width-input" id="inputGroupSelect05">
+                                                <option selected>Marital status</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group justify-content-end">
+                                            <select class="form-select max-width-input" id="inputGroupSelect06">
+                                                <option selected>Education type</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div class="input-group">
+                                            <select class="form-select max-width-input  mt-4" id="inputGroupSelect07">
+                                                <option selected>Children</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+
+                                        <input type="text" class="form-control max-width-input  mt-4"
+                                            placeholder="Previous Surname" aria-describedby="Previous Surname">
+                                    </div>
+
+
+                                    <div class="input-group">
+                                        <select class="form-select max-width-100" id="inputGroupSelect08">
+                                            <option selected>Living type</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between mt-4">
+                                        <input type="text" class="form-control max-width-input-234" placeholder="City"
+                                            aria-describedby="City">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="State/Region" aria-describedby="State/Region">
+                                        <input type="text" class="form-control max-width-input-234"
+                                            placeholder="ZIP code" aria-describedby="ZIP code">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </section>
 
 

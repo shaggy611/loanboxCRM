@@ -34,6 +34,14 @@
   -o-border-radius: 8px;
 }
 
+@mixin border_radius_16 {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
 @mixin mobile {
   @media (max-width: 991px) {
     @content;

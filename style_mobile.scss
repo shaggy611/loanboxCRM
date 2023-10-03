@@ -557,13 +557,21 @@
   .goals-overview {
     margin-bottom: 24px;
 
+    & .section-heading {
+      margin-top: 20px;
+    }
+
+    & .goals-overview-wrapper {
+      flex-wrap: wrap;
+    }
+
     & .row {
       justify-content: space-around !important;
     }
 
     & .goals-overview-item {
       @include crm_data_block;
-      max-width: 379px;
+      max-width: 290px;
       box-sizing: content-box;
       margin-right: 0;
 
@@ -697,7 +705,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      justify-content: end;
+      justify-content: center;
 
       & .overdue-section-item {
         @include crm_data_block;
@@ -913,4 +921,92 @@
     }
   }
   // End Login Form
+
+  .settings-section {
+    & .settings-section-sub-block-left {
+      max-width: 76px;
+    }
+
+    & .settings-section-sub-block-right {
+      & .upload-field {
+        max-width: 240px;
+      }
+
+      & input.max-width-input {
+        max-width: 170px;
+      }
+
+      & input.max-width-input-234 {
+        max-width: 194px;
+      }
+
+      & .form-select {
+        max-width: 170px;
+        padding-right: 30px;
+      }
+
+      & .input-group-text {
+        font-size: 0.6rem;
+      }
+
+      .input-group-text {
+        padding: 8px 0 10px 12px;
+      }
+    }
+
+    & .settings-section-sub-block {
+      flex-wrap: wrap;
+    }
+
+    & .settings-section-sub-block-left {
+      max-width: 280px;
+      width: 100%;
+
+      & .title {
+        width: 100%;
+      }
+
+      & .subtitle {
+        width: 100%;
+      }
+    }
+  }
+
+  .user-inform {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+
+    & .user-inform-activity {
+      text-align: center;
+    }
+  }
+
+  .underwriting-statistics {
+    margin-bottom: 44px;
+    & .underwriting-statistics-items-wrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      & .underwriting-statistics-left {
+        display: flex;
+        justify-content: space-between;
+        @include crm_data_block;
+        max-width: 441px;
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+
+      & .underwriting-statistics-right {
+        @include crm_data_block;
+        padding: 16px;
+        max-width: 441px;
+        width: 100%;
+      }
+    }
+  }
 }

@@ -3,6 +3,7 @@ import 'normalize.css';
 import './style_mobile.scss';
 import { Chart } from 'chart.js/auto';
 import Highcharts from 'highcharts';
+import { circliful } from 'js-plugin-circliful';
 
 const toggleButton = document.querySelector('#menu-button-toggler button');
 const appMenu = document.querySelector('.menu');
@@ -27,6 +28,10 @@ const cpaLinedChartPurple = document.querySelector('#cpa-lined-chart-purple')
 const cpaLinedChartBlue = document.querySelector('#cpa-lined-chart-blue')
 const responsesChartDonut = document.querySelector('#responses_chart_donut')
 const paymentsChartDonut = document.querySelector('#payments_chart_donut')
+const linedChartAnalyst = document.querySelector('#lined-chart-analyst')
+const goalsChartBlue = document.querySelector('#goals_chart_blue')
+const goalsChartPurple = document.querySelector('#goals_chart_purple')
+const circleStatus = document.querySelector('#circle-status')
 
 document.addEventListener('DOMContentLoaded', () => {
     // Donut Chart
@@ -153,6 +158,144 @@ document.addEventListener('DOMContentLoaded', () => {
                     fontSize: '10px'
                 }
             }
+        });
+    }
+
+    if (linedChartAnalyst) {
+        const a = Highcharts.chart(linedChartAnalyst, {
+            chart: {
+                type: 'spline',
+                scrollablePlotArea: {
+                    minWidth: 600,
+                    scrollPositionX: 1,
+                }
+            },
+            title: {
+                text: '',
+                align: 'left'
+            },
+            subtitle: {
+                text: '',
+                align: 'left'
+            },
+            xAxis: {
+                type: 'datetime',
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                minorGridLineWidth: 0,
+                gridLineWidth: 1,
+                alternateGridColor: '',
+
+            },
+            tooltip: {
+                valueSuffix: '',
+                crosshairs: true
+            },
+            plotOptions: {
+                spline: {
+                    lineWidth: 2,
+                    states: {
+                        hover: {
+                            lineWidth: 2
+                        }
+                    },
+                    marker: {
+                        enabled: false
+                    },
+                    pointInterval: 31 * 24 * 3600 * 1000,
+                    pointStart: Date.UTC(2022, 0, 1)
+                },
+            },
+            legend: {
+                align: 'left',
+                verticalAlign: 'top',
+                symbolWidth: 12,
+                margin: 30,
+                marker: {
+                    radius: 4,
+                    symbol: 'circle'
+                }
+            },
+            series: [{
+                name: 'Payment',
+                lineWidth: 2,
+                data: [202, 228, 232, 243, 254, 271, 277, 304, 321, 329, 341, 349, 352, 353, 368, 369, 373, 385, 391, 394],
+                color: 'rgba(52, 122, 226, 1)',
+                marker: {
+                    radius: 4,
+                    symbol: 'circle'
+                }
+
+            }, {
+                name: 'Payout',
+                lineWidth: 2,
+                data: [414, 419, 434, 439, 449, 453, 465, 469, 489, 490, 512, 521, 542, 547, 558, 567, 571, 589, 593, 598],
+                color: 'rgba(255, 149, 0, 1)',
+                marker: {
+                    radius: 4
+                }
+            }, {
+                name: 'Margin',
+                lineWidth: 2,
+                data: [600, 611, 621, 622, 626, 634, 646, 660, 661, 665, 666, 667, 695, 713, 714, 724, 751, 760, 774, 777],
+                color: '#7367F0',
+                marker: {
+                    radius: 4
+                }
+            }],
+            navigation: {
+                menuItemStyle: {
+                    fontSize: '10px'
+                }
+            }
+        });
+    }
+
+    if (goalsChartBlue) {
+        circliful.newCircle({
+            percent: 80,
+            id: 'goals_chart_blue',
+            type: 'simple',
+            text: '$10,000',
+            strokeLinecap: "round",
+            noPercentageSign: false,
+            backgroundCircleWidth: 15,
+            foregroundCircleWidth: 15,
+            progressColors: [
+                { percent: 1, color: '#467FFF' },
+                { percent: 80, color: '#467FFF' }
+            ]
+        });
+    }
+
+    if (goalsChartPurple) {
+        circliful.newCircle({
+            percent: 40,
+            id: 'goals_chart_purple',
+            type: 'simple',
+            text: '$10,000',
+            strokeLinecap: "round",
+            noPercentageSign: false,
+            backgroundCircleWidth: 15,
+            foregroundCircleWidth: 15,
+            progressColors: [
+                { percent: 1, color: '#7367F0' },
+                { percent: 40, color: '#7367F0' }
+            ]
+        });
+    }
+
+    if (circleStatus) {
+        circliful.newCircle({
+            percent: 50,
+            id: 'circle-status',
+            type: 'simple',
         });
     }
 
@@ -312,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
             series: [{
                 name: '',
                 lineWidth: 4,
-                data: [70, 67, 82, 28, 25, 62, 26, 49, 68, 36, 22, 52],
+                data: [101, 105, 109, 111, 125, 152, 156, 169, 185, 243, 254, 264, 270, 272, 280, 287, 337, 373, 387, 415, 428, 434, 435, 522, 536, 567, 583, 586, 624, 632, 656, 673, 708, 747, 753, 787, 796, 812, 813, 829, 832, 846, 909, 913, 930, 948, 952, 969, 979, 994],
                 color: '#7367F0',
                 marker: {
                     radius: 0,
@@ -405,10 +548,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 shadow: {
                     color: '#467FFF',
-                    width: 50,
+                    width: 100,
                     opacity: 2,
                     offsetX: 0,
-                    offsetY: 40
+                    offsetY: 80
                 }
 
             }],
