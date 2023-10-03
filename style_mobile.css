@@ -498,6 +498,9 @@
   .collection-statistic {
     margin-bottom: 24px;
   }
+  .collection-statistic .collection-statistic-wrapper {
+    flex-wrap: wrap;
+  }
   .collection-statistic .row {
     justify-content: space-around !important;
   }

@@ -19,6 +19,53 @@ a:hover {
   margin-left: 260px;
 }
 
+.apexcharts-legend {
+  justify-content: center !important;
+  top: 0 !important;
+}
+
+.apexcharts-text.apexcharts-datalabel-value {
+  color: var(--gray-900, #101828);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.43rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28.383px; /* 122.222% */
+  letter-spacing: -0.464px;
+}
+
+@include mobile {
+
+  .apexcharts-legend {
+    top: 80% !important;
+  }
+}
+
+.apexcharts-datalabels-group {
+  transform: translateY(-12px);
+  -webkit-transform: translateY(-12px);
+  -moz-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  -o-transform: translateY(-12px);
+}
+
+button.btn {
+  &:hover {
+    background: #6541b4 !important;
+    color: #fff !important;
+
+    & svg {
+      fill: #6541b4;
+      stroke: #fff;
+
+      & path {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
 #menu-button-toggler {
   margin-bottom: 25px;
   display: none;
@@ -83,7 +130,7 @@ a:hover {
 
 section,
 header {
-  max-width: 1170px;
+  max-width: 1155px;
   margin: auto;
 }
 

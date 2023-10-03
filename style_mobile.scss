@@ -540,6 +540,10 @@
   .collection-statistic {
     margin-bottom: 24px;
 
+    & .collection-statistic-wrapper {
+      flex-wrap: wrap;
+    }
+
     & .row {
       justify-content: space-around !important;
     }

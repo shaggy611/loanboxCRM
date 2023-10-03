@@ -4,6 +4,7 @@ import './style_mobile.scss';
 import { Chart } from 'chart.js/auto';
 import Highcharts from 'highcharts';
 import { circliful } from 'js-plugin-circliful';
+import ApexCharts from 'apexcharts'
 
 const toggleButton = document.querySelector('#menu-button-toggler button');
 const appMenu = document.querySelector('.menu');
@@ -32,6 +33,7 @@ const linedChartAnalyst = document.querySelector('#lined-chart-analyst')
 const goalsChartBlue = document.querySelector('#goals_chart_blue')
 const goalsChartPurple = document.querySelector('#goals_chart_purple')
 const circleStatus = document.querySelector('#circle-status')
+const overdueSectionChart = document.querySelector('#overdue-section-chart')
 
 document.addEventListener('DOMContentLoaded', () => {
     // Donut Chart
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const a = Highcharts.chart('lined-chart', {
             chart: {
                 type: 'spline',
+                height: 347,
                 scrollablePlotArea: {
                     minWidth: 600,
                     scrollPositionX: 1,
@@ -267,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
             noPercentageSign: false,
             backgroundCircleWidth: 15,
             foregroundCircleWidth: 15,
+            animationStep: 3,
             progressColors: [
                 { percent: 1, color: '#467FFF' },
                 { percent: 80, color: '#467FFF' }
@@ -284,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
             noPercentageSign: false,
             backgroundCircleWidth: 15,
             foregroundCircleWidth: 15,
+            animationStep: 3,
             progressColors: [
                 { percent: 1, color: '#7367F0' },
                 { percent: 40, color: '#7367F0' }
@@ -298,99 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'simple',
         });
     }
-
-    // Progress chart
-    // let chartProgress_1 = document.querySelector("#goals_chart_blue");
-    // if (chartProgress_1) {
-    //     let myChartCircle_1 = new Chart(chartProgress_1, {
-    //         type: 'doughnut',
-    //         data: {
-    //             labels: ["Remain", 'null'],
-    //             datasets: [{
-    //                 label: "Soft plan",
-    //                 backgroundColor: ["#5283ff"],
-    //                 data: [68, 48]
-    //             }]
-    //         },
-    //         plugins: [{
-    //             beforeDraw: function (chart) {
-    //                 let width = chart.chart.width,
-    //                     height = chart.chart.height,
-    //                     ctx = chart.chart.ctx;
-
-    //                 ctx.restore();
-    //                 let fontSize = (height / 150).toFixed(2);
-    //                 ctx.font = fontSize + "em sans-serif";
-    //                 ctx.fillStyle = "#467FFF";
-    //                 ctx.textBaseline = "middle";
-
-    //                 let text = "$10,000",
-    //                     textX = Math.round((width - ctx.measureText(text).width) / 2),
-    //                     textY = height / 2;
-
-    //                 ctx.fillText(text, textX, textY);
-    //                 ctx.save();
-    //             }
-    //         }],
-    //         options: {
-    //             legend: {
-    //                 display: false,
-    //             },
-    //             responsive: true,
-    //             maintainAspectRatio: false,
-    //             cutoutPercentage: 60
-    //         }
-
-    //     });
-    // }
-    // // =========================================
-    // let chartProgress_2 = document.querySelector("#goals_chart_purple");
-    // if (chartProgress_2) {
-    //     var myChartCircle_2 = new Chart(chartProgress_2, {
-    //         type: 'doughnut',
-    //         data: {
-    //             labels: ["Remain", 'null'],
-    //             datasets: [{
-    //                 label: "Soft plan",
-    //                 backgroundColor: ["#5283ff"],
-    //                 data: [68, 48]
-    //             }]
-    //         },
-    //         plugins: [{
-    //             beforeDraw: function (chart) {
-    //                 let width = chart.chart.width,
-    //                     height = chart.chart.height,
-    //                     ctx = chart.chart.ctx;
-
-    //                 ctx.restore();
-    //                 let fontSize = (height / 150).toFixed(2);
-    //                 ctx.font = fontSize + "em sans-serif";
-    //                 ctx.fillStyle = "#467FFF";
-    //                 ctx.textBaseline = "middle";
-
-    //                 let text = "$10,000",
-    //                     textX = Math.round((width - ctx.measureText(text).width) / 2),
-    //                     textY = height / 2;
-
-    //                 ctx.fillText(text, textX, textY);
-    //                 ctx.save();
-    //             }
-    //         }],
-    //         options: {
-    //             legend: {
-    //                 display: false,
-    //             },
-    //             responsive: true,
-    //             maintainAspectRatio: false,
-    //             cutoutPercentage: 60
-    //         }
-
-    //     });
-
-
-    // }
-    // End progress chart
-
 
 
     if (cpaLinedChartPurple) {
@@ -659,6 +571,117 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         );
+    }
+
+    if (overdueSectionChart) {
+        const prices = [721600, 289711, 431889]
+        const sum = prices.reduce((sum, value) => sum + value, 0)
+        const series = prices.map(item => (item * 100 / sum))
+
+        const options = {
+            series: series,
+            chart: {
+                height: 350,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    dataLabels: {
+                        name: {
+                            fontSize: '22px',
+                            show: false,
+                        },
+                        value: {
+                            fontSize: '16px',
+                            title: '',
+                            formatter: function (val) {
+                                return `$ ${((val * sum) / 100).toLocaleString()}`
+                            }
+                        },
+                        total: {
+                            show: true,
+                            fontSize: '14px',
+                            label: 'Total',
+                            formatter: function (w) {
+                                // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                                return `$${sum.toLocaleString()}`
+                            }
+                        }
+                    },
+                    hollow: {
+                        size: '40%',
+                    }
+                }
+            },
+            stroke: {
+                lineCap: 'round'
+            },
+            colors: ['#53389E', '#7F56D9', '#B692F6'],
+            labels: ['Payout: $721,600', 'Returned: $289,711', 'In progress: $431,889'],
+            legend: {
+                show: true,
+                showForSingleSeries: false,
+                showForNullSeries: true,
+                showForZeroSeries: true,
+                position: 'right',
+                horizontalAlign: 'center',
+                verticalAlign: 'bottom',
+                floating: false,
+                fontSize: '14px',
+                fontFamily: '',
+                fontWeight: 400,
+                formatter: undefined,
+                inverseOrder: false,
+                width: undefined,
+                height: undefined,
+                tooltipHoverFormatter: undefined,
+                customLegendItems: [],
+                offsetX: 0,
+                offsetY: 0,
+                labels: {
+                    colors: undefined,
+                    useSeriesColors: false
+                },
+                markers: {
+                    width: 12,
+                    height: 12,
+                    strokeWidth: 0,
+                    strokeColor: '#fff',
+                    fillColors: undefined,
+                    radius: 12,
+                    customHTML: undefined,
+                    onClick: undefined,
+                    offsetX: 0,
+                    offsetY: 0
+                },
+                itemMargin: {
+                    horizontal: 5,
+                    vertical: 3
+                },
+                onItemClick: {
+                    toggleDataSeries: true
+                },
+                onItemHover: {
+                    highlightDataSeries: true
+                },
+            },
+            responsive: [{
+                breakpoint: 992,
+                options: {
+                    chart: {
+                        width: 350,
+                        height: 450
+                    },
+                    legend: {
+                        position: 'bottom',
+                        fontSize: '10px',
+                    }
+                },
+            }]
+        };
+
+        const chart = new ApexCharts(overdueSectionChart, options)
+        chart.render()
     }
 
 })

@@ -17,6 +17,18 @@ a:hover {
   margin-left: 260px;
 }
 
+button.btn:hover {
+  background: #6541b4 !important;
+  color: #fff !important;
+}
+button.btn:hover svg {
+  fill: #6541b4;
+  stroke: #fff;
+}
+button.btn:hover svg path {
+  stroke: #fff;
+}
+
 #menu-button-toggler {
   margin-bottom: 25px;
   display: none;
@@ -76,7 +88,7 @@ a:hover {
 
 section,
 header {
-  max-width: 1170px;
+  max-width: 1155px;
   margin: auto;
 }
 
@@ -467,7 +479,7 @@ header .user-active-status::before {
   border: 1px solid #d0d5dd;
 }
 .data-picker .btn-outline-primary:hover {
-  background-color: #7367f0;
+  background: #f9fafb;
 }
 .data-picker .data-selecter {
   max-width: 145px;
@@ -499,7 +511,6 @@ header .user-active-status::before {
 .statistics-section .underwriting-statistic {
   max-width: 580px;
   width: 100%;
-  margin-right: 12px;
 }
 .statistics-section .underwriting-statistic .wrapper {
   display: grid;
@@ -515,8 +526,7 @@ header .user-active-status::before {
   background: #fff;
   width: 100%;
   padding: 12px 12px;
-  max-width: 180px;
-  min-height: 152px;
+  min-height: 162.5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -561,7 +571,6 @@ header .user-active-status::before {
 .statistics-section .statistics {
   max-width: 274px;
   width: 100%;
-  margin-right: 20px;
 }
 .statistics-section .statistics .statistics-item {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -589,7 +598,7 @@ header .user-active-status::before {
   border: 1px solid #d0d5dd;
 }
 .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary:hover {
-  background-color: #7367f0;
+  background: #f9fafb;
 }
 .statistics-section .statistics .statistics-item .statistics-item-buttons .btn-outline-primary:focus {
   background-color: #f9fafb;
@@ -713,7 +722,7 @@ header .user-active-status::before {
   border: 1px solid #d0d5dd;
 }
 .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary:hover {
-  background-color: #7367f0;
+  background: #f9fafb;
 }
 .statistics-section .appproval-rate .statistics-item .statistics-item-buttons .btn-outline-primary:focus {
   background-color: #f9fafb;
@@ -762,6 +771,8 @@ header .user-active-status::before {
   padding: 12px 32px 0 12px;
   box-sizing: border-box;
   overflow-y: auto;
+  z-index: 10;
+  position: relative;
 }
 .payments-charts .last-payments .payments-wrapper::-webkit-scrollbar {
   width: 0;
@@ -896,6 +907,9 @@ header .user-active-status::before {
   border: 1px solid #7f56d9;
   background: #7f56d9;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.clients-table .clients-list-handler .save-list:hover {
+  background: #6541b4;
 }
 .clients-table .clients-list-handler .save-list svg {
   margin-right: 8px;
@@ -1107,13 +1121,19 @@ header .user-active-status::before {
 .collection-statistic {
   margin-bottom: 24px;
 }
+.collection-statistic .collection-statistic-wrapper {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 10px;
+  flex-wrap: nowrap;
+}
 .collection-statistic .collection-statistic__item {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   border: 1px solid #eff0f6;
   background: #fff;
   width: 100%;
-  max-width: 179px;
+  max-width: 181px;
   padding: 12px;
 }
 .collection-statistic .collection-statistic__item .collection-statistic__item-title {
@@ -1191,7 +1211,7 @@ header .user-active-status::before {
   background: #7367f0 !important;
 }
 .goals-overview .goals-overview-chart.purple-chart .remain:before {
-  background: rgba(70, 126, 255, 0.5764705882);
+  background: rgba(114, 103, 240, 0.3725490196);
 }
 .goals-overview .goals-overview-chart svg {
   width: 100%;
@@ -1200,6 +1220,9 @@ header .user-active-status::before {
 .goals-overview .goals-overview-chart .background-circle {
   fill: none;
   stroke: rgba(70, 126, 255, 0.5764705882);
+}
+.goals-overview .goals-overview-chart #circle-goals_chart_purple {
+  stroke: rgba(114, 103, 240, 0.3725490196);
 }
 .goals-overview .goals-overview-chart .foreground-circle {
   fill: none;
@@ -1346,7 +1369,7 @@ header .user-active-status::before {
 }
 .cashflow-section .cashflow-section-chart {
   width: 100%;
-  margin-right: 18px;
+  margin-right: 12px;
 }
 .cashflow-section .cashflow-section-chart .chart {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -1365,8 +1388,7 @@ header .user-active-status::before {
 .cashflow-section .underwriting-statistic .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  gap: 12px;
 }
 .cashflow-section .underwriting-statistic .wrapper .underwriting-statistic-item {
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -1376,9 +1398,7 @@ header .user-active-status::before {
   width: 100%;
   padding: 12px 12px;
   max-width: 180px;
-  min-height: 152px;
-  margin-right: 11.5px;
-  margin-bottom: 12px;
+  height: 184px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2428,6 +2448,7 @@ header .user-active-status::before {
 .clients-stat .clients-stat-wrapper .clients-stat-item {
   max-width: 297px;
   width: 100%;
+  border-bottom: 5px solid #fff;
 }
 .clients-stat .clients-stat-wrapper .clients-stat-item:hover {
   border-bottom: 5px solid #7f56d9;

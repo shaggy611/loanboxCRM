@@ -292,7 +292,8 @@ header {
     border: 1px solid #d0d5dd;
 
     &:hover {
-      background-color: #7367f0;
+      // background-color: #7367f0;
+      background: #f9fafb;
     }
   }
 
@@ -330,7 +331,7 @@ header {
   & .underwriting-statistic {
     max-width: 580px;
     width: 100%;
-    margin-right: 12px;
+    // margin-right: 12px;
 
     & .wrapper {
       display: grid;
@@ -341,10 +342,8 @@ header {
       & .underwriting-statistic-item {
         @include crm_data_block;
         padding: 12px 12px;
-        max-width: 180px;
-        min-height: 152px;
-        // margin-right: 11.5px;
-        // margin-bottom: 12px;
+        // max-width: 180px;
+        min-height: 162.5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -396,7 +395,7 @@ header {
   & .statistics {
     max-width: 274px;
     width: 100%;
-    margin-right: 20px;
+    // margin-right: 12px;
 
     & .statistics-item {
       @include crm_data_block;
@@ -420,7 +419,8 @@ header {
           border: 1px solid #d0d5dd;
 
           &:hover {
-            background-color: #7367f0;
+            // background-color: #7367f0;
+            background: #f9fafb;
           }
 
           &:focus {
@@ -541,7 +541,8 @@ header {
           border: 1px solid #d0d5dd;
 
           &:hover {
-            background-color: #7367f0;
+            // background-color: #7367f0;
+            background: #f9fafb;
           }
 
           &:focus {
@@ -598,6 +599,8 @@ header {
     padding: 12px 32px 0 12px;
     box-sizing: border-box;
     overflow-y: auto;
+    z-index: 10;
+    position: relative;
 
     &::-webkit-scrollbar {
       width: 0;
@@ -741,6 +744,10 @@ header {
       border: 1px solid #7f56d9;
       background: #7f56d9;
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+      &:hover {
+        background: #6541b4;
+      }
 
       & svg {
         margin-right: 8px;
@@ -967,9 +974,16 @@ header {
 .collection-statistic {
   margin-bottom: 24px;
 
+  & .collection-statistic-wrapper {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 10px;
+    flex-wrap: nowrap;
+  }
+
   & .collection-statistic__item {
     @include crm_data_block;
-    max-width: 179px;
+    max-width: 181px;
     padding: 12px;
 
     & .collection-statistic__item-title {
@@ -1061,7 +1075,7 @@ header {
       }
 
       & .remain:before {
-        background: rgba(70, 126, 255, 0.5764705882);
+        background: #7267f05f;
       }
     }
 
@@ -1073,6 +1087,10 @@ header {
     & .background-circle {
       fill: none;
       stroke: #467eff93;
+    }
+
+    & #circle-goals_chart_purple {
+      stroke: #7267f05f;
     }
 
     & .foreground-circle {
@@ -1243,7 +1261,7 @@ header {
 
   & .cashflow-section-chart {
     width: 100%;
-    margin-right: 18px;
+    margin-right: 12px;
 
     & .chart {
       @include crm_data_block;
@@ -1263,15 +1281,16 @@ header {
     & .wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 12px;
+      // column-gap: 12px;
+      gap: 12px;
 
       & .underwriting-statistic-item {
         @include crm_data_block;
         padding: 12px 12px;
         max-width: 180px;
-        min-height: 152px;
-        margin-right: 11.5px;
-        margin-bottom: 12px;
+        height: 184px;
+        // margin-right: 11.5px;
+        // margin-bottom: 12px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -2143,6 +2162,7 @@ header {
     & .clients-stat-item {
       max-width: 297px;
       width: 100%;
+      border-bottom: 5px solid #fff;
 
       &:hover {
         border-bottom: 5px solid #7f56d9;
