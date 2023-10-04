@@ -6,7 +6,7 @@
     margin-left: 0 !important;
   }
   .menu-blur-filter.show {
-    width: 400px;
+    width: 600px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.415);
     z-index: 90;
@@ -41,10 +41,9 @@
     -o-transition: all 0.1s ease-in-out;
   }
   .menu .main-menu .menu-subsection {
-    font-feature-settings: "clig" off, "liga" off;
     font-size: 0.9375rem;
     font-weight: 300;
-    padding-left: 30px;
+    padding-left: 0;
     color: rgba(94, 88, 115, 0.5);
   }
   .menu .main-menu .menu-block {
@@ -57,7 +56,7 @@
   }
   .menu .main-menu .menu-block .nav-item {
     width: 100%;
-    padding: 12px 15px 12px 15px;
+    padding: 5px 15px 12px 5px;
   }
   .menu .main-menu .menu-block .nav-item .badge {
     background-color: #7367f0;
@@ -82,8 +81,8 @@
     -o-border-radius: 50%;
   }
   .menu .main-menu .menu-block .nav-item .nav-link {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 15px !important;
     padding-right: 10px !important;
   }
@@ -154,7 +153,7 @@
   }
   .data-picker .data-selecter {
     max-width: 145px;
-    padding: 10px 7px;
+    padding: 10px 4px;
     line-height: 40px;
   }
   .data-picker .data-selecter svg {
@@ -925,5 +924,27 @@
     padding: 16px;
     max-width: 441px;
     width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .show-menu {
+    margin-left: 0 !important;
+  }
+  .menu-blur-filter.show {
+    width: 2000px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.415);
+    z-index: 90;
+    position: fixed;
+  }
+  .menu {
+    margin-left: -260px;
+    z-index: 99;
+  }
+  .content-screen {
+    width: 100%;
+    padding: 80px 24px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }/*# sourceMappingURL=style_mobile.css.map */

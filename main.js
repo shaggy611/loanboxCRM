@@ -5,6 +5,10 @@ import { Chart } from 'chart.js/auto';
 import Highcharts from 'highcharts';
 import { circliful } from 'js-plugin-circliful';
 import ApexCharts from 'apexcharts'
+// import daterangepicker from 'daterangepicker';
+// import * as moment from 'moment';
+// import $ from "jquery";
+
 
 const toggleButton = document.querySelector('#menu-button-toggler button');
 const appMenu = document.querySelector('.menu');
@@ -110,7 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             tooltip: {
                 valueSuffix: '',
-                crosshairs: true
+                crosshairs: {
+                    width: 12,
+                    color: 'rgba(114, 103, 240, 0.299)',
+                }
             },
             plotOptions: {
                 spline: {
@@ -198,7 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             tooltip: {
                 valueSuffix: '',
-                crosshairs: true
+                crosshairs: {
+                    width: 12,
+                    color: 'rgba(114, 103, 240, 0.299)',
+                }
             },
             plotOptions: {
                 spline: {
@@ -233,6 +243,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 marker: {
                     radius: 4,
                     symbol: 'circle'
+                },
+                shadow: {
+                    color: '#7367F0',
+                    width: 50,
+                    opacity: 1,
+                    offsetX: 0,
+                    offsetY: 40
                 }
 
             }, {
@@ -241,7 +258,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: [414, 419, 434, 439, 449, 453, 465, 469, 489, 490, 512, 521, 542, 547, 558, 567, 571, 589, 593, 598],
                 color: 'rgba(255, 149, 0, 1)',
                 marker: {
-                    radius: 4
+                    radius: 4,
+                    symbol: 'circle'
+                },
+                shadow: {
+                    color: '#7367F0',
+                    width: 50,
+                    opacity: 2,
+                    offsetX: 0,
+                    offsetY: 40
                 }
             }, {
                 name: 'Margin',
@@ -249,7 +274,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: [600, 611, 621, 622, 626, 634, 646, 660, 661, 665, 666, 667, 695, 713, 714, 724, 751, 760, 774, 777],
                 color: '#7367F0',
                 marker: {
-                    radius: 4
+                    radius: 4,
+                    symbol: 'circle'
+                },
+                shadow: {
+                    color: '#7367F0',
+                    width: 50,
+                    opacity: 2,
+                    offsetX: 0,
+                    offsetY: 40
                 }
             }],
             navigation: {
@@ -310,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart: {
                 type: 'spline',
                 scrollablePlotArea: {
-                    minWidth: 600,
+                    minWidth: 700,
                     scrollPositionX: 1,
                 }
             },
@@ -395,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart: {
                 type: 'spline',
                 scrollablePlotArea: {
-                    minWidth: 600,
+                    minWidth: 700,
                     scrollPositionX: 1,
                 }
             },
@@ -452,18 +485,18 @@ document.addEventListener('DOMContentLoaded', () => {
             series: [{
                 name: '',
                 lineWidth: 4,
-                data: [70, 67, 82, 28, 25, 62, 26, 49, 68, 36, 22, 52],
+                data: [10, 12, 15, 18, 19, 20, 22, 24, 31, 34, 38, 41, 42, 43, 44, 45, 49, 51, 53, 55, 56, 60, 65, 67, 68, 69, 70, 72, 73, 76, 79, 80, 81, 82, 87, 89, 94, 95, 96, 97],
                 color: '#467FFF',
                 marker: {
                     radius: 0,
                     symbol: 'circle'
                 },
                 shadow: {
-                    color: '#467FFF',
-                    width: 100,
+                    color: '#2e6cfe',
+                    width: 50,
                     opacity: 2,
                     offsetX: 0,
-                    offsetY: 80
+                    offsetY: 40
                 }
 
             }],
@@ -683,6 +716,70 @@ document.addEventListener('DOMContentLoaded', () => {
         const chart = new ApexCharts(overdueSectionChart, options)
         chart.render()
     }
+
+    // Data Picker Initialization
+
+    $(function () {
+
+        $('button[name="datefilter"]').daterangepicker({
+            alwaysShowCalendars: true,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'This week': [moment().startOf('week'), moment()],
+                'Last week': [moment().subtract(6, 'days'), moment()],
+                'This month': [moment().startOf('month'), moment().endOf('month')],
+                'Last month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+                'This year': [moment().startOf('year'), moment()],
+                'Last year': [moment().startOf('year').subtract(1, 'years'), moment().endOf('year').subtract(1, 'years')],
+            },
+            "locale": {
+                "format": "MMM DD, YYYY",
+                "separator": " - ",
+                "applyLabel": "Apply",
+                "cancelLabel": "Cancel",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "All time",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "firstDay": 1
+            },
+            "startDate": "09/28/2023",
+            "endDate": "10/04/2023"
+        });
+
+        $('button[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        });
+
+        $('button[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+        });
+
+    });
 
 })
 

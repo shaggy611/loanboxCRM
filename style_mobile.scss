@@ -10,7 +10,7 @@
   }
 
   .menu-blur-filter.show {
-    width: 400px;
+    width: 600px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.415);
     z-index: 90;
@@ -48,10 +48,9 @@
       }
 
       & .menu-subsection {
-        font-feature-settings: 'clig' off, 'liga' off;
         font-size: 0.9375rem;
         font-weight: 300;
-        padding-left: 30px;
+        padding-left: 0;
         color: rgba(94, 88, 115, 0.5);
       }
 
@@ -66,7 +65,7 @@
 
         & .nav-item {
           width: 100%;
-          padding: 12px 15px 12px 15px;
+          padding: 5px 15px 12px 5px;
 
           .badge {
             background-color: #7367f0;
@@ -94,8 +93,8 @@
           }
         }
         & .nav-item .nav-link {
-          padding-top: 12px;
-          padding-bottom: 12px;
+          padding-top: 5px;
+          padding-bottom: 5px;
           padding-left: 15px !important;
           padding-right: 10px !important;
         }
@@ -183,7 +182,7 @@
 
     & .data-selecter {
       max-width: 145px;
-      padding: 10px 7px;
+      padding: 10px 4px;
       line-height: 40px;
 
       & svg {
@@ -1012,5 +1011,31 @@
         width: 100%;
       }
     }
+  }
+}
+
+@include notebook {
+  .show-menu {
+    margin-left: 0 !important;
+  }
+
+  .menu-blur-filter.show {
+    width: 2000px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.415);
+    z-index: 90;
+    position: fixed;
+  }
+
+  .menu {
+    margin-left: -260px;
+    z-index: 99;
+  }
+
+  .content-screen {
+    width: 100%;
+    padding: 80px 24px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -31,12 +31,12 @@
   }
 
   & .nav {
-    margin-bottom: 24px;
-    transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
+    // margin-bottom: 16px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
   }
 
   & .menu-subsection {
@@ -45,6 +45,7 @@
     font-weight: 300;
     padding-left: 30px;
     color: rgba(94, 88, 115, 0.5);
+    margin-top: 16px;
   }
 
   & .logo-name {
@@ -66,17 +67,49 @@
 
     & .nav-item {
       width: 100%;
-      padding: 12px 15px 12px 15px;
+      padding: 2px 15px 6px 15px;
 
       .badge {
         background-color: #7367f0;
         position: absolute;
         left: calc(100% - 55px);
+        top: 12px;
+        line-height: 13px;
+      }
+
+      &:hover {
+        .badge {
+          background-color: #fff;
+          color: #7367f0 !important;
+        }
+      }
+
+      & #submenu1 li,
+      & #submenu2 li,
+      & #submenu3 li,
+      & #submenu4 li {
+        & a::before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border: 1px solid #5e5873;
+          margin-right: 15px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
       }
 
       & .collapse li {
-        padding-top: 24px;
+        // padding-top: 24px;
         padding-bottom: 0;
+
+        & .nav-link:focus span {
+          color: #5e5873 !important;
+        }
 
         & a:hover {
           border-radius: 5px;
@@ -93,6 +126,20 @@
 
           &::before {
             border: 1px solid #ffffff;
+          }
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #5e5873;
+            margin-right: 15px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
           }
         }
 
@@ -117,6 +164,10 @@
       padding-left: 15px !important;
       padding-right: 10px !important;
 
+      & i svg {
+        min-width: 20px;
+      }
+
       &:hover {
         border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -124,6 +175,13 @@
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
         background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
+
+        & i svg {
+          stroke: #fff;
+          & path {
+            fill: #fff;
+          }
+        }
 
         & a,
         & span {
@@ -143,6 +201,10 @@
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
+
+      &:focus {
+        color: #5e5873;
+      }
     }
   }
 
@@ -199,6 +261,27 @@ header {
     padding-right: 0;
   }
 
+  & .btn {
+    padding: 7px;
+
+    &:hover {
+      & svg {
+        & path {
+          fill: white !important;
+        }
+      }
+
+      & svg.indicator path {
+        fill: #ff3b30 !important;
+        stroke: #ff3b30;
+      }
+    }
+
+    & svg {
+      margin-right: 0;
+    }
+  }
+
   & .welcome-text h1 {
     color: rgba(94, 88, 115, 1);
     font-family: Poppins;
@@ -236,6 +319,7 @@ header {
   & .user-name-role {
     text-align: right;
     margin-right: 14px;
+    margin-left: 14px;
   }
 
   & .name {
@@ -403,7 +487,7 @@ header {
       max-width: 274px;
       min-height: 334px;
       box-sizing: content-box;
-      overflow: hidden;
+      // overflow: hidden;
 
       & .statistics-item-buttons {
         text-align: right;
@@ -491,7 +575,7 @@ header {
       max-width: 274px;
       min-height: 334px;
       box-sizing: content-box;
-      overflow: hidden;
+      // overflow: hidden;
 
       & .statistics-item-title {
         color: rgba(0, 0, 0, 0.7);
@@ -1144,6 +1228,7 @@ header {
       line-height: normal;
       margin-top: 29px;
       position: relative;
+      margin-left: 15px;
 
       &.goal:before {
         position: absolute;
@@ -1734,7 +1819,7 @@ header {
 
   & .settings-section-tabs-navigation {
     margin-bottom: 32px;
-    border-bottom: 1px solid #eaecf0;
+    border-bottom: 2px solid #eaecf0;
 
     & li .nav-link {
       color: #667085;
@@ -1748,7 +1833,7 @@ header {
       &.active,
       &:hover {
         color: #6941c6;
-        border-bottom: 2px solid #6941c6;
+        border-bottom: 4px solid #6941c6;
       }
     }
   }
@@ -1914,8 +1999,10 @@ header {
       border-radius: 4px;
       border: 1px solid #7f56d9;
       background: #f9f5ff;
-      width: 20px;
+      width: 12px;
       margin-right: 7px;
+      padding: 7px;
+      margin-top: 7px;
     }
 
     & .form-check {
@@ -2092,9 +2179,10 @@ header {
       display: flex;
       justify-content: space-between;
       @include crm_data_block;
-      max-width: 541px;
+      max-width: 570px;
       width: 100%;
       padding: 16px;
+      box-shadow: none;
     }
 
     & .underwriting-statistics-right {
