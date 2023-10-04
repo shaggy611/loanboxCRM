@@ -94,12 +94,27 @@
           width: 10px;
           height: 10px;
           border: 1px solid #5e5873;
-          margin-right: 15px;
+          margin-right: 10px;
+          margin-left: 3px;
           border-radius: 50%;
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
+        }
+      }
+
+      & ul.nav {
+        margin-left: 0 !important;
+
+        & li .nav-link:hover {
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            border: 1px solid white !important;
+          }
         }
       }
 
@@ -176,6 +191,14 @@
         -o-border-radius: 5px;
         background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
 
+        &::after {
+          content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="white"/></svg>') !important;
+        }
+
+        &.dropdown-toggle::after {
+          stroke: white;
+        }
+
         & i svg {
           stroke: #fff;
           & path {
@@ -204,6 +227,18 @@
 
       &:focus {
         color: #5e5873;
+
+        &:not(:hover) .badge {
+          background-color: #7367f0;
+          color: #fff !important;
+        }
+      }
+
+      &:hover {
+        & .badge {
+          background-color: #fff;
+          color: #7367f0 !important;
+        }
       }
     }
   }
@@ -218,24 +253,8 @@
   }
 
   & .dropdown-toggle::after {
-    content: url('/images/dropdown-ico.svg');
-    border: none;
-    left: calc(100% - 30px);
-    position: absolute;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-  }
-
-  & .collapsed::after {
-    content: url('/images/dropdown-ico.svg');
+    // content: url('/images/dropdown-ico.svg');
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="%235E5873"/></svg>');
     border: none;
     left: calc(100% - 30px);
     position: absolute;
@@ -244,6 +263,25 @@
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    top: 10px;
+  }
+
+  & a[aria-expanded='true']::after {
+    // content: url('/images/dropdown-ico.svg');
+    // content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="%235E5873"/></svg>');
+    border: none;
+    left: calc(100% - 30px);
+    position: absolute;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -852,7 +890,7 @@ header {
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 
       & button {
-        padding: 10px 8px 10px 14px;
+        padding: 10px 0 10px 12px;
         border: none;
 
         &:hover {
@@ -861,7 +899,7 @@ header {
       }
 
       & input {
-        padding: 10px 14px 10px 0;
+        padding: 10px 14px 10px 5px;
         border: none;
       }
     }
@@ -873,9 +911,23 @@ header {
   }
 
   & .filter-buttons {
-    & button {
+    & button.btn {
       @include button_basic_style;
       margin-right: 5px;
+
+      & svg {
+        background-color: transparent !important;
+      }
+
+      &:hover {
+        & svg {
+          background-color: transparent !important;
+
+          & path {
+            stroke: #fff;
+          }
+        }
+      }
 
       & svg {
         margin-left: 4px;
@@ -1436,9 +1488,34 @@ header {
 
   & .cashflow-chart-section__chart {
     @include crm_data_block;
+    position: relative;
 
     & img {
       width: 100%;
+    }
+
+    & .data-selecter {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 99;
+      border-radius: 8px;
+      border: 1px solid #d0d5dd;
+      background: #fff;
+      padding: 10px 16px;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      color: #667085;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    @include mobile {
+      & .data-selecter {
+        padding: 5px 7px;
+      }
     }
   }
 }
@@ -1776,8 +1853,29 @@ header {
 .cpa-section {
   padding-bottom: 40px;
 
+  & .application-button {
+    @include button_basic_style;
+    color: #344054;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:hover {
+      background-color: #7367f0;
+      color: #1d2939;
+    }
+
+    & svg {
+      margin-left: 7px;
+      margin-right: 0;
+    }
+  }
+
   & .cpa-section__chart {
-    margin-top: 30px;
+    margin-top: 20px;
     @include crm_data_block;
   }
 

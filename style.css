@@ -314,7 +314,10 @@ header {
 }
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
   font-size: 14px !important;
-  padding: 8px 9px 7px 9px;
+  padding: 7px 9px 6px 9px;
+}
+.daterangepicker .month, .daterangepicker .prev, .daterangepicker .next {
+  padding-bottom: 20px !important;
 }
 .daterangepicker .drp-calendar {
   display: none;
@@ -333,6 +336,7 @@ header {
 }
 .daterangepicker .ranges ul li {
   padding: 10px 16px;
+  font-size: 14px;
 }
 .daterangepicker .ranges ul li:hover {
   border-radius: 6px;
@@ -344,6 +348,7 @@ header {
 }
 .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
   padding: 20px 20px;
+  height: 388px;
 }
 .daterangepicker .drp-buttons {
   border-top: 1px solid #f2f4f7;
@@ -397,17 +402,22 @@ header {
   font-weight: 400;
   line-height: 24px;
 }
+.daterangepicker .ranges ul {
+  width: 176px;
+}
 
 @media (min-width: 768px) and (max-width: 1400px) {
   .daterangepicker {
-    right: 13.5% !important;
-    width: 293px !important;
+    right: 8% !important;
   }
 }
 @media (max-width: 991px) {
   .daterangepicker .drp-calendar.left,
   .daterangepicker .drp-calendar.right {
     padding: 20px 0px;
+  }
+  .daterangepicker .ranges ul {
+    width: auto;
   }
 }
 .menu {
@@ -487,12 +497,22 @@ header {
   width: 10px;
   height: 10px;
   border: 1px solid #5e5873;
-  margin-right: 15px;
+  margin-right: 10px;
+  margin-left: 3px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+.main-menu .menu-block .nav-item ul.nav {
+  margin-left: 0 !important;
+}
+.main-menu .menu-block .nav-item ul.nav li .nav-link:hover::after {
+  display: none;
+}
+.main-menu .menu-block .nav-item ul.nav li .nav-link:hover::before {
+  border: 1px solid white !important;
 }
 .main-menu .menu-block .nav-item .collapse li {
   padding-bottom: 0;
@@ -557,6 +577,12 @@ header {
   -o-border-radius: 5px;
   background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
 }
+.main-menu .menu-block .nav-item .nav-link:hover::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="white"/></svg>') !important;
+}
+.main-menu .menu-block .nav-item .nav-link:hover.dropdown-toggle::after {
+  stroke: white;
+}
 .main-menu .menu-block .nav-item .nav-link:hover i svg {
   stroke: #fff;
 }
@@ -580,6 +606,14 @@ header {
 .main-menu .menu-block .nav-item.active-item > a:focus {
   color: #5e5873;
 }
+.main-menu .menu-block .nav-item.active-item > a:focus:not(:hover) .badge {
+  background-color: #7367f0;
+  color: #fff !important;
+}
+.main-menu .menu-block .nav-item.active-item > a:hover .badge {
+  background-color: #fff;
+  color: #7367f0 !important;
+}
 .main-menu .dropdown-toggle {
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -589,23 +623,7 @@ header {
   -o-transition: all 0.3s ease-in-out;
 }
 .main-menu .dropdown-toggle::after {
-  content: url("/images/dropdown-ico.svg");
-  border: none;
-  left: calc(100% - 30px);
-  position: absolute;
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-}
-.main-menu .collapsed::after {
-  content: url("/images/dropdown-ico.svg");
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="%235E5873"/></svg>');
   border: none;
   left: calc(100% - 30px);
   position: absolute;
@@ -614,6 +632,22 @@ header {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  top: 10px;
+}
+.main-menu a[aria-expanded=true]::after {
+  border: none;
+  left: calc(100% - 30px);
+  position: absolute;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1167,14 +1201,14 @@ header .user-active-status::before {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .clients-table .clients-list-search .input-group button {
-  padding: 10px 8px 10px 14px;
+  padding: 10px 0 10px 12px;
   border: none;
 }
 .clients-table .clients-list-search .input-group button:hover {
   background: none;
 }
 .clients-table .clients-list-search .input-group input {
-  padding: 10px 14px 10px 0;
+  padding: 10px 14px 10px 5px;
   border: none;
 }
 .clients-table .clients-list-search .buttons-wrapper button {
@@ -1189,7 +1223,7 @@ header .user-active-status::before {
   line-height: 20px;
   margin-left: 12px;
 }
-.clients-table .filter-buttons button {
+.clients-table .filter-buttons button.btn {
   border-radius: 8px;
   border: 1px solid #d0d5dd;
   background: #fff;
@@ -1201,7 +1235,16 @@ header .user-active-status::before {
   line-height: 20px;
   margin-right: 5px;
 }
-.clients-table .filter-buttons button svg {
+.clients-table .filter-buttons button.btn svg {
+  background-color: transparent !important;
+}
+.clients-table .filter-buttons button.btn:hover svg {
+  background-color: transparent !important;
+}
+.clients-table .filter-buttons button.btn:hover svg path {
+  stroke: #fff;
+}
+.clients-table .filter-buttons button.btn svg {
   margin-left: 4px;
   margin-right: 0;
   padding: 0;
@@ -1694,9 +1737,32 @@ header .user-active-status::before {
   border: 1px solid #eff0f6;
   background: #fff;
   width: 100%;
+  position: relative;
 }
 .cashflow-chart-section .cashflow-chart-section__chart img {
   width: 100%;
+}
+.cashflow-chart-section .cashflow-chart-section__chart .data-selecter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #667085;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+@media (max-width: 991px) {
+  .cashflow-chart-section .cashflow-chart-section__chart .data-selecter {
+    padding: 5px 7px;
+  }
 }
 
 .overdue-section {
@@ -2247,8 +2313,34 @@ header .user-active-status::before {
 .cpa-section {
   padding-bottom: 40px;
 }
+.cpa-section .application-button {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px 16px;
+  color: #344054;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: #344054;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cpa-section .application-button:hover {
+  background-color: #7367f0;
+  color: #1d2939;
+}
+.cpa-section .application-button svg {
+  margin-left: 7px;
+  margin-right: 0;
+}
 .cpa-section .cpa-section__chart {
-  margin-top: 30px;
+  margin-top: 20px;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   border: 1px solid #eff0f6;

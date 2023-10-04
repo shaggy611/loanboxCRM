@@ -71,6 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     plugins: {
                         legend: {
                             display: false
+                        },
+                        tooltip: {
+                            enabled: true,
+                            usePointStyle: true,
+                            borderWidth: 0,
+                            boxPadding: 4,
+                            titleFont: {
+                                size: 18
+                            },
+                            bodyFont: {
+                                size: 18,
+                            },
+                            bodyColor: 'white',
+                            padding: 15,
+                            backgroundColor: 'rgba(16, 24, 40, 0.8)',
+                            titleColor: 'white',
+                            cornerRadius: 8
                         }
                     }
                 }
