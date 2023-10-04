@@ -925,6 +925,20 @@
     max-width: 441px;
     width: 100%;
   }
+  .clients-stat .clients-stat-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .clients-stat .clients-stat-wrapper .clients-stat-item {
+    max-width: 182px;
+  }
+  .clients-table .table .table-responsive td .bage.c-purple,
+  .clients-table .table .table-responsive th .bage.c-purple {
+    color: #7367f0;
+    border-color: #7367f0;
+    width: 127px;
+    display: block;
+  }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .show-menu {
