@@ -14,17 +14,19 @@ const toggleButton = document.querySelector('#menu-button-toggler button');
 const appMenu = document.querySelector('.menu');
 const menuBlurFilter = document.querySelector('.menu-blur-filter')
 
-const toggleMenu = () => {
+const toggleMenu = (event) => {
     appMenu.classList.toggle('show-menu')
     menuBlurFilter.classList.toggle('show')
 }
+
+document.querySelector('.app').addEventListener('click', function (event) {
+    if (event.target.classList.contains('menu-blur-filter') || event.target.classList.contains('menu-blur-filter')) {
+        appMenu.classList.remove('show-menu')
+        menuBlurFilter.classList.remove('show')
+    }
+})
 
 toggleButton.addEventListener('click', toggleMenu)
-
-toggleButton.onblur = function () {
-    appMenu.classList.toggle('show-menu')
-    menuBlurFilter.classList.toggle('show')
-}
 
 // ======================================================
 const chartDonut = document.querySelector('#chart_donut')
