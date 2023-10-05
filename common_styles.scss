@@ -479,3 +479,25 @@ header {
 }
 
 // End Data Picker
+
+.graphs-wrapper-adaptive {
+  display: contents;
+}
+
+.slick-dots {
+  display: flex;
+  width: 70px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 0 !important;
+  top: 20px;
+  position: relative;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+.slick-active::marker {
+  color: rgba(0, 0, 0, 0.623);
+}

@@ -808,5 +808,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+
+    // Slider
+    $('#graphs_wrapper_adaptive_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        variableHeight: true,
+        arrows: false,
+        centerMode: false,
+        centerPadding: '40px',
+
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick",
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    variableHeight: true,
+                    arrows: false,
+                    centerMode: false,
+                    centerPadding: '40px',
+                }
+            }
+        ]
+    });
+    // Slider
+
 })
 

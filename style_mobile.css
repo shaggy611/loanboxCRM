@@ -28,12 +28,13 @@
     line-height: 24px;
   }
   .menu .main-menu .navbar-brand {
-    padding-left: 25px;
+    padding-left: 22px;
     text-align: left;
     width: 100%;
+    padding-bottom: 22px !important;
   }
   .menu .main-menu .nav {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -45,26 +46,34 @@
     font-weight: 300;
     padding-left: 0;
     color: rgba(94, 88, 115, 0.5);
+    margin-left: 23px;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  .menu .main-menu .dropdown-toggle::after {
+    top: 5px;
   }
   .menu .main-menu .menu-block {
     border-bottom: 1px solid rgba(110, 107, 123, 0.3);
-    padding: 12px 0;
+    padding: 6px 0;
     width: 100%;
+    margin-top: -7px;
   }
   .menu .main-menu .menu-block:last-child {
     margin: 0 !important;
   }
   .menu .main-menu .menu-block .nav-item {
     width: 100%;
-    padding: 5px 15px 12px 5px;
+    padding: 5px 15px 5px 5px;
   }
   .menu .main-menu .menu-block .nav-item .badge {
     background-color: #7367f0;
     position: absolute;
     left: calc(100% - 55px);
+    line-height: 10px;
+    top: 9px;
   }
   .menu .main-menu .menu-block .nav-item .collapse li {
-    padding-top: 24px;
     padding-bottom: 0;
   }
   .menu .main-menu .menu-block .nav-item .collapse li a::before {
@@ -85,6 +94,9 @@
     padding-bottom: 5px;
     padding-left: 15px !important;
     padding-right: 10px !important;
+  }
+  .menu .main-menu .menu-block .nav-item .nav-link:hover {
+    color: white;
   }
   header {
     margin-bottom: 20px;
@@ -163,7 +175,7 @@
     margin-top: 22px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-bottom: 29px;
   }
@@ -187,18 +199,18 @@
     background: #fff;
     width: 100%;
     padding: 12px 12px;
-    max-width: 180px;
+    max-width: 370px !important;
     min-height: 152px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .statistics-section .statistics {
-    max-width: 274px;
+    max-width: 370px;
     width: 100%;
     margin-right: 0;
     margin-top: 20px;
-    margin-bottom: 20px;
+    max-height: 372px;
   }
   .statistics-section .statistics .statistics-item {
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -207,7 +219,7 @@
     background: #fff;
     width: 100%;
     position: relative;
-    max-width: 274px;
+    max-width: 370px !important;
     min-height: 334px;
     box-sizing: content-box;
     overflow: hidden;
@@ -283,8 +295,9 @@
     bottom: 0;
   }
   .statistics-section .appproval-rate {
-    max-width: 274px;
+    max-width: 370px;
     width: 100%;
+    margin-top: 20px;
   }
   .statistics-section .appproval-rate .statistics-item {
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
@@ -293,7 +306,7 @@
     background: #fff;
     width: 100%;
     position: relative;
-    max-width: 274px;
+    max-width: 370px;
     min-height: 334px;
     box-sizing: content-box;
     overflow: hidden;
@@ -368,8 +381,9 @@
   }
   .statistics-section .appproval-rate .statistics-item .chart {
     position: absolute;
-    left: 0;
     bottom: 0;
+    right: 0;
+    text-align: right;
   }
   .payments-charts {
     display: flex;
@@ -499,6 +513,9 @@
   }
   .collection-statistic .collection-statistic-wrapper {
     flex-wrap: wrap;
+    row-gap: 8px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
   .collection-statistic .row {
     justify-content: space-around !important;
@@ -509,9 +526,8 @@
     border: 1px solid #eff0f6;
     background: #fff;
     width: 100%;
-    max-width: 169px;
+    max-width: 180px;
     padding: 12px;
-    margin-bottom: 10px;
   }
   .goals-overview {
     margin-bottom: 24px;

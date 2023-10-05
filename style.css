@@ -489,7 +489,6 @@ header {
 }
 .main-menu .menu-block .nav-item:hover .badge {
   background-color: #fff;
-  color: #7367f0 !important;
 }
 .main-menu .menu-block .nav-item #submenu1 li a::before, .main-menu .menu-block .nav-item #submenu2 li a::before, .main-menu .menu-block .nav-item #submenu3 li a::before, .main-menu .menu-block .nav-item #submenu4 li a::before {
   content: "";
@@ -517,7 +516,7 @@ header {
 .main-menu .menu-block .nav-item .collapse li {
   padding-bottom: 0;
 }
-.main-menu .menu-block .nav-item .collapse li .nav-link:focus span {
+.main-menu .menu-block .nav-item .collapse li a:focus span {
   color: #5e5873 !important;
 }
 .main-menu .menu-block .nav-item .collapse li a:hover {
@@ -527,6 +526,12 @@ header {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
+}
+.main-menu .menu-block .nav-item .collapse li a:hover:focus span {
+  color: white !important;
+}
+.main-menu .menu-block .nav-item .collapse li a:hover:active span {
+  color: #ffffff !important;
 }
 .main-menu .menu-block .nav-item .collapse li a:hover a, .main-menu .menu-block .nav-item .collapse li a:hover span {
   color: #ffffff;
@@ -577,9 +582,6 @@ header {
   -o-border-radius: 5px;
   background: linear-gradient(47deg, #7367f0 0%, #9e95f5 93.64%);
 }
-.main-menu .menu-block .nav-item .nav-link:hover::after {
-  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="white"/></svg>') !important;
-}
 .main-menu .menu-block .nav-item .nav-link:hover.dropdown-toggle::after {
   stroke: white;
 }
@@ -607,6 +609,10 @@ header {
   color: #5e5873;
 }
 .main-menu .menu-block .nav-item.active-item > a:focus:not(:hover) .badge {
+  background-color: #7367f0;
+  color: #fff !important;
+}
+.main-menu .menu-block .nav-item.active-item > a:not(:focus) .badge {
   background-color: #7367f0;
   color: #fff !important;
 }
@@ -639,7 +645,7 @@ header {
   -o-transition: all 0.3s ease-in-out;
   top: 10px;
 }
-.main-menu a[aria-expanded=true]::after {
+.main-menu .dropdown-toggle[aria-expanded=true]::after {
   border: none;
   left: calc(100% - 30px);
   position: absolute;
@@ -653,6 +659,9 @@ header {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+}
+.main-menu .dropdown-toggle:hover::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M9.68021 1.46732L5.68021 5.46732C5.54688 5.60065 5.41354 5.66732 5.21354 5.66732C5.01354 5.66732 4.88021 5.60065 4.74688 5.46732L0.746875 1.46732C0.480208 1.20065 0.480208 0.800651 0.746875 0.533984C1.01354 0.267318 1.41354 0.267318 1.68021 0.533984L5.21354 4.06732L8.74688 0.533984C9.01354 0.267318 9.41354 0.267318 9.68021 0.533984C9.94688 0.800651 9.94688 1.20065 9.68021 1.46732Z" fill="white"/></svg>') !important;
 }
 
 header .welcome-text {
@@ -1325,6 +1334,7 @@ header .user-active-status::before {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 16px;
+  vertical-align: middle;
 }
 .clients-table .table .table-responsive thead th:first-child {
   text-align: left;
