@@ -5,6 +5,12 @@
     font-size: 12px;
   }
 
+  .chart {
+    & .highcharts-container {
+      max-width: 370px;
+    }
+  }
+
   .show-menu {
     margin-left: 0 !important;
   }

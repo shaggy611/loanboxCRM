@@ -40,6 +40,8 @@ const goalsChartBlue = document.querySelector('#goals_chart_blue')
 const goalsChartPurple = document.querySelector('#goals_chart_purple')
 const circleStatus = document.querySelector('#circle-status')
 const overdueSectionChart = document.querySelector('#overdue-section-chart')
+const chartStatisticsSsmall_1 = document.querySelector('#chart_statistics_small_1')
+const chartStatisticsSsmall_2 = document.querySelector('#chart_statistics_small_2')
 
 document.addEventListener('DOMContentLoaded', () => {
     // Donut Chart
@@ -848,6 +850,136 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     });
     // Slider
+
+    if (chartStatisticsSsmall_2) {
+        // Data retrieved from https://fas.org/issues/nuclear-weapons/status-world-nuclear-forces/
+        Highcharts.chart('chart_statistics_small_2', {
+            chart: {
+                type: 'area',
+                spacingTop: 0,
+                spacingRight: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                plotBorderWidth: 0,
+                marginRight: -2,
+                marginLeft: -2,
+                marginTop: 0,
+                marginBottom: 0
+            },
+            legend: {
+                enabled: false
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                visible: false,
+                gridLineWidth: 0,
+                labels: {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                visible: false,
+                labels: {
+                    enabled: false
+                }
+            },
+            tooltip: {
+                pointFormat: ''
+            },
+            plotOptions: {
+                series: {
+                    lineWidth: 2,
+                    color: '#28C76F',
+                    fillOpacity: 0.1,
+                    marker: {
+                        enabled: false,
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '',
+                data: [
+                    18, 30, 46, 31, 38, 25, 41, 5, 14, 49, 40, 24, 13, 27, 21, 10, 44, 43, 37, 42, 9, 35, 50, 47, 28, 11, 17, 23, 26, 22, 12, 29, 36, 34, 6, 48, 45, 39, 32, 16
+                ],
+            }]
+        });
+
+    }
+
+    if (chartStatisticsSsmall_1) {
+        // Data retrieved from https://fas.org/issues/nuclear-weapons/status-world-nuclear-forces/
+        Highcharts.chart('chart_statistics_small_1', {
+            chart: {
+                type: 'area',
+                spacingTop: 0,
+                spacingRight: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                plotBorderWidth: 0,
+                marginRight: -2,
+                marginLeft: -2,
+                marginTop: 0,
+                marginBottom: 0
+            },
+            legend: {
+                enabled: false
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                visible: false,
+                gridLineWidth: 0,
+                labels: {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                visible: false,
+                labels: {
+                    enabled: false
+                }
+            },
+            tooltip: {
+                pointFormat: ''
+            },
+            plotOptions: {
+                series: {
+                    lineWidth: 2,
+                    color: '#F04438',
+                    fillOpacity: 0.1,
+                    marker: {
+                        enabled: false,
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '',
+                data: [
+                    18, 30, 46, 31, 38, 25, 41, 5, 14, 49, 40, 24, 13, 27, 21, 10, 44, 43, 37, 42, 9, 35, 50, 47, 28, 11, 17, 23, 26, 22, 12, 29, 36, 34, 6, 48, 45, 39, 32, 16
+                ],
+            }]
+        });
+
+    }
 
 })
 
